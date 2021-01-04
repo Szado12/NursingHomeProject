@@ -118,6 +118,8 @@
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Systems\DataManagers\Interfaces\IDefaultDataManager.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IPatientDataManager.cs" />
+    <Compile Include="Systems\DataManagers\PatientDataManager.cs" />
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
