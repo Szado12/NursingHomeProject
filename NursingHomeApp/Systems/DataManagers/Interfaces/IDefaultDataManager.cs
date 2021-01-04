@@ -9,9 +9,9 @@ namespace NursingHomeApp.Systems.DataMangers.Interfaces
     public interface IDefaultDataManager<T>
     {
         bool Add(T t);
-        bool Delete(int id);
+        bool Delete(int Id);
         bool Update(T t);
-        List<Object> Select();
-        List<Object> Select(int Id);
+        List<T> Select();
+        T Select(int Id);
     }
 }

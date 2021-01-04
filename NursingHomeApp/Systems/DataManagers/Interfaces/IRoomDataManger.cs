@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
-    public interface IPatientDataManager : IDefaultDataManager<Patient>
+    public interface IRoomDataManger : IDefaultDataManager<Room>
     {
-        List<Patient> SelectEmployeeId(int Id);
     }
 }

@@ -7,31 +7,41 @@ using System.Threading.Tasks;
 
 namespace NursingHomeApp.Systems.DataManagers
 {
-    class PatientDataManager : IPatientDataManager
+    class PatientDataManager : DefaultDataManager, IPatientDataManager
     {
         public bool Add(Patient t)
         {
-            throw new NotImplementedException();
+            DbContext.Patients.Add(t);
+            return (DbContext.SaveChanges() > 0);
         }
 
-        public bool Delete(int id)
+        public bool Delete(int Id)
         {
-            throw new NotImplementedException();
+            Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == Id);
+            DbContext.Patients.Remove(patient);
+            return (DbContext.SaveChanges() > 0);
         }
 
-        public List<object> Select()
+        public List<Patient> Select()
         {
-            throw new NotImplementedException();
+            return DbContext.Patients.ToList();
         }
 
-        public List<object> Select(int Id)
+        public Patient Select(int Id)
         {
-            throw new NotImplementedException();
+            return DbContext.Patients.SingleOrDefault(p => p.Id == Id);
+        }
+
+        public List<Patient> SelectEmployeeId(int Id)
+        {
+            return DbContext.Patients.Where(e => e.EmployeeId == Id).ToList();
         }
 
         public bool Update(Patient t)
         {
-            throw new NotImplementedException();
+            Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == t.Id);
+            patient = t;
+            return (DbContext.SaveChanges() > 0);
         }
     }
 }
