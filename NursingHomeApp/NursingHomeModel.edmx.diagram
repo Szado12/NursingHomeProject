@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b0c2c08f38842d5b5b60bfc84e0c273" Name="Diagram1">
+        <EntityTypeShape EntityType="NursingHomeModel.EmployeeLogin" Width="1.5" PointX="5.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Employee" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Medicine" Width="1.5" PointX="6" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.PatientLogin" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.PatientMedicine" Width="1.5" PointX="9.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Patient" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Place" Width="1.5" PointX="4.875" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Profession" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Room" Width="1.5" PointX="3.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Schedule" Width="1.5" PointX="8.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NursingHomeModel.Treatment" Width="1.5" PointX="6" PointY="15.25" IsExpanded="true" />
+        <AssociationConnector Association="NursingHomeModel.FK_EmployeeLogins_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_Employees_Professions" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_Schedules_Employees" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_PatientMedicines_Medicines" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_PatientLogins_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_PatientMedicines_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_Patients_Rooms" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_Schedules_Patients" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_Schedules_Places" ManuallyRouted="false" />
+        <AssociationConnector Association="NursingHomeModel.FK_Schedules_Treatments" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
