@@ -11,5 +11,6 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
     public interface IPatientDataManager : IDefaultDataManager<Patient,PatientView>
     {
         List<PatientView> SelectEmployeeId(int Id);
+        List<Patient> SelectAll();
     }
 }

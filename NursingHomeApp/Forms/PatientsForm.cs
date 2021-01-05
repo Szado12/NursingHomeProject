@@ -23,6 +23,7 @@ namespace NursingHomeApp
             InitializeComponent();
             PatientView patientView = patientDataManager.Select(7);
             SetControlls(patientView);
+            dataGridViewPatientSchedule.Columns["Id"].Visible = false;
         }
         public void SetControlls(PatientView patientView)
         {

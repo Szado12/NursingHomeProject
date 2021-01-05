@@ -34,7 +34,7 @@ namespace NursingHomeApp.Forms
             this.tabControlRehabilitator = new System.Windows.Forms.TabControl();
             this.tabPageInformations = new System.Windows.Forms.TabPage();
             this.labelProfession = new System.Windows.Forms.Label();
-            this.textBoxContactNumber = new System.Windows.Forms.TextBox();
+            this.textBoxProfession = new System.Windows.Forms.TextBox();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.labelPersonId = new System.Windows.Forms.Label();
@@ -57,6 +57,16 @@ namespace NursingHomeApp.Forms
             this.buttonEditTreatment = new System.Windows.Forms.Button();
             this.buttonAddTreatment = new System.Windows.Forms.Button();
             this.dataGridViewTreatments = new System.Windows.Forms.DataGridView();
+            this.comboBoxPlace = new System.Windows.Forms.ComboBox();
+            this.comboBoxTreatment = new System.Windows.Forms.ComboBox();
+            this.comboBoxPatient = new System.Windows.Forms.ComboBox();
+            this.labelPatient = new System.Windows.Forms.Label();
+            this.labelRehabilitator = new System.Windows.Forms.Label();
+            this.textBoxRehabilitator = new System.Windows.Forms.TextBox();
+            this.labelTreatment = new System.Windows.Forms.Label();
+            this.labelPlace = new System.Windows.Forms.Label();
+            this.labelTerm = new System.Windows.Forms.Label();
+            this.textBoxTerm = new System.Windows.Forms.TextBox();
             this.tabControlRehabilitator.SuspendLayout();
             this.tabPageInformations.SuspendLayout();
             this.tabPageSchedule.SuspendLayout();
@@ -80,7 +90,7 @@ namespace NursingHomeApp.Forms
             // tabPageInformations
             // 
             this.tabPageInformations.Controls.Add(this.labelProfession);
-            this.tabPageInformations.Controls.Add(this.textBoxContactNumber);
+            this.tabPageInformations.Controls.Add(this.textBoxProfession);
             this.tabPageInformations.Controls.Add(this.labelPhoneNumber);
             this.tabPageInformations.Controls.Add(this.textBoxPhoneNumber);
             this.tabPageInformations.Controls.Add(this.labelPersonId);
@@ -107,13 +117,13 @@ namespace NursingHomeApp.Forms
             this.labelProfession.TabIndex = 28;
             this.labelProfession.Text = "Profession:";
             // 
-            // textBoxContactNumber
+            // textBoxProfession
             // 
-            this.textBoxContactNumber.Location = new System.Drawing.Point(286, 145);
-            this.textBoxContactNumber.Name = "textBoxContactNumber";
-            this.textBoxContactNumber.ReadOnly = true;
-            this.textBoxContactNumber.Size = new System.Drawing.Size(176, 20);
-            this.textBoxContactNumber.TabIndex = 27;
+            this.textBoxProfession.Location = new System.Drawing.Point(286, 145);
+            this.textBoxProfession.Name = "textBoxProfession";
+            this.textBoxProfession.ReadOnly = true;
+            this.textBoxProfession.Size = new System.Drawing.Size(176, 20);
+            this.textBoxProfession.TabIndex = 27;
             // 
             // labelPhoneNumber
             // 
@@ -185,6 +195,16 @@ namespace NursingHomeApp.Forms
             // 
             // tabPageSchedule
             // 
+            this.tabPageSchedule.Controls.Add(this.textBoxTerm);
+            this.tabPageSchedule.Controls.Add(this.labelTerm);
+            this.tabPageSchedule.Controls.Add(this.labelPlace);
+            this.tabPageSchedule.Controls.Add(this.labelTreatment);
+            this.tabPageSchedule.Controls.Add(this.textBoxRehabilitator);
+            this.tabPageSchedule.Controls.Add(this.labelRehabilitator);
+            this.tabPageSchedule.Controls.Add(this.labelPatient);
+            this.tabPageSchedule.Controls.Add(this.comboBoxPatient);
+            this.tabPageSchedule.Controls.Add(this.comboBoxTreatment);
+            this.tabPageSchedule.Controls.Add(this.comboBoxPlace);
             this.tabPageSchedule.Controls.Add(this.buttonDeleteSchedulePosition);
             this.tabPageSchedule.Controls.Add(this.buttonEditSchedulePosition);
             this.tabPageSchedule.Controls.Add(this.buttonAddSchedulePosition);
@@ -233,6 +253,7 @@ namespace NursingHomeApp.Forms
             // 
             // dataGridViewSchedule
             // 
+            this.dataGridViewSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSchedule.Location = new System.Drawing.Point(2, 2);
             this.dataGridViewSchedule.Margin = new System.Windows.Forms.Padding(2);
@@ -241,6 +262,7 @@ namespace NursingHomeApp.Forms
             this.dataGridViewSchedule.RowTemplate.Height = 24;
             this.dataGridViewSchedule.Size = new System.Drawing.Size(791, 276);
             this.dataGridViewSchedule.TabIndex = 0;
+            this.dataGridViewSchedule.SelectionChanged += new System.EventHandler(this.dataGridViewSchedule_SelectionChanged);
             // 
             // tabPageTreatments
             // 
@@ -337,7 +359,92 @@ namespace NursingHomeApp.Forms
             this.dataGridViewTreatments.RowTemplate.Height = 24;
             this.dataGridViewTreatments.Size = new System.Drawing.Size(784, 308);
             this.dataGridViewTreatments.TabIndex = 2;
-            this.dataGridViewTreatments.SelectionChanged += new EventHandler(dataGridViewTreatments_SelectionChanged);
+            this.dataGridViewTreatments.SelectionChanged += new System.EventHandler(this.dataGridViewTreatments_SelectionChanged);
+            // 
+            // comboBoxPlace
+            // 
+            this.comboBoxPlace.FormattingEnabled = true;
+            this.comboBoxPlace.Location = new System.Drawing.Point(404, 341);
+            this.comboBoxPlace.Name = "comboBoxPlace";
+            this.comboBoxPlace.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPlace.TabIndex = 10;
+            // 
+            // comboBoxTreatment
+            // 
+            this.comboBoxTreatment.FormattingEnabled = true;
+            this.comboBoxTreatment.Location = new System.Drawing.Point(404, 309);
+            this.comboBoxTreatment.Name = "comboBoxTreatment";
+            this.comboBoxTreatment.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxTreatment.TabIndex = 11;
+            // 
+            // comboBoxPatient
+            // 
+            this.comboBoxPatient.FormattingEnabled = true;
+            this.comboBoxPatient.Location = new System.Drawing.Point(159, 309);
+            this.comboBoxPatient.Name = "comboBoxPatient";
+            this.comboBoxPatient.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPatient.TabIndex = 12;
+            this.comboBoxPatient.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxPatient_Format);
+            // 
+            // labelPatient
+            // 
+            this.labelPatient.AutoSize = true;
+            this.labelPatient.Location = new System.Drawing.Point(83, 312);
+            this.labelPatient.Name = "labelPatient";
+            this.labelPatient.Size = new System.Drawing.Size(43, 13);
+            this.labelPatient.TabIndex = 13;
+            this.labelPatient.Text = "Patient:";
+            // 
+            // labelRehabilitator
+            // 
+            this.labelRehabilitator.AutoSize = true;
+            this.labelRehabilitator.Location = new System.Drawing.Point(83, 344);
+            this.labelRehabilitator.Name = "labelRehabilitator";
+            this.labelRehabilitator.Size = new System.Drawing.Size(69, 13);
+            this.labelRehabilitator.TabIndex = 14;
+            this.labelRehabilitator.Text = "Rehabilitator:";
+            // 
+            // textBoxRehabilitator
+            // 
+            this.textBoxRehabilitator.Location = new System.Drawing.Point(158, 341);
+            this.textBoxRehabilitator.Name = "textBoxRehabilitator";
+            this.textBoxRehabilitator.ReadOnly = true;
+            this.textBoxRehabilitator.Size = new System.Drawing.Size(121, 20);
+            this.textBoxRehabilitator.TabIndex = 15;
+            // 
+            // labelTreatment
+            // 
+            this.labelTreatment.AutoSize = true;
+            this.labelTreatment.Location = new System.Drawing.Point(329, 312);
+            this.labelTreatment.Name = "labelTreatment";
+            this.labelTreatment.Size = new System.Drawing.Size(58, 13);
+            this.labelTreatment.TabIndex = 16;
+            this.labelTreatment.Text = "Treatment:";
+            // 
+            // labelPlace
+            // 
+            this.labelPlace.AutoSize = true;
+            this.labelPlace.Location = new System.Drawing.Point(329, 344);
+            this.labelPlace.Name = "labelPlace";
+            this.labelPlace.Size = new System.Drawing.Size(37, 13);
+            this.labelPlace.TabIndex = 17;
+            this.labelPlace.Text = "Place:";
+            // 
+            // labelTerm
+            // 
+            this.labelTerm.AutoSize = true;
+            this.labelTerm.Location = new System.Drawing.Point(558, 312);
+            this.labelTerm.Name = "labelTerm";
+            this.labelTerm.Size = new System.Drawing.Size(34, 13);
+            this.labelTerm.TabIndex = 18;
+            this.labelTerm.Text = "Term:";
+            // 
+            // textBoxTerm
+            // 
+            this.textBoxTerm.Location = new System.Drawing.Point(598, 309);
+            this.textBoxTerm.Name = "textBoxTerm";
+            this.textBoxTerm.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTerm.TabIndex = 19;
             // 
             // RehabilitatorForm
             // 
@@ -353,6 +460,7 @@ namespace NursingHomeApp.Forms
             this.tabPageInformations.ResumeLayout(false);
             this.tabPageInformations.PerformLayout();
             this.tabPageSchedule.ResumeLayout(false);
+            this.tabPageSchedule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSchedule)).EndInit();
             this.tabPageTreatments.ResumeLayout(false);
             this.tabPageTreatments.PerformLayout();
@@ -366,7 +474,7 @@ namespace NursingHomeApp.Forms
         private System.Windows.Forms.TabControl tabControlRehabilitator;
         private System.Windows.Forms.TabPage tabPageInformations;
         private System.Windows.Forms.Label labelProfession;
-        private System.Windows.Forms.TextBox textBoxContactNumber;
+        private System.Windows.Forms.TextBox textBoxProfession;
         private System.Windows.Forms.Label labelPhoneNumber;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label labelPersonId;
@@ -389,5 +497,15 @@ namespace NursingHomeApp.Forms
         private System.Windows.Forms.Label labelDuration;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.ComboBox comboBoxPatient;
+        private System.Windows.Forms.ComboBox comboBoxTreatment;
+        private System.Windows.Forms.ComboBox comboBoxPlace;
+        private System.Windows.Forms.Label labelPlace;
+        private System.Windows.Forms.Label labelTreatment;
+        private System.Windows.Forms.TextBox textBoxRehabilitator;
+        private System.Windows.Forms.Label labelRehabilitator;
+        private System.Windows.Forms.Label labelPatient;
+        private System.Windows.Forms.TextBox textBoxTerm;
+        private System.Windows.Forms.Label labelTerm;
     }
 }

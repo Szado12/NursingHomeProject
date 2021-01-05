@@ -19,7 +19,7 @@ namespace NursingHomeApp.Mapper
                 .ForMember(s => s.EmployeeFirstName, opt => opt.MapFrom(src => src.Employee.FirstName))
                 .ForMember(s => s.EmployeeLastName, opt => opt.MapFrom(src => src.Employee.LastName))
                 .ForMember(s => s.TreatmentName, opt => opt.MapFrom(src => src.Treatment.Name))
-                .ForMember(s => s.PlacetName, opt => opt.MapFrom(src => src.Place.Name));
+                .ForMember(s => s.PlaceName, opt => opt.MapFrom(src => src.Place.Name));
 
             CreateMap<Patient, PatientView>()
                 .ForMember(d => d.EmployeeFirstName, opt => opt.MapFrom(src => src.Employee.FirstName))
