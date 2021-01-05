@@ -30,7 +30,7 @@ namespace NursingHomeApp
         public virtual DbSet<Medicine> Medicines { get; set; }
         public virtual DbSet<PatientLogin> PatientLogins { get; set; }
         public virtual DbSet<PatientMedicine> PatientMedicines { get; set; }
-        public virtual DbSet<Patient> Patients { get; set; }
+        public virtual DbSet<PatientForm> Patients { get; set; }
         public virtual DbSet<Place> Places { get; set; }
         public virtual DbSet<Profession> Professions { get; set; }
         public virtual DbSet<Room> Rooms { get; set; }

@@ -117,7 +117,18 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Systems\DataManagers\DefaultDataManager.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IDefaultDataManager.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IEmployeeDataManager.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IMedicineDataManger.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IPatientDataManager.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IPatientMedicineDataManger.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IPlaceDataManger.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IProfessionDataManger.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IRoomDataManger.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\IScheduleDataManger.cs" />
+    <Compile Include="Systems\DataManagers\Interfaces\ITreatmentDataManger.cs" />
+    <Compile Include="Systems\DataManagers\PatientDataManager.cs" />
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>

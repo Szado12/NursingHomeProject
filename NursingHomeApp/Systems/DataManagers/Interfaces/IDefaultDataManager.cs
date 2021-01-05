@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace NursingHomeApp.Systems.DataMangers.Interfaces
 {
-    interface IDefaultDataManager
+    public interface IDefaultDataManager<T>
     {
-        bool Add(Object obj);
-        bool Delete(int id);
-        bool Update(Object obj);
-        List<Object> Select();
-        List<Object> Select(int Id);
+        bool Add(T t);
+        bool Delete(int Id);
+        bool Update(T t);
+        List<T> Select();
+        T Select(int Id);
     }
 }
