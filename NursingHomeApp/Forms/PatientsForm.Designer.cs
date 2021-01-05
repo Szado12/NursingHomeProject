@@ -30,20 +30,22 @@
         {
             this.Tabs = new System.Windows.Forms.TabControl();
             this.InformationsTab = new System.Windows.Forms.TabPage();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+
+            this.textBoxAlergies = new System.Windows.Forms.TextBox();
             this.labelAlergies = new System.Windows.Forms.Label();
             this.labelCaregiver = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxCaregiver = new System.Windows.Forms.TextBox();
             this.labelContactNumber = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxContactNumber = new System.Windows.Forms.TextBox();
+
             this.labelPhoneNumber = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.labelAge = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxAge = new System.Windows.Forms.TextBox();
             this.labelPersonId = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxPersonId = new System.Windows.Forms.TextBox();
             this.labelLastName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.labelFirstName = new System.Windows.Forms.Label();
             this.textBoxFistName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -67,20 +69,20 @@
             // 
             // InformationsTab
             // 
-            this.InformationsTab.Controls.Add(this.textBox7);
+            this.InformationsTab.Controls.Add(this.textBoxAlergies);
             this.InformationsTab.Controls.Add(this.labelAlergies);
             this.InformationsTab.Controls.Add(this.labelCaregiver);
-            this.InformationsTab.Controls.Add(this.textBox6);
+            this.InformationsTab.Controls.Add(this.textBoxCaregiver);
             this.InformationsTab.Controls.Add(this.labelContactNumber);
-            this.InformationsTab.Controls.Add(this.textBox5);
+            this.InformationsTab.Controls.Add(this.textBoxContactNumber);
             this.InformationsTab.Controls.Add(this.labelPhoneNumber);
-            this.InformationsTab.Controls.Add(this.textBox4);
+            this.InformationsTab.Controls.Add(this.textBoxPhoneNumber);
             this.InformationsTab.Controls.Add(this.labelAge);
-            this.InformationsTab.Controls.Add(this.textBox3);
+            this.InformationsTab.Controls.Add(this.textBoxAge);
             this.InformationsTab.Controls.Add(this.labelPersonId);
-            this.InformationsTab.Controls.Add(this.textBox2);
+            this.InformationsTab.Controls.Add(this.textBoxPersonId);
             this.InformationsTab.Controls.Add(this.labelLastName);
-            this.InformationsTab.Controls.Add(this.textBox1);
+            this.InformationsTab.Controls.Add(this.textBoxLastName);
             this.InformationsTab.Controls.Add(this.labelFirstName);
             this.InformationsTab.Controls.Add(this.textBoxFistName);
             this.InformationsTab.Location = new System.Drawing.Point(4, 25);
@@ -92,63 +94,56 @@
             this.InformationsTab.Text = "Informations";
             this.InformationsTab.UseVisualStyleBackColor = true;
             // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(381, 276);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(233, 98);
-            this.textBox7.TabIndex = 16;
-            // 
-            // labelAlergies
-            // 
+
+            this.textBoxAlergies.Location = new System.Drawing.Point(286, 224);
+            this.textBoxAlergies.Multiline = true;
+            this.textBoxAlergies.Name = "textBoxAlergies";
+            this.textBoxAlergies.ReadOnly = true;
+            this.textBoxAlergies.Size = new System.Drawing.Size(176, 80);
+            this.textBoxAlergies.TabIndex = 16;
             this.labelAlergies.AutoSize = true;
-            this.labelAlergies.Location = new System.Drawing.Point(23, 276);
-            this.labelAlergies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+
+            this.labelAlergies.Location = new System.Drawing.Point(17, 224);
             this.labelAlergies.Name = "labelAlergies";
-            this.labelAlergies.Size = new System.Drawing.Size(63, 17);
+            this.labelAlergies.Size = new System.Drawing.Size(47, 13);
+
             this.labelAlergies.TabIndex = 15;
             this.labelAlergies.Text = "Alergies:";
             // 
             // labelCaregiver
             // 
             this.labelCaregiver.AutoSize = true;
-            this.labelCaregiver.Location = new System.Drawing.Point(23, 244);
-            this.labelCaregiver.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+
+            this.labelCaregiver.Location = new System.Drawing.Point(17, 198);
             this.labelCaregiver.Name = "labelCaregiver";
-            this.labelCaregiver.Size = new System.Drawing.Size(73, 17);
+            this.labelCaregiver.Size = new System.Drawing.Size(55, 13);
             this.labelCaregiver.TabIndex = 13;
             this.labelCaregiver.Text = "Caregiver:";
             // 
-            // textBox6
+            // textBoxCaregiver
             // 
-            this.textBox6.Location = new System.Drawing.Point(381, 240);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(233, 22);
-            this.textBox6.TabIndex = 12;
-            // 
-            // labelContactNumber
-            // 
+            this.textBoxCaregiver.Location = new System.Drawing.Point(286, 195);
+            this.textBoxCaregiver.Name = "textBoxCaregiver";
+            this.textBoxCaregiver.ReadOnly = true;
+            this.textBoxCaregiver.Size = new System.Drawing.Size(176, 20);
+            this.textBoxCaregiver.TabIndex = 12;
+
             this.labelContactNumber.AutoSize = true;
-            this.labelContactNumber.Location = new System.Drawing.Point(23, 212);
-            this.labelContactNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+
+            this.labelContactNumber.Location = new System.Drawing.Point(17, 172);
             this.labelContactNumber.Name = "labelContactNumber";
-            this.labelContactNumber.Size = new System.Drawing.Size(114, 17);
+            this.labelContactNumber.Size = new System.Drawing.Size(87, 13);
             this.labelContactNumber.TabIndex = 11;
             this.labelContactNumber.Text = "Contact Number:";
             // 
-            // textBox5
+            // textBoxContactNumber
             // 
-            this.textBox5.Location = new System.Drawing.Point(381, 208);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(233, 22);
-            this.textBox5.TabIndex = 10;
+            this.textBoxContactNumber.Location = new System.Drawing.Point(286, 169);
+            this.textBoxContactNumber.Name = "textBoxContactNumber";
+            this.textBoxContactNumber.ReadOnly = true;
+            this.textBoxContactNumber.Size = new System.Drawing.Size(176, 20);
+            this.textBoxContactNumber.TabIndex = 10;
+
             // 
             // labelPhoneNumber
             // 
@@ -160,14 +155,15 @@
             this.labelPhoneNumber.TabIndex = 9;
             this.labelPhoneNumber.Text = "Phone Number:";
             // 
-            // textBox4
+            // textBoxPhoneNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(381, 176);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(233, 22);
-            this.textBox4.TabIndex = 8;
+
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(286, 143);
+            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
+            this.textBoxPhoneNumber.ReadOnly = true;
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(176, 20);
+            this.textBoxPhoneNumber.TabIndex = 8;
+
             // 
             // labelAge
             // 
@@ -179,14 +175,15 @@
             this.labelAge.TabIndex = 7;
             this.labelAge.Text = "Age:";
             // 
-            // textBox3
+            // textBoxAge
             // 
-            this.textBox3.Location = new System.Drawing.Point(381, 144);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(233, 22);
-            this.textBox3.TabIndex = 6;
+
+            this.textBoxAge.Location = new System.Drawing.Point(286, 117);
+            this.textBoxAge.Name = "textBoxAge";
+            this.textBoxAge.ReadOnly = true;
+            this.textBoxAge.Size = new System.Drawing.Size(176, 20);
+            this.textBoxAge.TabIndex = 6;
+
             // 
             // labelPersonId
             // 
@@ -198,14 +195,15 @@
             this.labelPersonId.TabIndex = 5;
             this.labelPersonId.Text = "Person Id";
             // 
-            // textBox2
+            // textBoxPersonId
             // 
-            this.textBox2.Location = new System.Drawing.Point(381, 112);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(233, 22);
-            this.textBox2.TabIndex = 4;
+
+            this.textBoxPersonId.Location = new System.Drawing.Point(286, 91);
+            this.textBoxPersonId.Name = "textBoxPersonId";
+            this.textBoxPersonId.ReadOnly = true;
+            this.textBoxPersonId.Size = new System.Drawing.Size(176, 20);
+            this.textBoxPersonId.TabIndex = 4;
+
             // 
             // labelLastName
             // 
@@ -217,14 +215,15 @@
             this.labelLastName.TabIndex = 3;
             this.labelLastName.Text = "Last Name:";
             // 
-            // textBox1
+            // textBoxLastName
             // 
-            this.textBox1.Location = new System.Drawing.Point(381, 80);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(233, 22);
-            this.textBox1.TabIndex = 2;
+
+            this.textBoxLastName.Location = new System.Drawing.Point(286, 65);
+            this.textBoxLastName.Name = "textBoxLastName";
+            this.textBoxLastName.ReadOnly = true;
+            this.textBoxLastName.Size = new System.Drawing.Size(176, 20);
+            this.textBoxLastName.TabIndex = 2;
+
             // 
             // labelFirstName
             // 
@@ -259,12 +258,15 @@
             // 
             // dataGridViewPatientSchedule
             // 
+            this.dataGridViewPatientSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPatientSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPatientSchedule.Location = new System.Drawing.Point(11, 10);
             this.dataGridViewPatientSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewPatientSchedule.Name = "dataGridViewPatientSchedule";
-            this.dataGridViewPatientSchedule.RowHeadersWidth = 51;
-            this.dataGridViewPatientSchedule.Size = new System.Drawing.Size(1045, 505);
+
+            this.dataGridViewPatientSchedule.ReadOnly = true;
+            this.dataGridViewPatientSchedule.Size = new System.Drawing.Size(784, 410);
+
             this.dataGridViewPatientSchedule.TabIndex = 0;
             // 
             // PatientsForm
@@ -295,19 +297,19 @@
         private System.Windows.Forms.TextBox textBoxFistName;
         private System.Windows.Forms.DataGridView dataGridViewPatientSchedule;
         private System.Windows.Forms.Label labelPhoneNumber;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label labelAge;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxAge;
         private System.Windows.Forms.Label labelPersonId;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxPersonId;
         private System.Windows.Forms.Label labelLastName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxLastName;
+        private System.Windows.Forms.TextBox textBoxAlergies;
         private System.Windows.Forms.Label labelAlergies;
         private System.Windows.Forms.Label labelCaregiver;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxCaregiver;
         private System.Windows.Forms.Label labelContactNumber;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxContactNumber;
     }
 }
 

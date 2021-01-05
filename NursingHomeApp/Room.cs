@@ -17,13 +17,13 @@ namespace NursingHomeApp
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Room()
         {
-            this.Patients = new HashSet<PatientForm>();
+            this.Patients = new HashSet<Patient>();
         }
     
         public int Id { get; set; }
         public int Capacity { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PatientForm> Patients { get; set; }
+        public virtual ICollection<Patient> Patients { get; set; }
     }
 }
