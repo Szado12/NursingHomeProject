@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NursingHomeApp
 {
-    public partial class Form1 : Form
+    public partial class PatientsForm : Form
     {
-        public Form1()
+        public PatientsForm()
         {
             InitializeComponent();
         }

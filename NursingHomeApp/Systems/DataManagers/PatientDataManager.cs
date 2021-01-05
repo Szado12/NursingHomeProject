@@ -9,7 +9,7 @@ namespace NursingHomeApp.Systems.DataManagers
 {
     class PatientDataManager : DefaultDataManager, IPatientDataManager
     {
-        public bool Add(Patient t)
+        public bool Add(PatientForm t)
         {
             DbContext.Patients.Add(t);
             return (DbContext.SaveChanges() > 0);
@@ -17,29 +17,29 @@ namespace NursingHomeApp.Systems.DataManagers
 
         public bool Delete(int Id)
         {
-            Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == Id);
+            PatientForm patient = DbContext.Patients.SingleOrDefault(p => p.Id == Id);
             DbContext.Patients.Remove(patient);
             return (DbContext.SaveChanges() > 0);
         }
 
-        public List<Patient> Select()
+        public List<PatientForm> Select()
         {
             return DbContext.Patients.ToList();
         }
 
-        public Patient Select(int Id)
+        public PatientForm Select(int Id)
         {
             return DbContext.Patients.SingleOrDefault(p => p.Id == Id);
         }
 
-        public List<Patient> SelectEmployeeId(int Id)
+        public List<PatientForm> SelectEmployeeId(int Id)
         {
             return DbContext.Patients.Where(e => e.EmployeeId == Id).ToList();
         }
 
-        public bool Update(Patient t)
+        public bool Update(PatientForm t)
         {
-            Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == t.Id);
+            PatientForm patient = DbContext.Patients.SingleOrDefault(p => p.Id == t.Id);
             patient = t;
             return (DbContext.SaveChanges() > 0);
         }
