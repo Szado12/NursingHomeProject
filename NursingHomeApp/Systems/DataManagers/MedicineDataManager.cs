@@ -7,13 +7,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NursingHomeApp.Systems.DataManagers
 {
-    class MedicineDataManger : DefaultDataManager, IMedicineDataManger
+    public class MedicineDataManager : DefaultDataManager, IMedicineDataManger
     {
         public bool Add(Medicine t)
         {
+            Medicine medicine = DbContext.Medicines.SingleOrDefault(m => m.Name == t.Name);
+            if(medicine != null)
+            {
+                if (MessageBox.Show("This medicine already exists in data base!") == DialogResult.OK)
+                    return false;
+            }
 
             DbContext.Medicines.Add(t);
             return DbContext.SaveChanges() > 0;
