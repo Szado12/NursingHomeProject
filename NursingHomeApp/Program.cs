@@ -17,7 +17,7 @@ namespace NursingHomeApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RehabilitatorForm(new Employee()));
+            Application.Run(new AdministratorForm(new Employee()));
         }
     }
 }
