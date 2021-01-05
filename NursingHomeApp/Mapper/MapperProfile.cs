@@ -10,7 +10,7 @@ namespace NursingHomeApp.Mapper
 {
     internal class MapperProfile : Profile
     {
-        public MapperProfile()  
+        public MapperProfile()
         {
 
             CreateMap<Schedule, ScheduleView>()
@@ -26,7 +26,7 @@ namespace NursingHomeApp.Mapper
                 .ForMember(d => d.EmployeeLastName, opt => opt.MapFrom(src => src.Employee.LastName))
                 .ForMember(d => d.Schedule, opt => opt.MapFrom(src => src.Schedules));
 
-            
+
         }
     }
 }
