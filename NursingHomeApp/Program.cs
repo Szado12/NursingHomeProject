@@ -16,7 +16,11 @@ namespace NursingHomeApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< Updated upstream
             Application.Run(new Form1());
+=======
+            Application.Run(new PatientsForm());
+>>>>>>> Stashed changes
         }
     }
 }

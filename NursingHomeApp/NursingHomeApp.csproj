@@ -67,11 +67,11 @@
     <Compile Include="EmployeeLogin.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\PatientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\PatientsForm.Designer.cs">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Medicine.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
@@ -121,8 +121,8 @@
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\PatientsForm.resx">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
