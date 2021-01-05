@@ -8,6 +8,7 @@ namespace NursingHomeApp.Views
 {
     public class PatientMedicineView
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public int Dose { get; set; }
         public System.TimeSpan Time { get; set; }

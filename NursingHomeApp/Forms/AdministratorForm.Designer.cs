@@ -1,4 +1,6 @@
-﻿namespace NursingHomeApp.Forms
+﻿using System;
+
+namespace NursingHomeApp.Forms
 {
     partial class AdministratorForm
     {
@@ -439,6 +441,7 @@
             this.dataGridViewPatients.RowTemplate.Height = 24;
             this.dataGridViewPatients.Size = new System.Drawing.Size(572, 519);
             this.dataGridViewPatients.TabIndex = 0;
+            this.dataGridViewPatients.SelectionChanged += new EventHandler(dataGridViewPatients_SelectionChanged);
             // 
             // tabPageTreatments
             // 
@@ -470,6 +473,7 @@
             this.dataGridViewPatientMedicines.RowTemplate.Height = 24;
             this.dataGridViewPatientMedicines.Size = new System.Drawing.Size(406, 519);
             this.dataGridViewPatientMedicines.TabIndex = 44;
+            this.dataGridViewPatientMedicines.SelectionChanged += new EventHandler(dataGridViewPatientMedicines_SelectionChanged);
             // 
             // label12
             // 
@@ -563,6 +567,7 @@
             this.dataGridViewPatientsList.RowTemplate.Height = 24;
             this.dataGridViewPatientsList.Size = new System.Drawing.Size(303, 519);
             this.dataGridViewPatientsList.TabIndex = 28;
+            this.dataGridViewPatientsList.SelectionChanged += new EventHandler(dataGridViewPatientsList_SelectionChanged);
             // 
             // tabPage1
             // 

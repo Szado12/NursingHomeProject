@@ -45,7 +45,17 @@ namespace NursingHomeApp.Systems.DataManagers
         public bool Update(Patient t)
         {
             Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == t.Id);
-            patient = t;
+
+            patient.FirstName = t.FirstName;
+            patient.LastName = t.LastName;
+            patient.PersonId = t.PersonId;
+            patient.Age = t.Age;
+            patient.ContactNumber = t.ContactNumber;
+            patient.PhoneNumber = t.PhoneNumber;
+            patient.RoomID = t.RoomID;
+            patient.Alergies = t.Alergies;
+            //patient.Employee = t.Employee;
+
             return (DbContext.SaveChanges() > 0);
         }
     }
