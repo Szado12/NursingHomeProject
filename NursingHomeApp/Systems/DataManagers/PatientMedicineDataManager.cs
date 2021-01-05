@@ -37,14 +37,16 @@ namespace NursingHomeApp.Systems.DataManagers
 
         public List<PatientMedicineView> SelectAll(int Id)
         {
-            List<PatientMedicine> patientMedicine = DbContext.PatientMedicines.Where(p => p.Id == Id).ToList();
+            List<PatientMedicine> patientMedicine = DbContext.PatientMedicines.Where(p => p.PatientId == Id).ToList();
             return Mapper.Map<List<PatientMedicine>, List<PatientMedicineView>>(patientMedicine);
         }
 
         public bool Update(PatientMedicine t)
         {
             PatientMedicine patientMedicine = DbContext.PatientMedicines.SingleOrDefault(p => p.Id == t.Id);
-            patientMedicine = t;
+            patientMedicine.MedicineId = t.MedicineId;
+            patientMedicine.Dose = t.Dose;
+            patientMedicine.Term = t.Term;
             return (DbContext.SaveChanges() > 0);
         }
 

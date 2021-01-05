@@ -154,6 +154,7 @@
     <Compile Include="Systems\DataManagers\PatientDataManager.cs" />
     <Compile Include="Systems\DataManagers\PatientMedicineDataManager.cs" />
     <Compile Include="Systems\DataManagers\PlaceDataManager.cs" />
+    <Compile Include="Systems\DataManagers\RoomDataManager.cs" />
     <Compile Include="Systems\DataManagers\ScheduleDataManager.cs" />
     <Compile Include="Systems\DataManagers\TreatmentDataManager.cs" />
     <Compile Include="Treatment.cs">
@@ -162,7 +163,9 @@
     <Compile Include="Views\EmployeeView.cs" />
     <Compile Include="Views\MedicineView.cs" />
     <Compile Include="Views\PatientMedicineView.cs" />
+    <Compile Include="Views\PatientOnListView.cs" />
     <Compile Include="Views\PatientView.cs" />
+    <Compile Include="Views\RoomView.cs" />
     <Compile Include="Views\ScheduleView.cs" />
     <EmbeddedResource Include="Forms\AdministratorForm.resx">
       <DependentUpon>AdministratorForm.cs</DependentUpon>

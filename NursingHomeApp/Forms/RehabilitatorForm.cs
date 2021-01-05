@@ -35,6 +35,7 @@ namespace NursingHomeApp.Forms
             dataGridViewTreatments.Columns["Schedules"].Visible = false; 
             RefreshDataGridViewSchedule();
             dataGridViewSchedule.Columns["Id"].Visible = false;
+
             comboBoxPatient.DataSource = patientDataManager.SelectAll();
             comboBoxPatient.DisplayMember = "LastName";
             comboBoxPatient.ValueMember = "Id";
