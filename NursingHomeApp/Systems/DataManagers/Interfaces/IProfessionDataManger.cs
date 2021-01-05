@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
-    public interface IProfessionDataManger : IDefaultDataManager<Profession>
+    public interface IProfessionDataManger : IDefaultDataManager<Profession, Profession>
     {
     }
 }

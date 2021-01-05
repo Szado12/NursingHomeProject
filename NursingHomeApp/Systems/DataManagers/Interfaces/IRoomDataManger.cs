@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
-    public interface IRoomDataManger : IDefaultDataManager<Room>
+    public interface IRoomDataManger : IDefaultDataManager<Room, Room>
     {
     }
 }

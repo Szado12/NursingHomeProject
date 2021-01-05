@@ -97,7 +97,7 @@
           <Property Name="EmployeeId" Type="int" Nullable="false" />
           <Property Name="TreatmentId" Type="int" Nullable="false" />
           <Property Name="PlaceId" Type="int" Nullable="false" />
-          <Property Name="Term" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Term" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -187,6 +187,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Patients_Employees">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Patients" Type="Self.Patients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Patients">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Patients_Rooms">
           <End Role="Rooms" Type="Self.Rooms" Multiplicity="0..1" />
           <End Role="Patients" Type="Self.Patients" Multiplicity="*" />
@@ -209,7 +221,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Schedules">
-              <PropertyRef Name="PatientId" />
+              <PropertyRef Name="EmployeeId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -288,6 +300,10 @@
             <End Role="Patients" EntitySet="Patients" />
             <End Role="PatientMedicines" EntitySet="PatientMedicines" />
           </AssociationSet>
+          <AssociationSet Name="FK_Patients_Employees" Association="Self.FK_Patients_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Patients" EntitySet="Patients" />
+          </AssociationSet>
           <AssociationSet Name="FK_Patients_Rooms" Association="Self.FK_Patients_Rooms">
             <End Role="Rooms" EntitySet="Rooms" />
             <End Role="Patients" EntitySet="Patients" />
@@ -336,6 +352,7 @@
           <Property Name="ProfessionId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="EmployeeLogins" Relationship="Self.FK_EmployeeLogins_Employees" FromRole="Employees" ToRole="EmployeeLogins" />
           <NavigationProperty Name="Profession" Relationship="Self.FK_Employees_Professions" FromRole="Employees" ToRole="Professions" />
+          <NavigationProperty Name="Patients" Relationship="Self.FK_Patients_Employees" FromRole="Employees" ToRole="Patients" />
           <NavigationProperty Name="Schedules" Relationship="Self.FK_Schedules_Employees" FromRole="Employees" ToRole="Schedules" />
         </EntityType>
         <EntityType Name="Medicine">
@@ -383,6 +400,7 @@
           <Property Name="Alergies" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="EmployeeId" Type="Int32" Nullable="false" />
           <Property Name="RoomID" Type="Int32" />
+          <NavigationProperty Name="Employee" Relationship="Self.FK_Patients_Employees" FromRole="Patients" ToRole="Employees" />
           <NavigationProperty Name="PatientLogins" Relationship="Self.FK_PatientLogins_Patients" FromRole="Patients" ToRole="PatientLogins" />
           <NavigationProperty Name="PatientMedicines" Relationship="Self.FK_PatientMedicines_Patients" FromRole="Patients" ToRole="PatientMedicines" />
           <NavigationProperty Name="Room" Relationship="Self.FK_Patients_Rooms" FromRole="Patients" ToRole="Rooms" />
@@ -421,7 +439,7 @@
           <Property Name="EmployeeId" Type="Int32" Nullable="false" />
           <Property Name="TreatmentId" Type="Int32" Nullable="false" />
           <Property Name="PlaceId" Type="Int32" Nullable="false" />
-          <Property Name="Term" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Term" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Schedules_Employees" FromRole="Schedules" ToRole="Employees" />
           <NavigationProperty Name="Patient" Relationship="Self.FK_Schedules_Patients" FromRole="Schedules" ToRole="Patients" />
           <NavigationProperty Name="Place" Relationship="Self.FK_Schedules_Places" FromRole="Schedules" ToRole="Places" />
@@ -474,6 +492,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Patients_Employees">
+          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Patients" Type="Self.Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Patients">
+              <PropertyRef Name="EmployeeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Schedules_Employees">
           <End Role="Employees" Type="Self.Employee" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -484,7 +514,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Schedules">
-              <PropertyRef Name="PatientId" />
+              <PropertyRef Name="EmployeeId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -604,6 +634,10 @@
           <AssociationSet Name="FK_Employees_Professions" Association="Self.FK_Employees_Professions">
             <End Role="Professions" EntitySet="Professions" />
             <End Role="Employees" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Patients_Employees" Association="Self.FK_Patients_Employees">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Patients" EntitySet="Patients" />
           </AssociationSet>
           <AssociationSet Name="FK_Schedules_Employees" Association="Self.FK_Schedules_Employees">
             <End Role="Employees" EntitySet="Employees" />

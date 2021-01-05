@@ -12,14 +12,14 @@ namespace NursingHomeApp
     using System;
     using System.Collections.Generic;
     
-    public partial class PatientForm
+    public partial class Patient
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PatientForm()
+        public Patient()
         {
             this.PatientLogins = new HashSet<PatientLogin>();
             this.PatientMedicines = new HashSet<PatientMedicine>();
-            this.Schedules = new HashSet<Schedule>();
+            this.Schedules = new List<Schedule>();
         }
     
         public int Id { get; set; }
@@ -33,12 +33,13 @@ namespace NursingHomeApp
         public int EmployeeId { get; set; }
         public Nullable<int> RoomID { get; set; }
     
+        public virtual Employee Employee { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PatientLogin> PatientLogins { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PatientMedicine> PatientMedicines { get; set; }
         public virtual Room Room { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual List<Schedule> Schedules { get; set; }
     }
 }
