@@ -45,7 +45,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -66,6 +68,12 @@
     </Compile>
     <Compile Include="EmployeeLogin.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdministratorForm.Designer.cs">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\NurseForm.cs">
       <SubType>Form</SubType>
@@ -156,6 +164,9 @@
     <Compile Include="Views\PatientMedicineView.cs" />
     <Compile Include="Views\PatientView.cs" />
     <Compile Include="Views\ScheduleView.cs" />
+    <EmbeddedResource Include="Forms\AdministratorForm.resx">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NurseForm.resx">
       <DependentUpon>NurseForm.cs</DependentUpon>
     </EmbeddedResource>
