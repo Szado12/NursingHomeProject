@@ -27,6 +27,14 @@ namespace NursingHomeApp.Mapper
                 .ForMember(d => d.Schedule, opt => opt.MapFrom(src => src.Schedules));
 
 
+            CreateMap<Medicine, MedicineView>()
+                .ForMember(m => m.Name, opt => opt.MapFrom(src => src.Name));
+
+            CreateMap<PatientMedicine, PatientMedicineView>()
+                .ForMember(pm => pm.Name, opt => opt.MapFrom(src => src.Medicine.Name))
+                .ForMember(pm => pm.Dose, opt => opt.MapFrom(src => src.Dose))
+                .ForMember(pm => pm.Time, opt => opt.MapFrom(src => src.Term));
+
         }
     }
 }
