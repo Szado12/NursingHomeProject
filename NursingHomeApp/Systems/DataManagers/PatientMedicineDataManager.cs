@@ -1,4 +1,5 @@
 ﻿using NursingHomeApp.Systems.DataManagers.Interfaces;
+using NursingHomeApp.Systems.DataMangers.Interfaces;
 using NursingHomeApp.Views;
 using System;
 using System.Collections.Generic;
@@ -31,9 +32,13 @@ namespace NursingHomeApp.Systems.DataManagers
 
         public PatientMedicineView Select(int Id)
         {
-            PatientMedicine patientMedicine = DbContext.PatientMedicines.SingleOrDefault(p => p.Id == Id);
-            PatientMedicineView patientView = Mapper.Map<PatientMedicine, PatientMedicineView>(patientMedicine);
-            return patientView;
+            throw new NotImplementedException();
+        }
+
+        public List<PatientMedicineView> SelectAll(int Id)
+        {
+            List<PatientMedicine> patientMedicine = DbContext.PatientMedicines.Where(p => p.Id == Id).ToList();
+            return Mapper.Map<List<PatientMedicine>, List<PatientMedicineView>>(patientMedicine);
         }
 
         public bool Update(PatientMedicine t)
@@ -42,5 +47,6 @@ namespace NursingHomeApp.Systems.DataManagers
             patientMedicine = t;
             return (DbContext.SaveChanges() > 0);
         }
+
     }
 }

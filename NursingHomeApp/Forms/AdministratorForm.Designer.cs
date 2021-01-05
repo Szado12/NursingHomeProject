@@ -1,4 +1,6 @@
-﻿namespace NursingHomeApp.Forms
+﻿using System;
+
+namespace NursingHomeApp.Forms
 {
     partial class AdministratorForm
     {
@@ -41,20 +43,7 @@
             this.labelFirstName = new System.Windows.Forms.Label();
             this.textBoxFistName = new System.Windows.Forms.TextBox();
             this.tabPageSchedule = new System.Windows.Forms.TabPage();
-            this.buttonDeletePatient = new System.Windows.Forms.Button();
-            this.buttonEditPatient = new System.Windows.Forms.Button();
-            this.buttonAddPatient = new System.Windows.Forms.Button();
-            this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
-            this.tabPageTreatments = new System.Windows.Forms.TabPage();
-            this.textBoxPatientFirstName = new System.Windows.Forms.TextBox();
-            this.textBoxPatientLastName = new System.Windows.Forms.TextBox();
-            this.textBoxPatientPersonId = new System.Windows.Forms.TextBox();
-            this.numericUpDownPatientAge = new System.Windows.Forms.NumericUpDown();
-            this.textBoxPatientContactNumber = new System.Windows.Forms.TextBox();
-            this.textBoxPatientPhoneNumber = new System.Windows.Forms.TextBox();
-            this.comboBoxPatientRoom = new System.Windows.Forms.ComboBox();
-            this.comboBoxPatientCaregiver = new System.Windows.Forms.ComboBox();
-            this.textBoxPatientAlergies = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.labelAlergies = new System.Windows.Forms.Label();
             this.labelCaregiver = new System.Windows.Forms.Label();
             this.labelContactNumber = new System.Windows.Forms.Label();
@@ -63,29 +52,42 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxPatientAlergies = new System.Windows.Forms.TextBox();
+            this.comboBoxPatientCaregiver = new System.Windows.Forms.ComboBox();
+            this.comboBoxPatientRoom = new System.Windows.Forms.ComboBox();
+            this.textBoxPatientPhoneNumber = new System.Windows.Forms.TextBox();
+            this.textBoxPatientContactNumber = new System.Windows.Forms.TextBox();
+            this.numericUpDownPatientAge = new System.Windows.Forms.NumericUpDown();
+            this.textBoxPatientPersonId = new System.Windows.Forms.TextBox();
+            this.textBoxPatientLastName = new System.Windows.Forms.TextBox();
+            this.textBoxPatientFirstName = new System.Windows.Forms.TextBox();
+            this.buttonDeletePatient = new System.Windows.Forms.Button();
+            this.buttonEditPatient = new System.Windows.Forms.Button();
+            this.buttonAddPatient = new System.Windows.Forms.Button();
+            this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
+            this.tabPageTreatments = new System.Windows.Forms.TabPage();
+            this.dataGridViewPatientMedicines = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxTerm = new System.Windows.Forms.ComboBox();
+            this.comboBoxName = new System.Windows.Forms.ComboBox();
+            this.numericUpDownDose = new System.Windows.Forms.NumericUpDown();
             this.buttonDeletePatientMedicine = new System.Windows.Forms.Button();
             this.buttonEditPatientMedicine = new System.Windows.Forms.Button();
             this.buttonAddPatientMedicine = new System.Windows.Forms.Button();
             this.dataGridViewPatientsList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewPatientMedicines = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewRooms = new System.Windows.Forms.DataGridView();
             this.tabControlRehabilitator.SuspendLayout();
             this.tabPageInformations.SuspendLayout();
             this.tabPageSchedule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPatientAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).BeginInit();
             this.tabPageTreatments.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPatientAge)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatientsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatientMedicines)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatientsList)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).BeginInit();
             this.SuspendLayout();
@@ -249,128 +251,14 @@
             this.tabPageSchedule.Text = "Patient Manager";
             this.tabPageSchedule.UseVisualStyleBackColor = true;
             // 
-            // buttonDeletePatient
+            // label5
             // 
-            this.buttonDeletePatient.Location = new System.Drawing.Point(617, 291);
-            this.buttonDeletePatient.Name = "buttonDeletePatient";
-            this.buttonDeletePatient.Size = new System.Drawing.Size(129, 55);
-            this.buttonDeletePatient.TabIndex = 9;
-            this.buttonDeletePatient.Text = "Delete patient";
-            this.buttonDeletePatient.UseVisualStyleBackColor = true;
-            // 
-            // buttonEditPatient
-            // 
-            this.buttonEditPatient.Location = new System.Drawing.Point(617, 214);
-            this.buttonEditPatient.Name = "buttonEditPatient";
-            this.buttonEditPatient.Size = new System.Drawing.Size(129, 55);
-            this.buttonEditPatient.TabIndex = 8;
-            this.buttonEditPatient.Text = "Edit patient";
-            this.buttonEditPatient.UseVisualStyleBackColor = true;
-            // 
-            // buttonAddPatient
-            // 
-            this.buttonAddPatient.Location = new System.Drawing.Point(617, 133);
-            this.buttonAddPatient.Name = "buttonAddPatient";
-            this.buttonAddPatient.Size = new System.Drawing.Size(129, 55);
-            this.buttonAddPatient.TabIndex = 7;
-            this.buttonAddPatient.Text = "Add patient";
-            this.buttonAddPatient.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewPatients
-            // 
-            this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatients.Location = new System.Drawing.Point(3, 3);
-            this.dataGridViewPatients.Name = "dataGridViewPatients";
-            this.dataGridViewPatients.RowHeadersWidth = 51;
-            this.dataGridViewPatients.RowTemplate.Height = 24;
-            this.dataGridViewPatients.Size = new System.Drawing.Size(572, 519);
-            this.dataGridViewPatients.TabIndex = 0;
-            // 
-            // tabPageTreatments
-            // 
-            this.tabPageTreatments.Controls.Add(this.dataGridViewPatientMedicines);
-            this.tabPageTreatments.Controls.Add(this.label12);
-            this.tabPageTreatments.Controls.Add(this.label13);
-            this.tabPageTreatments.Controls.Add(this.label14);
-            this.tabPageTreatments.Controls.Add(this.comboBox1);
-            this.tabPageTreatments.Controls.Add(this.comboBox2);
-            this.tabPageTreatments.Controls.Add(this.numericUpDown1);
-            this.tabPageTreatments.Controls.Add(this.buttonDeletePatientMedicine);
-            this.tabPageTreatments.Controls.Add(this.buttonEditPatientMedicine);
-            this.tabPageTreatments.Controls.Add(this.buttonAddPatientMedicine);
-            this.tabPageTreatments.Controls.Add(this.dataGridViewPatientsList);
-            this.tabPageTreatments.Location = new System.Drawing.Point(4, 25);
-            this.tabPageTreatments.Name = "tabPageTreatments";
-            this.tabPageTreatments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTreatments.Size = new System.Drawing.Size(1063, 525);
-            this.tabPageTreatments.TabIndex = 2;
-            this.tabPageTreatments.Text = "Patient Medicine Manager";
-            this.tabPageTreatments.UseVisualStyleBackColor = true;
-            // 
-            // textBoxPatientFirstName
-            // 
-            this.textBoxPatientFirstName.Location = new System.Drawing.Point(916, 69);
-            this.textBoxPatientFirstName.Name = "textBoxPatientFirstName";
-            this.textBoxPatientFirstName.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPatientFirstName.TabIndex = 10;
-            // 
-            // textBoxPatientLastName
-            // 
-            this.textBoxPatientLastName.Location = new System.Drawing.Point(916, 108);
-            this.textBoxPatientLastName.Name = "textBoxPatientLastName";
-            this.textBoxPatientLastName.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPatientLastName.TabIndex = 11;
-            // 
-            // textBoxPatientPersonId
-            // 
-            this.textBoxPatientPersonId.Location = new System.Drawing.Point(916, 147);
-            this.textBoxPatientPersonId.Name = "textBoxPatientPersonId";
-            this.textBoxPatientPersonId.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPatientPersonId.TabIndex = 12;
-            // 
-            // numericUpDownPatientAge
-            // 
-            this.numericUpDownPatientAge.Location = new System.Drawing.Point(916, 186);
-            this.numericUpDownPatientAge.Name = "numericUpDownPatientAge";
-            this.numericUpDownPatientAge.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDownPatientAge.TabIndex = 13;
-            // 
-            // textBoxPatientContactNumber
-            // 
-            this.textBoxPatientContactNumber.Location = new System.Drawing.Point(916, 225);
-            this.textBoxPatientContactNumber.Name = "textBoxPatientContactNumber";
-            this.textBoxPatientContactNumber.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPatientContactNumber.TabIndex = 14;
-            // 
-            // textBoxPatientPhoneNumber
-            // 
-            this.textBoxPatientPhoneNumber.Location = new System.Drawing.Point(916, 264);
-            this.textBoxPatientPhoneNumber.Name = "textBoxPatientPhoneNumber";
-            this.textBoxPatientPhoneNumber.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPatientPhoneNumber.TabIndex = 15;
-            // 
-            // comboBoxPatientRoom
-            // 
-            this.comboBoxPatientRoom.FormattingEnabled = true;
-            this.comboBoxPatientRoom.Location = new System.Drawing.Point(916, 303);
-            this.comboBoxPatientRoom.Name = "comboBoxPatientRoom";
-            this.comboBoxPatientRoom.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxPatientRoom.TabIndex = 16;
-            // 
-            // comboBoxPatientCaregiver
-            // 
-            this.comboBoxPatientCaregiver.FormattingEnabled = true;
-            this.comboBoxPatientCaregiver.Location = new System.Drawing.Point(916, 383);
-            this.comboBoxPatientCaregiver.Name = "comboBoxPatientCaregiver";
-            this.comboBoxPatientCaregiver.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxPatientCaregiver.TabIndex = 17;
-            // 
-            // textBoxPatientAlergies
-            // 
-            this.textBoxPatientAlergies.Location = new System.Drawing.Point(916, 344);
-            this.textBoxPatientAlergies.Name = "textBoxPatientAlergies";
-            this.textBoxPatientAlergies.Size = new System.Drawing.Size(121, 22);
-            this.textBoxPatientAlergies.TabIndex = 18;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(797, 308);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Room:";
             // 
             // labelAlergies
             // 
@@ -449,14 +337,143 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "First Name:";
             // 
-            // label5
+            // textBoxPatientAlergies
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(797, 308);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Room:";
+            this.textBoxPatientAlergies.Location = new System.Drawing.Point(916, 344);
+            this.textBoxPatientAlergies.Name = "textBoxPatientAlergies";
+            this.textBoxPatientAlergies.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPatientAlergies.TabIndex = 18;
+            // 
+            // comboBoxPatientCaregiver
+            // 
+            this.comboBoxPatientCaregiver.FormattingEnabled = true;
+            this.comboBoxPatientCaregiver.Location = new System.Drawing.Point(916, 383);
+            this.comboBoxPatientCaregiver.Name = "comboBoxPatientCaregiver";
+            this.comboBoxPatientCaregiver.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPatientCaregiver.TabIndex = 17;
+            // 
+            // comboBoxPatientRoom
+            // 
+            this.comboBoxPatientRoom.FormattingEnabled = true;
+            this.comboBoxPatientRoom.Location = new System.Drawing.Point(916, 303);
+            this.comboBoxPatientRoom.Name = "comboBoxPatientRoom";
+            this.comboBoxPatientRoom.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxPatientRoom.TabIndex = 16;
+            // 
+            // textBoxPatientPhoneNumber
+            // 
+            this.textBoxPatientPhoneNumber.Location = new System.Drawing.Point(916, 264);
+            this.textBoxPatientPhoneNumber.Name = "textBoxPatientPhoneNumber";
+            this.textBoxPatientPhoneNumber.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPatientPhoneNumber.TabIndex = 15;
+            // 
+            // textBoxPatientContactNumber
+            // 
+            this.textBoxPatientContactNumber.Location = new System.Drawing.Point(916, 225);
+            this.textBoxPatientContactNumber.Name = "textBoxPatientContactNumber";
+            this.textBoxPatientContactNumber.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPatientContactNumber.TabIndex = 14;
+            // 
+            // numericUpDownPatientAge
+            // 
+            this.numericUpDownPatientAge.Location = new System.Drawing.Point(916, 186);
+            this.numericUpDownPatientAge.Name = "numericUpDownPatientAge";
+            this.numericUpDownPatientAge.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownPatientAge.TabIndex = 13;
+            // 
+            // textBoxPatientPersonId
+            // 
+            this.textBoxPatientPersonId.Location = new System.Drawing.Point(916, 147);
+            this.textBoxPatientPersonId.Name = "textBoxPatientPersonId";
+            this.textBoxPatientPersonId.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPatientPersonId.TabIndex = 12;
+            // 
+            // textBoxPatientLastName
+            // 
+            this.textBoxPatientLastName.Location = new System.Drawing.Point(916, 108);
+            this.textBoxPatientLastName.Name = "textBoxPatientLastName";
+            this.textBoxPatientLastName.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPatientLastName.TabIndex = 11;
+            // 
+            // textBoxPatientFirstName
+            // 
+            this.textBoxPatientFirstName.Location = new System.Drawing.Point(916, 69);
+            this.textBoxPatientFirstName.Name = "textBoxPatientFirstName";
+            this.textBoxPatientFirstName.Size = new System.Drawing.Size(121, 22);
+            this.textBoxPatientFirstName.TabIndex = 10;
+            // 
+            // buttonDeletePatient
+            // 
+            this.buttonDeletePatient.Location = new System.Drawing.Point(617, 291);
+            this.buttonDeletePatient.Name = "buttonDeletePatient";
+            this.buttonDeletePatient.Size = new System.Drawing.Size(129, 55);
+            this.buttonDeletePatient.TabIndex = 9;
+            this.buttonDeletePatient.Text = "Delete patient";
+            this.buttonDeletePatient.UseVisualStyleBackColor = true;
+            this.buttonDeletePatient.Click += new System.EventHandler(this.buttonDeletePatient_Click);
+            // 
+            // buttonEditPatient
+            // 
+            this.buttonEditPatient.Location = new System.Drawing.Point(617, 214);
+            this.buttonEditPatient.Name = "buttonEditPatient";
+            this.buttonEditPatient.Size = new System.Drawing.Size(129, 55);
+            this.buttonEditPatient.TabIndex = 8;
+            this.buttonEditPatient.Text = "Edit patient";
+            this.buttonEditPatient.UseVisualStyleBackColor = true;
+            this.buttonEditPatient.Click += new System.EventHandler(this.buttonEditPatient_Click);
+            // 
+            // buttonAddPatient
+            // 
+            this.buttonAddPatient.Location = new System.Drawing.Point(617, 133);
+            this.buttonAddPatient.Name = "buttonAddPatient";
+            this.buttonAddPatient.Size = new System.Drawing.Size(129, 55);
+            this.buttonAddPatient.TabIndex = 7;
+            this.buttonAddPatient.Text = "Add patient";
+            this.buttonAddPatient.UseVisualStyleBackColor = true;
+            this.buttonAddPatient.Click += new System.EventHandler(this.buttonAddPatient_Click);
+            // 
+            // dataGridViewPatients
+            // 
+            this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPatients.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewPatients.Name = "dataGridViewPatients";
+            this.dataGridViewPatients.RowHeadersWidth = 51;
+            this.dataGridViewPatients.RowTemplate.Height = 24;
+            this.dataGridViewPatients.Size = new System.Drawing.Size(572, 519);
+            this.dataGridViewPatients.TabIndex = 0;
+            this.dataGridViewPatients.SelectionChanged += new EventHandler(dataGridViewPatients_SelectionChanged);
+            // 
+            // tabPageTreatments
+            // 
+            this.tabPageTreatments.Controls.Add(this.dataGridViewPatientMedicines);
+            this.tabPageTreatments.Controls.Add(this.label12);
+            this.tabPageTreatments.Controls.Add(this.label13);
+            this.tabPageTreatments.Controls.Add(this.label14);
+            this.tabPageTreatments.Controls.Add(this.comboBoxTerm);
+            this.tabPageTreatments.Controls.Add(this.comboBoxName);
+            this.tabPageTreatments.Controls.Add(this.numericUpDownDose);
+            this.tabPageTreatments.Controls.Add(this.buttonDeletePatientMedicine);
+            this.tabPageTreatments.Controls.Add(this.buttonEditPatientMedicine);
+            this.tabPageTreatments.Controls.Add(this.buttonAddPatientMedicine);
+            this.tabPageTreatments.Controls.Add(this.dataGridViewPatientsList);
+            this.tabPageTreatments.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTreatments.Name = "tabPageTreatments";
+            this.tabPageTreatments.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTreatments.Size = new System.Drawing.Size(1063, 525);
+            this.tabPageTreatments.TabIndex = 2;
+            this.tabPageTreatments.Text = "Patient Medicine Manager";
+            this.tabPageTreatments.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewPatientMedicines
+            // 
+            this.dataGridViewPatientMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPatientMedicines.Location = new System.Drawing.Point(338, 3);
+            this.dataGridViewPatientMedicines.Name = "dataGridViewPatientMedicines";
+            this.dataGridViewPatientMedicines.RowHeadersWidth = 51;
+            this.dataGridViewPatientMedicines.RowTemplate.Height = 24;
+            this.dataGridViewPatientMedicines.Size = new System.Drawing.Size(406, 519);
+            this.dataGridViewPatientMedicines.TabIndex = 44;
+            this.dataGridViewPatientMedicines.SelectionChanged += new EventHandler(dataGridViewPatientMedicines_SelectionChanged);
             // 
             // label12
             // 
@@ -488,28 +505,28 @@
             this.label14.TabIndex = 41;
             this.label14.Text = "Name:";
             // 
-            // comboBox1
+            // comboBoxTerm
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(910, 151);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 39;
+            this.comboBoxTerm.FormattingEnabled = true;
+            this.comboBoxTerm.Location = new System.Drawing.Point(910, 151);
+            this.comboBoxTerm.Name = "comboBoxTerm";
+            this.comboBoxTerm.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTerm.TabIndex = 39;
             // 
-            // comboBox2
+            // comboBoxName
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(911, 74);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 38;
+            this.comboBoxName.FormattingEnabled = true;
+            this.comboBoxName.Location = new System.Drawing.Point(911, 74);
+            this.comboBoxName.Name = "comboBoxName";
+            this.comboBoxName.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxName.TabIndex = 38;
             // 
-            // numericUpDown1
+            // numericUpDownDose
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(911, 111);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 35;
+            this.numericUpDownDose.Location = new System.Drawing.Point(911, 111);
+            this.numericUpDownDose.Name = "numericUpDownDose";
+            this.numericUpDownDose.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownDose.TabIndex = 35;
             // 
             // buttonDeletePatientMedicine
             // 
@@ -519,6 +536,7 @@
             this.buttonDeletePatientMedicine.TabIndex = 31;
             this.buttonDeletePatientMedicine.Text = "Delete patient medicine";
             this.buttonDeletePatientMedicine.UseVisualStyleBackColor = true;
+            this.buttonDeletePatientMedicine.Click += new System.EventHandler(this.buttonDeletePatientMedicine_Click);
             // 
             // buttonEditPatientMedicine
             // 
@@ -528,6 +546,7 @@
             this.buttonEditPatientMedicine.TabIndex = 30;
             this.buttonEditPatientMedicine.Text = "Edit patient medicine";
             this.buttonEditPatientMedicine.UseVisualStyleBackColor = true;
+            this.buttonEditPatientMedicine.Click += new System.EventHandler(this.buttonEditPatientMedicine_Click);
             // 
             // buttonAddPatientMedicine
             // 
@@ -537,6 +556,7 @@
             this.buttonAddPatientMedicine.TabIndex = 29;
             this.buttonAddPatientMedicine.Text = "Add patient medicine";
             this.buttonAddPatientMedicine.UseVisualStyleBackColor = true;
+            this.buttonAddPatientMedicine.Click += new System.EventHandler(this.buttonAddPatientMedicine_Click);
             // 
             // dataGridViewPatientsList
             // 
@@ -547,16 +567,7 @@
             this.dataGridViewPatientsList.RowTemplate.Height = 24;
             this.dataGridViewPatientsList.Size = new System.Drawing.Size(303, 519);
             this.dataGridViewPatientsList.TabIndex = 28;
-            // 
-            // dataGridViewPatientMedicines
-            // 
-            this.dataGridViewPatientMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatientMedicines.Location = new System.Drawing.Point(338, 3);
-            this.dataGridViewPatientMedicines.Name = "dataGridViewPatientMedicines";
-            this.dataGridViewPatientMedicines.RowHeadersWidth = 51;
-            this.dataGridViewPatientMedicines.RowTemplate.Height = 24;
-            this.dataGridViewPatientMedicines.Size = new System.Drawing.Size(406, 519);
-            this.dataGridViewPatientMedicines.TabIndex = 44;
+            this.dataGridViewPatientsList.SelectionChanged += new EventHandler(dataGridViewPatientsList_SelectionChanged);
             // 
             // tabPage1
             // 
@@ -592,13 +603,13 @@
             this.tabPageInformations.PerformLayout();
             this.tabPageSchedule.ResumeLayout(false);
             this.tabPageSchedule.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPatientAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatients)).EndInit();
             this.tabPageTreatments.ResumeLayout(false);
             this.tabPageTreatments.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPatientAge)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatientsList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatientMedicines)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatientsList)).EndInit();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRooms)).EndInit();
             this.ResumeLayout(false);
@@ -647,9 +658,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox comboBoxTerm;
+        private System.Windows.Forms.ComboBox comboBoxName;
+        private System.Windows.Forms.NumericUpDown numericUpDownDose;
         private System.Windows.Forms.Button buttonDeletePatientMedicine;
         private System.Windows.Forms.Button buttonEditPatientMedicine;
         private System.Windows.Forms.Button buttonAddPatientMedicine;
@@ -657,8 +668,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridViewRooms;
 
-            
-        
 
     }
 }
