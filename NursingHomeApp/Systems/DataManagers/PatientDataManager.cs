@@ -36,6 +36,11 @@ namespace NursingHomeApp.Systems.DataManagers
             return patientView;
         }
 
+        public List<Patient> SelectAll()
+        {
+            return DbContext.Patients.ToList();
+        }
+
         public List<PatientView> SelectEmployeeId(int Id)
         {
             List<Patient> patients = DbContext.Patients.Where(e => e.EmployeeId == Id).ToList();

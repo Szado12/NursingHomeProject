@@ -139,6 +139,7 @@
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Systems\DataManagers\DefaultDataManager.cs" />
+    <Compile Include="Systems\DataManagers\EmployeeDataManager.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IDefaultDataManager.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IEmployeeDataManager.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IMedicineDataManger.cs" />
@@ -151,11 +152,10 @@
     <Compile Include="Systems\DataManagers\Interfaces\ITreatmentDataManger.cs" />
     <Compile Include="Systems\DataManagers\MedicineDataManger.cs" />
     <Compile Include="Systems\DataManagers\PatientDataManager.cs" />
-
     <Compile Include="Systems\DataManagers\PatientMedicineDataManager.cs" />
-
+    <Compile Include="Systems\DataManagers\PlaceDataManager.cs" />
+    <Compile Include="Systems\DataManagers\ScheduleDataManager.cs" />
     <Compile Include="Systems\DataManagers\TreatmentDataManager.cs" />
-
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
