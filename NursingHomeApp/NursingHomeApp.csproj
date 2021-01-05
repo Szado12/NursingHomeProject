@@ -141,6 +141,7 @@
     <Compile Include="Systems\DataManagers\Interfaces\IRoomDataManger.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IScheduleDataManger.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\ITreatmentDataManger.cs" />
+    <Compile Include="Systems\DataManagers\MedicineDataManger.cs" />
     <Compile Include="Systems\DataManagers\PatientDataManager.cs" />
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
