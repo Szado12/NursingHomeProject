@@ -34,9 +34,9 @@ namespace NursingHomeApp
             textBoxContactNumber.Text = patientView.ContactNumber;
             textBoxCaregiver.Text = patientView.EmployeeFirstName +" "+ patientView.EmployeeLastName;
             textBoxPersonId.Text = patientView.PersonId;
-
-
             dataGridViewPatientSchedule.DataSource = patientView.Schedule;
+
+
         }
     }
 }

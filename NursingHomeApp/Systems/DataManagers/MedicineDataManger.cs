@@ -1,5 +1,7 @@
 ﻿using NursingHomeApp.Systems.DataManagers.Interfaces;
+
 using NursingHomeApp.Views;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +14,15 @@ namespace NursingHomeApp.Systems.DataManagers
     {
         public bool Add(Medicine t)
         {
+
             DbContext.Medicines.Add(t);
             return DbContext.SaveChanges() > 0;
+
         }
 
         public bool Delete(int Id)
         {
+
             Medicine medicine = DbContext.Medicines.SingleOrDefault(m => m.Id == Id);
             DbContext.Medicines.Remove(medicine);
             return DbContext.SaveChanges() > 0;
@@ -36,8 +41,11 @@ namespace NursingHomeApp.Systems.DataManagers
             return medicineView;
         }
 
+        
+
         public bool Update(Medicine t)
         {
+
             Medicine medicine = DbContext.Medicines.SingleOrDefault(p => p.Id == t.Id);
             medicine = t;
             return (DbContext.SaveChanges() > 0);

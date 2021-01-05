@@ -84,7 +84,7 @@
             this.InformationsTab.Controls.Add(this.textBoxFistName);
             this.InformationsTab.Location = new System.Drawing.Point(4, 22);
             this.InformationsTab.Name = "InformationsTab";
-            this.InformationsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.InformationsTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.InformationsTab.Size = new System.Drawing.Size(795, 424);
             this.InformationsTab.TabIndex = 0;
             this.InformationsTab.Text = "Informations";
@@ -92,17 +92,19 @@
             // 
             // textBoxAlergies
             // 
-            this.textBoxAlergies.Location = new System.Drawing.Point(286, 224);
+            this.textBoxAlergies.Location = new System.Drawing.Point(214, 197);
+            this.textBoxAlergies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAlergies.Multiline = true;
             this.textBoxAlergies.Name = "textBoxAlergies";
             this.textBoxAlergies.ReadOnly = true;
-            this.textBoxAlergies.Size = new System.Drawing.Size(176, 80);
+            this.textBoxAlergies.Size = new System.Drawing.Size(176, 66);
             this.textBoxAlergies.TabIndex = 16;
             // 
             // labelAlergies
             // 
             this.labelAlergies.AutoSize = true;
-            this.labelAlergies.Location = new System.Drawing.Point(17, 224);
+            this.labelAlergies.Location = new System.Drawing.Point(18, 176);
+            this.labelAlergies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAlergies.Name = "labelAlergies";
             this.labelAlergies.Size = new System.Drawing.Size(47, 13);
             this.labelAlergies.TabIndex = 15;
@@ -111,7 +113,8 @@
             // labelCaregiver
             // 
             this.labelCaregiver.AutoSize = true;
-            this.labelCaregiver.Location = new System.Drawing.Point(17, 198);
+            this.labelCaregiver.Location = new System.Drawing.Point(18, 200);
+            this.labelCaregiver.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCaregiver.Name = "labelCaregiver";
             this.labelCaregiver.Size = new System.Drawing.Size(55, 13);
             this.labelCaregiver.TabIndex = 13;
@@ -119,7 +122,8 @@
             // 
             // textBoxCaregiver
             // 
-            this.textBoxCaregiver.Location = new System.Drawing.Point(286, 195);
+            this.textBoxCaregiver.Location = new System.Drawing.Point(214, 149);
+            this.textBoxCaregiver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCaregiver.Name = "textBoxCaregiver";
             this.textBoxCaregiver.ReadOnly = true;
             this.textBoxCaregiver.Size = new System.Drawing.Size(176, 20);
@@ -128,7 +132,8 @@
             // labelContactNumber
             // 
             this.labelContactNumber.AutoSize = true;
-            this.labelContactNumber.Location = new System.Drawing.Point(17, 172);
+            this.labelContactNumber.Location = new System.Drawing.Point(18, 128);
+            this.labelContactNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelContactNumber.Name = "labelContactNumber";
             this.labelContactNumber.Size = new System.Drawing.Size(87, 13);
             this.labelContactNumber.TabIndex = 11;
@@ -136,7 +141,8 @@
             // 
             // textBoxContactNumber
             // 
-            this.textBoxContactNumber.Location = new System.Drawing.Point(286, 169);
+            this.textBoxContactNumber.Location = new System.Drawing.Point(214, 125);
+            this.textBoxContactNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxContactNumber.Name = "textBoxContactNumber";
             this.textBoxContactNumber.ReadOnly = true;
             this.textBoxContactNumber.Size = new System.Drawing.Size(176, 20);
@@ -145,7 +151,7 @@
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(17, 146);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(18, 152);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(81, 13);
             this.labelPhoneNumber.TabIndex = 9;
@@ -153,7 +159,8 @@
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(286, 143);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(214, 173);
+            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.ReadOnly = true;
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(176, 20);
@@ -162,7 +169,7 @@
             // labelAge
             // 
             this.labelAge.AutoSize = true;
-            this.labelAge.Location = new System.Drawing.Point(17, 120);
+            this.labelAge.Location = new System.Drawing.Point(18, 104);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(29, 13);
             this.labelAge.TabIndex = 7;
@@ -170,7 +177,8 @@
             // 
             // textBoxAge
             // 
-            this.textBoxAge.Location = new System.Drawing.Point(286, 117);
+            this.textBoxAge.Location = new System.Drawing.Point(214, 101);
+            this.textBoxAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAge.Name = "textBoxAge";
             this.textBoxAge.ReadOnly = true;
             this.textBoxAge.Size = new System.Drawing.Size(176, 20);
@@ -179,7 +187,7 @@
             // labelPersonId
             // 
             this.labelPersonId.AutoSize = true;
-            this.labelPersonId.Location = new System.Drawing.Point(17, 94);
+            this.labelPersonId.Location = new System.Drawing.Point(18, 80);
             this.labelPersonId.Name = "labelPersonId";
             this.labelPersonId.Size = new System.Drawing.Size(52, 13);
             this.labelPersonId.TabIndex = 5;
@@ -187,7 +195,8 @@
             // 
             // textBoxPersonId
             // 
-            this.textBoxPersonId.Location = new System.Drawing.Point(286, 91);
+            this.textBoxPersonId.Location = new System.Drawing.Point(214, 77);
+            this.textBoxPersonId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPersonId.Name = "textBoxPersonId";
             this.textBoxPersonId.ReadOnly = true;
             this.textBoxPersonId.Size = new System.Drawing.Size(176, 20);
@@ -196,7 +205,7 @@
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(17, 68);
+            this.labelLastName.Location = new System.Drawing.Point(18, 56);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(61, 13);
             this.labelLastName.TabIndex = 3;
@@ -204,7 +213,8 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(286, 65);
+            this.textBoxLastName.Location = new System.Drawing.Point(214, 53);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.ReadOnly = true;
             this.textBoxLastName.Size = new System.Drawing.Size(176, 20);
@@ -213,7 +223,7 @@
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(17, 42);
+            this.labelFirstName.Location = new System.Drawing.Point(18, 31);
             this.labelFirstName.Name = "labelFirstName";
             this.labelFirstName.Size = new System.Drawing.Size(60, 13);
             this.labelFirstName.TabIndex = 1;
@@ -221,7 +231,7 @@
             // 
             // textBoxFistName
             // 
-            this.textBoxFistName.Location = new System.Drawing.Point(286, 39);
+            this.textBoxFistName.Location = new System.Drawing.Point(214, 28);
             this.textBoxFistName.Name = "textBoxFistName";
             this.textBoxFistName.ReadOnly = true;
             this.textBoxFistName.Size = new System.Drawing.Size(176, 20);
@@ -232,7 +242,7 @@
             this.tabPage2.Controls.Add(this.dataGridViewPatientSchedule);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage2.Size = new System.Drawing.Size(795, 424);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
@@ -242,10 +252,10 @@
             // 
             this.dataGridViewPatientSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPatientSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatientSchedule.Location = new System.Drawing.Point(8, 8);
+            this.dataGridViewPatientSchedule.Location = new System.Drawing.Point(-4, 0);
             this.dataGridViewPatientSchedule.Name = "dataGridViewPatientSchedule";
             this.dataGridViewPatientSchedule.ReadOnly = true;
-            this.dataGridViewPatientSchedule.Size = new System.Drawing.Size(784, 410);
+            this.dataGridViewPatientSchedule.Size = new System.Drawing.Size(803, 428);
             this.dataGridViewPatientSchedule.TabIndex = 0;
             // 
             // PatientsForm
