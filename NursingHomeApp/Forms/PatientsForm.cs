@@ -36,7 +36,7 @@ namespace NursingHomeApp
             textBoxPersonId.Text = patientView.PersonId;
 
 
-            dataGridViewPatientSchedule.DataSource = patientView.Schedule;
+
         }
     }
 }

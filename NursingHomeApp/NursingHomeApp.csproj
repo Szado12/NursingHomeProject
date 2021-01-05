@@ -67,11 +67,11 @@
     <Compile Include="EmployeeLogin.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EmployeeForm.cs">
+    <Compile Include="Forms\NurseForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\EmployeeForm.Designer.cs">
-      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    <Compile Include="Forms\NurseForm.Designer.cs">
+      <DependentUpon>NurseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PatientsForm.cs">
       <SubType>Form</SubType>
@@ -79,7 +79,14 @@
     <Compile Include="Forms\PatientsForm.Designer.cs">
       <DependentUpon>PatientsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mapper\MapperProfile.cs" />
+
+    <Compile Include="Forms\RehabilitatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RehabilitatorForm.Designer.cs">
+      <DependentUpon>RehabilitatorForm.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="Medicine.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
@@ -139,11 +146,20 @@
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
+    
     <Compile Include="Views\EmployeeView.cs" />
     <Compile Include="Views\PatientView.cs" />
     <Compile Include="Views\ScheduleView.cs" />
+
+    <EmbeddedResource Include="Forms\NurseForm.resx">
+      <DependentUpon>NurseForm.cs</DependentUpon>
+    </EmbeddedResource>
+
     <EmbeddedResource Include="Forms\PatientsForm.resx">
       <DependentUpon>PatientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RehabilitatorForm.resx">
+      <DependentUpon>RehabilitatorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
