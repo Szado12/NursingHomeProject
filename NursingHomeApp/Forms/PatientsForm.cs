@@ -31,9 +31,9 @@ namespace NursingHomeApp
             textBoxFistName.Text = patientView.FirstName;
             textBoxLastName.Text = patientView.LastName;
             textBoxAlergies.Text = patientView.Alergies;
-            textBoxPhoneNumber.Text = patientView.PhoneNumber;
+            textBoxCaregiver.Text = patientView.EmployeeFirstName + " " + patientView.EmployeeLastName;
             textBoxContactNumber.Text = patientView.ContactNumber;
-            textBoxCaregiver.Text = patientView.EmployeeFirstName +" "+ patientView.EmployeeLastName;
+            textBoxPhoneNumber.Text = patientView.PhoneNumber;
             textBoxPersonId.Text = patientView.PersonId;
             dataGridViewPatientSchedule.DataSource = patientView.Schedule;
 
