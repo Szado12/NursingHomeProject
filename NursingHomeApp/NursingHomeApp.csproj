@@ -79,6 +79,7 @@
     <Compile Include="Forms\PatientsForm.Designer.cs">
       <DependentUpon>PatientsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mapper\MapperProfile.cs" />
     <Compile Include="Medicine.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
@@ -138,6 +139,9 @@
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Views\EmployeeView.cs" />
+    <Compile Include="Views\PatientView.cs" />
+    <Compile Include="Views\ScheduleView.cs" />
     <EmbeddedResource Include="Forms\PatientsForm.resx">
       <DependentUpon>PatientsForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -18,6 +18,7 @@ namespace NursingHomeApp
         public Employee()
         {
             this.EmployeeLogins = new HashSet<EmployeeLogin>();
+            this.Patients = new HashSet<Patient>();
             this.Schedules = new HashSet<Schedule>();
         }
     
@@ -31,6 +32,8 @@ namespace NursingHomeApp
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EmployeeLogin> EmployeeLogins { get; set; }
         public virtual Profession Profession { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Patient> Patients { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Schedule> Schedules { get; set; }
     }

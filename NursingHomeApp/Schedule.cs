@@ -19,10 +19,10 @@ namespace NursingHomeApp
         public int EmployeeId { get; set; }
         public int TreatmentId { get; set; }
         public int PlaceId { get; set; }
-        public byte[] Term { get; set; }
+        public System.DateTime Term { get; set; }
     
         public virtual Employee Employee { get; set; }
-        public virtual PatientForm Patient { get; set; }
+        public virtual Patient Patient { get; set; }
         public virtual Place Place { get; set; }
         public virtual Treatment Treatment { get; set; }
     }

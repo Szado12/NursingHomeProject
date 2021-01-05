@@ -21,6 +21,6 @@ namespace NursingHomeApp
         public int PatientId { get; set; }
     
         public virtual Medicine Medicine { get; set; }
-        public virtual PatientForm Patient { get; set; }
+        public virtual Patient Patient { get; set; }
     }
 }

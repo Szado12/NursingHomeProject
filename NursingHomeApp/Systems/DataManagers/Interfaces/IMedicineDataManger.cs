@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
-    public interface IMedicineDataManger : IDefaultDataManager<Medicine>
+    public interface IMedicineDataManger : IDefaultDataManager<Medicine, Medicine>
     {
     }
 }
