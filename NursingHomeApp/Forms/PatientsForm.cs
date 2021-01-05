@@ -17,5 +17,9 @@ namespace NursingHomeApp
             InitializeComponent();
         }
 
+        private void PatientsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
