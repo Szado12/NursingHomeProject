@@ -22,7 +22,7 @@ namespace NursingHomeApp
         public byte[] Term { get; set; }
     
         public virtual Employee Employee { get; set; }
-        public virtual Patient Patient { get; set; }
+        public virtual PatientForm Patient { get; set; }
         public virtual Place Place { get; set; }
         public virtual Treatment Treatment { get; set; }
     }

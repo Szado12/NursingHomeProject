@@ -19,6 +19,6 @@ namespace NursingHomeApp
         public byte[] Password { get; set; }
         public int PatientId { get; set; }
     
-        public virtual Patient Patient { get; set; }
+        public virtual PatientForm Patient { get; set; }
     }
 }
