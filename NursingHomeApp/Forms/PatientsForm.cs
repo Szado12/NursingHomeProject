@@ -16,8 +16,6 @@ namespace NursingHomeApp
 {
     public partial class PatientsForm : Form
     {
-        
-        PatientDataManager patientDataManager = new PatientDataManager();
         public PatientsForm(PatientView patient)
         {
             InitializeComponent();
