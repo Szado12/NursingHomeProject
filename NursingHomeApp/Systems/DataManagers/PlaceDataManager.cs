@@ -35,7 +35,7 @@ namespace NursingHomeApp.Systems.DataManagers
         public bool Update(Place t)
         {
             Place place = DbContext.Places.SingleOrDefault(p => p.Id == t.Id);
-            place = t;
+            place.Name = place.Name;
             return (DbContext.SaveChanges() > 0);
         }
     }

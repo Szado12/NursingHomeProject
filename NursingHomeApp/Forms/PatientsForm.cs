@@ -1,23 +1,11 @@
-﻿using AutoMapper;
-using NursingHomeApp.Mapper;
+﻿using System.Windows.Forms;
 using NursingHomeApp.Systems.DataManagers;
 using NursingHomeApp.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace NursingHomeApp
 {
     public partial class PatientsForm : Form
     {
-        
-        PatientDataManager patientDataManager = new PatientDataManager();
         public PatientsForm(PatientView patient)
         {
             InitializeComponent();

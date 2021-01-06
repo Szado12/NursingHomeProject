@@ -13,14 +13,18 @@ namespace NursingHomeApp.Forms
         private Employee currentUser;
         PatientView patient;
         RoomView room;
+
         PatientOnListView patientOnList;
         PatientMedicineView patientMedicine;
+
+        EmployeeManager employeeManager = new EmployeeManager();
+        PatientMedicineManager patientMedicineManager = new PatientMedicineManager();
+
         PatientManager patientManager = new PatientManager();
         PatientDataManager patientDataManager = new PatientDataManager();
         RoomDataManager roomDataManager = new RoomDataManager();
         MedicineDataManager medicineDataManager = new MedicineDataManager();
-        PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
-        EmployeeDataManager employeeDataManager = new EmployeeDataManager();
+
 
         public AdministratorForm(Employee loggedInAdministrator)
         {
@@ -36,7 +40,7 @@ namespace NursingHomeApp.Forms
             comboBoxName.DisplayMember = "Name";
             comboBoxName.ValueMember = "Id";
 
-            comboBoxCaregiver.DataSource = employeeDataManager.SelectNurses();
+            comboBoxCaregiver.DataSource = employeeManager.SelectNurses();
             comboBoxCaregiver.DisplayMember = "LastName";
             comboBoxCaregiver.ValueMember = "Id";
             
@@ -44,10 +48,10 @@ namespace NursingHomeApp.Forms
         public Employee CurrentUser { get => currentUser; set => currentUser = value; }
         private void RefreshDataGridView()
         {
-            dataGridViewPatients.DataSource = patientDataManager.Select();
+            dataGridViewPatients.DataSource = patientManager.Select();
             dataGridViewPatients.Columns[0].Visible = false;
 
-            dataGridViewPatientsList.DataSource = patientDataManager.SelectToList();
+            dataGridViewPatientsList.DataSource = patientManager.SelectToList();
             dataGridViewPatientsList.Columns[0].Visible = false;
 
             dataGridViewRooms.DataSource = roomDataManager.Select();
@@ -101,7 +105,7 @@ namespace NursingHomeApp.Forms
             try
             {
                 patientOnList = (PatientOnListView)dataGridViewPatientsList.CurrentRow.DataBoundItem;
-                dataGridViewPatientMedicines.DataSource = patientMedicineDataManager.SelectAll(patientOnList.Id);
+                dataGridViewPatientMedicines.DataSource = patientMedicineManager.SelectAll(patientOnList.Id);
                 dataGridViewPatientMedicines.Columns[0].Visible = false;
 
             }
@@ -115,7 +119,7 @@ namespace NursingHomeApp.Forms
             try
             {
                 room = (RoomView)dataGridViewRooms.CurrentRow.DataBoundItem;
-                dataGridViewResidents.DataSource = patientDataManager.SelectRoomId(room.Id);
+                dataGridViewResidents.DataSource = patientManager.SelectRoomId(room.Id);
                 dataGridViewResidents.Columns[0].Visible = false;
 
             }
@@ -139,23 +143,10 @@ namespace NursingHomeApp.Forms
 
         private void buttonEditPatient_Click(object sender, EventArgs e)
         {
-            Patient updatedPatient = new Patient();
-
-            updatedPatient.Id = patient.Id;
-
-            updatedPatient.FirstName = textBoxPatientFirstName.Text;
-            updatedPatient.LastName = textBoxPatientLastName.Text;
-            updatedPatient.PersonId = textBoxPatientPersonId.Text;
-            updatedPatient.Age = int.Parse(numericUpDownPatientAge.Text);
-            updatedPatient.ContactNumber = textBoxPatientContactNumber.Text;
-            updatedPatient.PhoneNumber = textBoxPatientPhoneNumber.Text;
-            updatedPatient.RoomID = int.Parse(comboBoxPatientRoom.Text);
-            updatedPatient.Alergies = textBoxPatientAlergies.Text;
-            updatedPatient.EmployeeId = (int)comboBoxCaregiver.SelectedValue;
-
-            if (patientDataManager.Update(updatedPatient))
+            
+            if (patientManager.Update(patient.Id,textBoxPatientFirstName.Text, textBoxPatientLastName.Text, textBoxPatientPersonId.Text, int.Parse(numericUpDownPatientAge.Text), textBoxPatientContactNumber.Text, textBoxPatientPhoneNumber.Text, int.Parse(comboBoxPatientRoom.Text), textBoxPatientAlergies.Text, (int)comboBoxCaregiver.SelectedValue))
             {
-                MessageBox.Show(patient.FirstName + " " + patient.LastName + " Updated");
+                MessageBox.Show(textBoxPatientFirstName.Text + " " + textBoxPatientLastName.Text + " Updated");
             }
             else
             {
@@ -168,9 +159,9 @@ namespace NursingHomeApp.Forms
         {
             try
             {
-                if (patientDataManager.Delete(patient.Id))
+                if (patientManager.Delete(patient.Id))
                 {
-                    MessageBox.Show(patient.FirstName + " " + patient.LastName + " Deleted");
+                    MessageBox.Show(textBoxPatientFirstName.Text + " " + textBoxPatientLastName.Text + " Deleted");
                 }
                 else
                 {
@@ -185,14 +176,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonAddPatientMedicine_Click(object sender, EventArgs e)
         {
-            PatientMedicine newPatientMedicine = new PatientMedicine();
-
-            newPatientMedicine.MedicineId = (int)comboBoxName.SelectedValue;
-            newPatientMedicine.PatientId = patientOnList.Id;
-            newPatientMedicine.Dose = int.Parse(numericUpDownDose.Text);
-            newPatientMedicine.Term = System.TimeSpan.Parse(comboBoxTerm.Text);
-
-            if (patientMedicineDataManager.Add(newPatientMedicine))
+           if (patientMedicineManager.Add((int)comboBoxName.SelectedValue, patientOnList.Id, int.Parse(numericUpDownDose.Text), System.TimeSpan.Parse(comboBoxTerm.Text)))
             {
                 MessageBox.Show("Added");
             }
@@ -205,15 +189,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonEditPatientMedicine_Click(object sender, EventArgs e)
         {
-            PatientMedicine updatedPatientMedicine = new PatientMedicine();
-
-            updatedPatientMedicine.Id = patientMedicine.Id; 
-            updatedPatientMedicine.MedicineId = (int)comboBoxName.SelectedValue;
-            updatedPatientMedicine.PatientId = patientOnList.Id;
-            updatedPatientMedicine.Dose = int.Parse(numericUpDownDose.Text);
-            updatedPatientMedicine.Term = System.TimeSpan.Parse(comboBoxTerm.Text);
-
-            if (patientMedicineDataManager.Update(updatedPatientMedicine))
+            if (patientMedicineManager.Update(patientMedicine.Id,(int)comboBoxName.SelectedValue, patientOnList.Id, int.Parse(numericUpDownDose.Text), System.TimeSpan.Parse(comboBoxTerm.Text)))
             {
                 MessageBox.Show("Updated");
             }
@@ -229,7 +205,7 @@ namespace NursingHomeApp.Forms
         {
             try
             {
-                if (patientMedicineDataManager.Delete(patientMedicine.Id))
+                if (patientMedicineManager.Delete(patientMedicine.Id))
                 {
                     MessageBox.Show("Deleted");
                 }

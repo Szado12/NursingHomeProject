@@ -1,5 +1,6 @@
 ﻿using NursingHomeApp.Forms;
 using NursingHomeApp.Systems.DataManagers;
+using NursingHomeApp.Systems.LogicalManagers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +17,9 @@ namespace NursingHomeApp
         [STAThread]
         static void Main()
         {
-            EmployeeDataManager employeeDataManager = new EmployeeDataManager();
-            Employee employee = employeeDataManager.Select(13);
+            EmployeeManager employeeManager = new EmployeeManager();
+            Employee employee = employeeManager.Select(13);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new TestForm());

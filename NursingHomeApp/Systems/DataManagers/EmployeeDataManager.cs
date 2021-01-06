@@ -36,7 +36,6 @@ namespace NursingHomeApp.Systems.DataManagers
             
             return DbContext.Employees.SingleOrDefault(p => p.Id == Id);
         }
-
         public bool Update(Employee t)
         {
             Employee employee = DbContext.Employees.SingleOrDefault(p => p.Id == t.Id);
