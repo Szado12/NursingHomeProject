@@ -8,6 +8,6 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
     interface IEmployeeLoginDataManager
     {
-        Employee Select(string PersonId, string Password);
+        Employee Select(string PersonId, Byte[] hashedBytes);
     }
 }

@@ -10,11 +10,8 @@ namespace NursingHomeApp.Systems.DataManagers
 {
     public class EmployeeLoginDataManager : DefaultDataManager, IEmployeeLoginDataManager
     {
-        public Employee Select(string PersonId, string Password)
+        public Employee Select(string PersonId, Byte[] hashedBytes)
         {
-            Byte[] inputBytes = Encoding.UTF8.GetBytes(Password);
-            SHA512 shaM = new SHA512Managed();
-            Byte[] hashedBytes = shaM.ComputeHash(inputBytes);
             EmployeeLogin employee = DbContext.EmployeeLogins.Where(x => x.PersonId == PersonId && x.Password == hashedBytes).SingleOrDefault();
             if (employee == null)
                 return null;

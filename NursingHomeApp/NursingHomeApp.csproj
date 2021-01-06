@@ -167,6 +167,7 @@
     <Compile Include="Systems\DataManagers\RoomDataManager.cs" />
     <Compile Include="Systems\DataManagers\ScheduleDataManager.cs" />
     <Compile Include="Systems\DataManagers\TreatmentDataManager.cs" />
+    <Compile Include="Systems\LogicalManagers\EmployeeLoginManager.cs" />
     <Compile Include="Systems\LogicalManagers\MedicineManager.cs" />
     <Compile Include="Systems\LogicalManagers\EmployeeManager.cs" />
     <Compile Include="Systems\LogicalManagers\PatientLoginManager.cs" />
