@@ -1,4 +1,5 @@
 ﻿using NursingHomeApp.Systems.DataManagers;
+using NursingHomeApp.Systems.LogicalManagers;
 using NursingHomeApp.Views;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,9 @@ namespace NursingHomeApp.Forms
     public partial class NurseForm : Form
     {
         private Employee currentUser;
+
+        MedicineManager medicineManager = new MedicineManager();
+
         MedicineDataManager medicineDataManager = new MedicineDataManager();
         PatientDataManager patientDataManager = new PatientDataManager();
         PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
@@ -41,17 +45,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonAddMedicine_Click(object sender, EventArgs e)
         {
-            if (textBoxMedicineName.Text == "")
-            {
-                if (MessageBox.Show(this, "Choose a name!") == DialogResult.OK)
-                    return;
-            }
-
-            Medicine newMedicine = new Medicine();
-            newMedicine.Name = textBoxMedicineName.Text;
-            newMedicine.Amount = int.Parse(numericUpDownStockStatus.Text);
-
-            if (medicineDataManager.Add(newMedicine))
+            if (medicineManager.Add(textBoxMedicineName.Text, int.Parse(numericUpDownStockStatus.Text)))
                 MessageBox.Show("Added!");
             else
                 MessageBox.Show("Error occured!");
@@ -61,18 +55,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonEditMedicine_Click(object sender, EventArgs e)
         {
-            if (textBoxMedicineName.Text == "")
-            {
-                if (MessageBox.Show(this, "Choose a name!") == DialogResult.OK)
-                    return;
-            }
-
-            Medicine updatedMedicine = new Medicine();
-            updatedMedicine.Id = medicine.Id;
-            updatedMedicine.Name = textBoxMedicineName.Text;
-            updatedMedicine.Amount = int.Parse(numericUpDownStockStatus.Text);
-
-            if (medicineDataManager.Update(updatedMedicine))
+            if (medicineManager.Update(medicine.Id, textBoxMedicineName.Text, int.Parse(numericUpDownStockStatus.Text)))
                 MessageBox.Show("Updated!");
             else
                 MessageBox.Show("Error occured!");
@@ -85,7 +68,7 @@ namespace NursingHomeApp.Forms
             try
             {
                 medicine = (MedicineView)dataGridViewMedicines.CurrentRow.DataBoundItem;
-                if (medicineDataManager.Delete(medicine.Id))
+                if (medicineManager.Delete(medicine.Id))
                     MessageBox.Show("Deleted!");
                 else
                     MessageBox.Show("Error occured!");
@@ -105,7 +88,7 @@ namespace NursingHomeApp.Forms
 
         private void RefreshDataGridView()
         {
-            dataGridViewMedicines.DataSource = medicineDataManager.Select();
+            dataGridViewMedicines.DataSource = medicineManager.Select();
             dataGridViewMedicines.Columns["Id"].Visible = false;
             dataGridViewPatients.DataSource = patientDataManager.SelectNursePatients(currentUser.Id);
             dataGridViewPatients.Columns["Id"].Visible = false;
