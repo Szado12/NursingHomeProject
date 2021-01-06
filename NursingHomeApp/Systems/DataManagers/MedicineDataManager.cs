@@ -52,9 +52,9 @@ namespace NursingHomeApp.Systems.DataManagers
 
         public bool Update(Medicine t)
         {
-
             Medicine medicine = DbContext.Medicines.SingleOrDefault(p => p.Id == t.Id);
-            medicine = t;
+            medicine.Name = t.Name;
+            medicine.Amount = t.Amount;
             return (DbContext.SaveChanges() > 0);
         }
     }

@@ -37,6 +37,7 @@ namespace NursingHomeApp.Systems.DataManagers
 
         public List<PatientMedicineView> SelectAll(int Id)
         {
+            DbContext = new NursingHomeEntities();
             List<PatientMedicine> patientMedicine = DbContext.PatientMedicines.Where(p => p.PatientId == Id).ToList();
             return Mapper.Map<List<PatientMedicine>, List<PatientMedicineView>>(patientMedicine);
         }
