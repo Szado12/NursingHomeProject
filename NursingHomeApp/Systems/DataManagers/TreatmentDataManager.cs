@@ -35,7 +35,8 @@ namespace NursingHomeApp.Systems.DataManagers
         public bool Update(Treatment t)
         {
             Treatment treatment = DbContext.Treatments.SingleOrDefault(x => x.Id == t.Id);
-            treatment = t;
+            treatment.Name = t.Name;
+            treatment.Duration = t.Duration;
             return (DbContext.SaveChanges() > 0);
         }
     }
