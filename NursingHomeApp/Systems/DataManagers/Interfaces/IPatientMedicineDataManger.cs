@@ -10,6 +10,7 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
     public interface IPatientMedicineDataManger : IDefaultDataManager<PatientMedicine, PatientMedicineView>
     {
-       List<PatientMedicineView> SelectAll(int Id);
+        List<PatientMedicineView> SelectPatientMedicine(int Id);
+        List<PatientMedicineView> SelectAll(int Id);
     }
 }

@@ -30,6 +30,7 @@ namespace NursingHomeApp.Forms
         /// </summary>
         private void InitializeComponent()
         {
+
             this.tabControlRehabilitator = new System.Windows.Forms.TabControl();
             this.tabPageInformations = new System.Windows.Forms.TabPage();
             this.labelProfession = new System.Windows.Forms.Label();

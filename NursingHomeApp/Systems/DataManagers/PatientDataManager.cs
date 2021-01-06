@@ -74,5 +74,11 @@ namespace NursingHomeApp.Systems.DataManagers
 
             return (DbContext.SaveChanges() > 0);
         }
+
+        public List<NursePatientsView> SelectNursePatients(int Id)
+        {
+            List<Patient> patients = DbContext.Patients.Where(e => e.EmployeeId == Id).ToList();
+            return Mapper.Map<List<Patient>, List<NursePatientsView>>(patients);
+        }
     }
 }

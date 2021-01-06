@@ -45,6 +45,8 @@ namespace NursingHomeApp.Forms
             this.dataGridViewPatientMedicines = new System.Windows.Forms.DataGridView();
             this.dataGridViewPatients = new System.Windows.Forms.DataGridView();
             this.tabPageMedicines = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxMedicineName = new System.Windows.Forms.TextBox();
             this.labelAmount = new System.Windows.Forms.Label();
             this.buttonDeleteMedicine = new System.Windows.Forms.Button();
             this.buttonEditMedicine = new System.Windows.Forms.Button();
@@ -217,9 +219,12 @@ namespace NursingHomeApp.Forms
             this.dataGridViewPatients.RowTemplate.Height = 24;
             this.dataGridViewPatients.Size = new System.Drawing.Size(457, 379);
             this.dataGridViewPatients.TabIndex = 0;
+            this.dataGridViewPatients.SelectionChanged += new System.EventHandler(this.dataGridViewPatients_SelectionChanged);
             // 
             // tabPageMedicines
             // 
+            this.tabPageMedicines.Controls.Add(this.label1);
+            this.tabPageMedicines.Controls.Add(this.textBoxMedicineName);
             this.tabPageMedicines.Controls.Add(this.labelAmount);
             this.tabPageMedicines.Controls.Add(this.buttonDeleteMedicine);
             this.tabPageMedicines.Controls.Add(this.buttonEditMedicine);
@@ -234,19 +239,38 @@ namespace NursingHomeApp.Forms
             this.tabPageMedicines.Text = "Medicines";
             this.tabPageMedicines.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(821, 206);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Name:";
+            // 
+            // textBoxMedicineName
+            // 
+            this.textBoxMedicineName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMedicineName.Location = new System.Drawing.Point(885, 203);
+            this.textBoxMedicineName.Name = "textBoxMedicineName";
+            this.textBoxMedicineName.ReadOnly = true;
+            this.textBoxMedicineName.Size = new System.Drawing.Size(150, 27);
+            this.textBoxMedicineName.TabIndex = 8;
+            // 
             // labelAmount
             // 
             this.labelAmount.AutoSize = true;
-            this.labelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(850, 184);
+            this.labelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmount.Location = new System.Drawing.Point(808, 250);
             this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(80, 25);
+            this.labelAmount.Size = new System.Drawing.Size(71, 20);
             this.labelAmount.TabIndex = 7;
-            this.labelAmount.Text = "Amount";
+            this.labelAmount.Text = "Amount:";
             // 
             // buttonDeleteMedicine
             // 
-            this.buttonDeleteMedicine.Location = new System.Drawing.Point(83, 288);
+            this.buttonDeleteMedicine.Location = new System.Drawing.Point(579, 296);
             this.buttonDeleteMedicine.Name = "buttonDeleteMedicine";
             this.buttonDeleteMedicine.Size = new System.Drawing.Size(129, 55);
             this.buttonDeleteMedicine.TabIndex = 6;
@@ -256,7 +280,7 @@ namespace NursingHomeApp.Forms
             // 
             // buttonEditMedicine
             // 
-            this.buttonEditMedicine.Location = new System.Drawing.Point(83, 211);
+            this.buttonEditMedicine.Location = new System.Drawing.Point(579, 219);
             this.buttonEditMedicine.Name = "buttonEditMedicine";
             this.buttonEditMedicine.Size = new System.Drawing.Size(129, 55);
             this.buttonEditMedicine.TabIndex = 5;
@@ -266,7 +290,7 @@ namespace NursingHomeApp.Forms
             // 
             // buttonAddMedicine
             // 
-            this.buttonAddMedicine.Location = new System.Drawing.Point(83, 130);
+            this.buttonAddMedicine.Location = new System.Drawing.Point(579, 138);
             this.buttonAddMedicine.Name = "buttonAddMedicine";
             this.buttonAddMedicine.Size = new System.Drawing.Size(129, 55);
             this.buttonAddMedicine.TabIndex = 4;
@@ -276,23 +300,23 @@ namespace NursingHomeApp.Forms
             // 
             // textBoxStockStatus
             // 
-            this.textBoxStockStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStockStatus.Location = new System.Drawing.Point(814, 212);
-            this.textBoxStockStatus.Multiline = true;
+            this.textBoxStockStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxStockStatus.Location = new System.Drawing.Point(885, 247);
             this.textBoxStockStatus.Name = "textBoxStockStatus";
             this.textBoxStockStatus.ReadOnly = true;
-            this.textBoxStockStatus.Size = new System.Drawing.Size(150, 55);
+            this.textBoxStockStatus.Size = new System.Drawing.Size(150, 27);
             this.textBoxStockStatus.TabIndex = 3;
             // 
             // dataGridViewMedicines
             // 
             this.dataGridViewMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMedicines.Location = new System.Drawing.Point(311, 62);
+            this.dataGridViewMedicines.Location = new System.Drawing.Point(56, 64);
             this.dataGridViewMedicines.Name = "dataGridViewMedicines";
             this.dataGridViewMedicines.RowHeadersWidth = 51;
             this.dataGridViewMedicines.RowTemplate.Height = 24;
             this.dataGridViewMedicines.Size = new System.Drawing.Size(457, 379);
             this.dataGridViewMedicines.TabIndex = 2;
+            this.dataGridViewMedicines.SelectionChanged += new System.EventHandler(this.dataGridViewMedicines_SelectionChanged);
             // 
             // NurseForm
             // 
@@ -340,5 +364,7 @@ namespace NursingHomeApp.Forms
         private System.Windows.Forms.TextBox textBoxStockStatus;
         private System.Windows.Forms.DataGridView dataGridViewMedicines;
         private System.Windows.Forms.Label labelAmount;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxMedicineName;
     }
 }
