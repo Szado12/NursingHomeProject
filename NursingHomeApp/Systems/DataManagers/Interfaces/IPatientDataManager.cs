@@ -12,5 +12,7 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
     {
         List<PatientView> SelectEmployeeId(int Id);
         List<Patient> SelectAll();
+        List<PatientOnListView> SelectToList();
+        List<PatientOnListView> SelectRoomId(int Id);
     }
 }

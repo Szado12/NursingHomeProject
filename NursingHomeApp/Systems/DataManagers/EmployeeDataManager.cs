@@ -27,7 +27,10 @@ namespace NursingHomeApp.Systems.DataManagers
         {
             return DbContext.Employees.ToList();
         }
-
+        public List<Employee> SelectNurses()
+        {
+            return DbContext.Employees.Where(p => p.ProfessionId == 3).ToList();
+        }
         public Employee Select(int Id)
         {
             

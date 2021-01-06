@@ -10,5 +10,6 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
     public interface IEmployeeDataManager : IDefaultDataManager<Employee, Employee>
     {
+        List<Employee> SelectNurses();
     }
 }

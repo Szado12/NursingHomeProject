@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using NursingHomeApp.Systems.DataManagers;
 using NursingHomeApp.Views;
@@ -9,16 +10,34 @@ namespace NursingHomeApp.Forms
     {
         private Employee currentUser;
         PatientView patient;
-        PatientMedicine patientMedicine;
+        RoomView room;
+        PatientOnListView patientOnList;
+        PatientMedicineView patientMedicine;
 
         PatientDataManager patientDataManager = new PatientDataManager();
+        RoomDataManager roomDataManager = new RoomDataManager();
+        MedicineDataManger medicineDataManager = new MedicineDataManger();
         PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
+        EmployeeDataManager employeeDataManager = new EmployeeDataManager();
 
         public AdministratorForm(Employee loggedInAdministrator)
         {
             CurrentUser = loggedInAdministrator;
             InitializeComponent();
             RefreshDataGridView();
+
+            comboBoxPatientRoom.DataSource = roomDataManager.Select();
+            comboBoxPatientRoom.DisplayMember = "Id";
+            comboBoxPatientRoom.ValueMember = "Id";
+
+            comboBoxName.DataSource = medicineDataManager.Select();
+            comboBoxName.DisplayMember = "Name";
+            comboBoxName.ValueMember = "Id";
+
+            comboBoxCaregiver.DataSource = employeeDataManager.SelectNurses();
+            comboBoxCaregiver.DisplayMember = "LastName";
+            comboBoxCaregiver.ValueMember = "Id";
+            
         }
         public Employee CurrentUser { get => currentUser; set => currentUser = value; }
         private void RefreshDataGridView()
@@ -26,16 +45,10 @@ namespace NursingHomeApp.Forms
             dataGridViewPatients.DataSource = patientDataManager.Select();
             dataGridViewPatients.Columns[0].Visible = false;
 
-            dataGridViewPatientsList.DataSource = patientDataManager.Select();
+            dataGridViewPatientsList.DataSource = patientDataManager.SelectToList();
             dataGridViewPatientsList.Columns[0].Visible = false;
-            dataGridViewPatientsList.Columns[3].Visible = false;
-            dataGridViewPatientsList.Columns[4].Visible = false;
-            dataGridViewPatientsList.Columns[5].Visible = false;
-            dataGridViewPatientsList.Columns[6].Visible = false;
-            dataGridViewPatientsList.Columns[7].Visible = false;
-            dataGridViewPatientsList.Columns[8].Visible = false;
-            dataGridViewPatientsList.Columns[9].Visible = false;
-            dataGridViewPatientsList.Columns[10].Visible = false;
+
+            dataGridViewRooms.DataSource = roomDataManager.Select();
         }
         public AdministratorForm()
         {
@@ -43,6 +56,8 @@ namespace NursingHomeApp.Forms
             textBoxLastName.Text = currentUser.LastName;
             textBoxPersonId.Text = currentUser.PersonId;
             textBoxPhoneNumber.Text = currentUser.PhoneNumber;
+
+
         }
         private void dataGridViewPatients_SelectionChanged(object sender, EventArgs e)
         {
@@ -58,7 +73,6 @@ namespace NursingHomeApp.Forms
                 textBoxPatientPhoneNumber.Text = patient.PhoneNumber;
                 comboBoxPatientRoom.Text = patient.RoomID.ToString();
                 textBoxPatientAlergies.Text = patient.Alergies;
-                //comboBoxPatientCaregiver.ValueMember = patient.EmployeeId.ToString();
             }
             catch (Exception)
             {
@@ -68,10 +82,10 @@ namespace NursingHomeApp.Forms
         {
             try
             {
-                patientMedicine = (PatientMedicine)dataGridViewPatientMedicines.CurrentRow.DataBoundItem;
+                patientMedicine = (PatientMedicineView)dataGridViewPatientMedicines.CurrentRow.DataBoundItem;
 
-                comboBoxName.ValueMember = patientMedicine.MedicineId.ToString();
-                comboBoxTerm.Text = patientMedicine.Term.ToString();
+                comboBoxName.Text = patientMedicine.Name.ToString();
+                comboBoxTerm.Text = patientMedicine.Time.ToString();
                 numericUpDownDose.Text = patientMedicine.Dose.ToString();
             }
             catch (Exception)
@@ -82,9 +96,23 @@ namespace NursingHomeApp.Forms
         {
             try
             {
-                patient = (PatientView)dataGridViewPatientsList.CurrentRow.DataBoundItem;
-                dataGridViewPatientMedicines.DataSource = patientMedicineDataManager.SelectAll(patient.Id);
+                patientOnList = (PatientOnListView)dataGridViewPatientsList.CurrentRow.DataBoundItem;
+                dataGridViewPatientMedicines.DataSource = patientMedicineDataManager.SelectAll(patientOnList.Id);
                 dataGridViewPatientMedicines.Columns[0].Visible = false;
+
+            }
+            catch (Exception)
+            {
+            }
+        }
+
+        private void dataGridViewRooms_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                room = (RoomView)dataGridViewRooms.CurrentRow.DataBoundItem;
+                dataGridViewResidents.DataSource = patientDataManager.SelectRoomId(room.Id);
+                dataGridViewResidents.Columns[0].Visible = false;
 
             }
             catch (Exception)
@@ -104,7 +132,7 @@ namespace NursingHomeApp.Forms
             newPatient.PhoneNumber = textBoxPatientPhoneNumber.Text;
             newPatient.RoomID = int.Parse(comboBoxPatientRoom.Text);
             newPatient.Alergies = textBoxPatientAlergies.Text;
-            //newPatient.EmployeeId = 1;
+            newPatient.EmployeeId = (int)comboBoxCaregiver.SelectedValue;
 
             if (patientDataManager.Add(newPatient))
             {
@@ -131,7 +159,7 @@ namespace NursingHomeApp.Forms
             updatedPatient.PhoneNumber = textBoxPatientPhoneNumber.Text;
             updatedPatient.RoomID = int.Parse(comboBoxPatientRoom.Text);
             updatedPatient.Alergies = textBoxPatientAlergies.Text;
-            //updatedPatient.EmployeeId = 1;
+            updatedPatient.EmployeeId = (int)comboBoxCaregiver.SelectedValue;
 
             if (patientDataManager.Update(updatedPatient))
             {
@@ -165,19 +193,80 @@ namespace NursingHomeApp.Forms
 
         private void buttonAddPatientMedicine_Click(object sender, EventArgs e)
         {
+            PatientMedicine newPatientMedicine = new PatientMedicine();
 
+            newPatientMedicine.MedicineId = (int)comboBoxName.SelectedValue;
+            newPatientMedicine.PatientId = patientOnList.Id;
+            newPatientMedicine.Dose = int.Parse(numericUpDownDose.Text);
+            newPatientMedicine.Term = System.TimeSpan.Parse(comboBoxTerm.Text);
+
+            if (patientMedicineDataManager.Add(newPatientMedicine))
+            {
+                MessageBox.Show("Added");
+            }
+            else
+            {
+                MessageBox.Show("Error occured");
+            }
+            RefreshDataGridView();
         }
 
         private void buttonEditPatientMedicine_Click(object sender, EventArgs e)
         {
+            PatientMedicine updatedPatientMedicine = new PatientMedicine();
+
+            updatedPatientMedicine.Id = patientMedicine.Id; 
+            updatedPatientMedicine.MedicineId = (int)comboBoxName.SelectedValue;
+            updatedPatientMedicine.PatientId = patientOnList.Id;
+            updatedPatientMedicine.Dose = int.Parse(numericUpDownDose.Text);
+            updatedPatientMedicine.Term = System.TimeSpan.Parse(comboBoxTerm.Text);
+
+            if (patientMedicineDataManager.Update(updatedPatientMedicine))
+            {
+                MessageBox.Show("Updated");
+            }
+            else
+            {
+                MessageBox.Show("Error occured");
+            }
+            RefreshDataGridView();
 
         }
 
         private void buttonDeletePatientMedicine_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (patientMedicineDataManager.Delete(patientMedicine.Id))
+                {
+                    MessageBox.Show("Deleted");
+                }
+                else
+                {
+                    MessageBox.Show("Error occured");
+                }
+            }
+            catch (Exception)
+            {
+            }
+            RefreshDataGridView();
 
         }
 
+        private void AdministratorForm_Load(object sender, EventArgs e)
+        {
+            textBoxFistName.Text = currentUser.FirstName;
+            textBoxLastName.Text = currentUser.LastName;
+            textBoxPersonId.Text = currentUser.PersonId;
+            textBoxPhoneNumber.Text = currentUser.PhoneNumber;
+            textBoxProfession.Text = currentUser.Profession.Name.ToString();
+        }
+        private void comboBoxCaregiver_Format(object sender, ListControlConvertEventArgs e)
+        {
 
+            string lastname = ((Employee)e.ListItem).FirstName;
+            string firstname = ((Employee)e.ListItem).LastName;
+            e.Value = lastname + " " + firstname;
+        }
     }
 }

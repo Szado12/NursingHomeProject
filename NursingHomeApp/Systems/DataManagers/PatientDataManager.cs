@@ -29,6 +29,12 @@ namespace NursingHomeApp.Systems.DataManagers
             return Mapper.Map<List<Patient>, List<PatientView>>(patients);
         }
 
+        public List<PatientOnListView> SelectToList()
+        {
+            List<Patient> patients = DbContext.Patients.ToList();
+            return Mapper.Map<List<Patient>, List<PatientOnListView>>(patients);
+        }
+
         public PatientView Select(int Id)
         {
             Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == Id);
@@ -46,6 +52,11 @@ namespace NursingHomeApp.Systems.DataManagers
             List<Patient> patients = DbContext.Patients.Where(e => e.EmployeeId == Id).ToList();
             return Mapper.Map<List<Patient>, List<PatientView>>(patients);
         }
+        public List<PatientOnListView> SelectRoomId(int Id)
+        {
+            List<Patient> patients = DbContext.Patients.Where(e => e.RoomID == Id).ToList();
+            return Mapper.Map<List<Patient>, List<PatientOnListView>>(patients);
+        }
 
         public bool Update(Patient t)
         {
@@ -59,7 +70,7 @@ namespace NursingHomeApp.Systems.DataManagers
             patient.PhoneNumber = t.PhoneNumber;
             patient.RoomID = t.RoomID;
             patient.Alergies = t.Alergies;
-            //patient.Employee = t.Employee;
+            patient.EmployeeId = t.EmployeeId;
 
             return (DbContext.SaveChanges() > 0);
         }
