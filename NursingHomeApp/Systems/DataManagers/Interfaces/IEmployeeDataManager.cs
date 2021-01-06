@@ -1,4 +1,5 @@
 ﻿using NursingHomeApp.Systems.DataMangers.Interfaces;
+using NursingHomeApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
     public interface IEmployeeDataManager : IDefaultDataManager<Employee, Employee>
     {
+        List<Employee> SelectNurses();
     }
 }

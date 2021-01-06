@@ -19,7 +19,7 @@ namespace NursingHomeApp.Mapper
                 .ForMember(s => s.EmployeeFirstName, opt => opt.MapFrom(src => src.Employee.FirstName))
                 .ForMember(s => s.EmployeeLastName, opt => opt.MapFrom(src => src.Employee.LastName))
                 .ForMember(s => s.TreatmentName, opt => opt.MapFrom(src => src.Treatment.Name))
-                .ForMember(s => s.PlacetName, opt => opt.MapFrom(src => src.Place.Name));
+                .ForMember(s => s.PlaceName, opt => opt.MapFrom(src => src.Place.Name));
 
             CreateMap<Patient, PatientView>()
                 .ForMember(d => d.EmployeeFirstName, opt => opt.MapFrom(src => src.Employee.FirstName))
@@ -34,6 +34,11 @@ namespace NursingHomeApp.Mapper
                 .ForMember(pm => pm.Name, opt => opt.MapFrom(src => src.Medicine.Name))
                 .ForMember(pm => pm.Dose, opt => opt.MapFrom(src => src.Dose))
                 .ForMember(pm => pm.Time, opt => opt.MapFrom(src => src.Term));
+
+            CreateMap<Patient, PatientOnListView>();
+
+            CreateMap<Room, RoomView>()
+                .ForMember(r => r.Patients, opt => opt.MapFrom(src => src.Patients));
 
         }
     }

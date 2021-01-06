@@ -139,6 +139,7 @@
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Systems\DataManagers\DefaultDataManager.cs" />
+    <Compile Include="Systems\DataManagers\EmployeeDataManager.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IDefaultDataManager.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IEmployeeDataManager.cs" />
     <Compile Include="Systems\DataManagers\Interfaces\IMedicineDataManger.cs" />
@@ -152,6 +153,9 @@
     <Compile Include="Systems\DataManagers\MedicineDataManager.cs" />
     <Compile Include="Systems\DataManagers\PatientDataManager.cs" />
     <Compile Include="Systems\DataManagers\PatientMedicineDataManager.cs" />
+    <Compile Include="Systems\DataManagers\PlaceDataManager.cs" />
+    <Compile Include="Systems\DataManagers\RoomDataManager.cs" />
+    <Compile Include="Systems\DataManagers\ScheduleDataManager.cs" />
     <Compile Include="Systems\DataManagers\TreatmentDataManager.cs" />
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
@@ -160,7 +164,9 @@
     <Compile Include="Views\MedicineView.cs" />
     <Compile Include="Views\NursePatientsView.cs" />
     <Compile Include="Views\PatientMedicineView.cs" />
+    <Compile Include="Views\PatientOnListView.cs" />
     <Compile Include="Views\PatientView.cs" />
+    <Compile Include="Views\RoomView.cs" />
     <Compile Include="Views\ScheduleView.cs" />
     <EmbeddedResource Include="Forms\AdministratorForm.resx">
       <DependentUpon>AdministratorForm.cs</DependentUpon>

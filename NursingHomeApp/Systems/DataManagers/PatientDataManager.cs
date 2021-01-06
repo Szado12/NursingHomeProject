@@ -29,6 +29,12 @@ namespace NursingHomeApp.Systems.DataManagers
             return Mapper.Map<List<Patient>, List<PatientView>>(patients);
         }
 
+        public List<PatientOnListView> SelectToList()
+        {
+            List<Patient> patients = DbContext.Patients.ToList();
+            return Mapper.Map<List<Patient>, List<PatientOnListView>>(patients);
+        }
+
         public PatientView Select(int Id)
         {
             Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == Id);
@@ -36,16 +42,36 @@ namespace NursingHomeApp.Systems.DataManagers
             return patientView;
         }
 
+        public List<Patient> SelectAll()
+        {
+            return DbContext.Patients.ToList();
+        }
+
         public List<PatientView> SelectEmployeeId(int Id)
         {
             List<Patient> patients = DbContext.Patients.Where(e => e.EmployeeId == Id).ToList();
             return Mapper.Map<List<Patient>, List<PatientView>>(patients);
         }
+        public List<PatientOnListView> SelectRoomId(int Id)
+        {
+            List<Patient> patients = DbContext.Patients.Where(e => e.RoomID == Id).ToList();
+            return Mapper.Map<List<Patient>, List<PatientOnListView>>(patients);
+        }
 
         public bool Update(Patient t)
         {
             Patient patient = DbContext.Patients.SingleOrDefault(p => p.Id == t.Id);
-            patient = t;
+
+            patient.FirstName = t.FirstName;
+            patient.LastName = t.LastName;
+            patient.PersonId = t.PersonId;
+            patient.Age = t.Age;
+            patient.ContactNumber = t.ContactNumber;
+            patient.PhoneNumber = t.PhoneNumber;
+            patient.RoomID = t.RoomID;
+            patient.Alergies = t.Alergies;
+            patient.EmployeeId = t.EmployeeId;
+
             return (DbContext.SaveChanges() > 0);
         }
 
