@@ -75,11 +75,8 @@ namespace NursingHomeApp.Forms
             Schedule newSchedule = new Schedule();
             newSchedule.PatientId = (int)comboBoxPatient.SelectedValue;
             newSchedule.PlaceId = (int)comboBoxPlace.SelectedValue;
-            newSchedule.Place = (Place)comboBoxPlace.SelectedItem;
-            newSchedule.Employee = currentUser;
             newSchedule.EmployeeId = currentUser.Id;
             newSchedule.TreatmentId = (int)comboBoxTreatment.SelectedValue;
-            newSchedule.Treatment = (Treatment)comboBoxTreatment.SelectedItem;
             newSchedule.Id = schedule.Id;
             newSchedule.Term = System.DateTime.Parse(textBoxTerm.Text);
             if (ScheduleDataManager.Update(newSchedule))
@@ -112,8 +109,8 @@ namespace NursingHomeApp.Forms
                 Treatment newTreatment = new Treatment();
                 newTreatment.Name = textBoxName.Text;
                 newTreatment.Duration = System.TimeSpan.Parse(textBoxDuration.Text);
-                if (treatmentDataManager.Add(treatment))
-                    MessageBox.Show(treatment.Name + " Added");
+                if (treatmentDataManager.Add(newTreatment))
+                    MessageBox.Show(newTreatment.Name + " Added");
                 else
                     MessageBox.Show("Error occured");
                 RefreshDataGridViewTreatment();
