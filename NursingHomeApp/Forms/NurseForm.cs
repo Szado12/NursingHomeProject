@@ -116,6 +116,7 @@ namespace NursingHomeApp.Forms
         {
             NursePatientsView patient = (NursePatientsView)dataGridViewPatients.CurrentRow.DataBoundItem;
             dataGridViewPatientMedicines.DataSource = patientMedicineDataManager.SelectPatientMedicine(patient.Id);
+            dataGridViewPatientMedicines.Columns["Id"].Visible = false;
         }
     }
 }
