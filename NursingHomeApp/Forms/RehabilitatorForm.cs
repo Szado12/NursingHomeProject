@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using NursingHomeApp.Mapper;
 using NursingHomeApp.Systems.LogicalManagers;
 using NursingHomeApp.Systems.DataManagers;
@@ -6,13 +6,14 @@ using NursingHomeApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+
 using System.Data;
-using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using AutoMapper;
+using NursingHomeApp.Mapper;
+using NursingHomeApp.Systems.DataManagers;
+using NursingHomeApp.Views;
 
 namespace NursingHomeApp.Forms
 {

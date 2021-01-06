@@ -13,14 +13,18 @@ namespace NursingHomeApp.Forms
         private Employee currentUser;
         PatientView patient;
         RoomView room;
+
         PatientOnListView patientOnList;
         PatientMedicineView patientMedicine;
+
+        EmployeeManager employeeManager = new EmployeeManager();
+        PatientMedicineManager patientMedicineManager = new PatientMedicineManager();
+
         PatientManager patientManager = new PatientManager();
         PatientDataManager patientDataManager = new PatientDataManager();
         RoomDataManager roomDataManager = new RoomDataManager();
         MedicineDataManager medicineDataManager = new MedicineDataManager();
-        PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
-        EmployeeDataManager employeeDataManager = new EmployeeDataManager();
+
 
         public AdministratorForm(Employee loggedInAdministrator)
         {
@@ -36,7 +40,7 @@ namespace NursingHomeApp.Forms
             comboBoxName.DisplayMember = "Name";
             comboBoxName.ValueMember = "Id";
 
-            comboBoxCaregiver.DataSource = employeeDataManager.SelectNurses();
+            comboBoxCaregiver.DataSource = employeeManager.SelectNurses();
             comboBoxCaregiver.DisplayMember = "LastName";
             comboBoxCaregiver.ValueMember = "Id";
             
@@ -101,7 +105,7 @@ namespace NursingHomeApp.Forms
             try
             {
                 patientOnList = (PatientOnListView)dataGridViewPatientsList.CurrentRow.DataBoundItem;
-                dataGridViewPatientMedicines.DataSource = patientMedicineDataManager.SelectAll(patientOnList.Id);
+                dataGridViewPatientMedicines.DataSource = patientMedicineManager.SelectAll(patientOnList.Id);
                 dataGridViewPatientMedicines.Columns[0].Visible = false;
 
             }
@@ -172,14 +176,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonAddPatientMedicine_Click(object sender, EventArgs e)
         {
-            PatientMedicine newPatientMedicine = new PatientMedicine();
-
-            newPatientMedicine.MedicineId = (int)comboBoxName.SelectedValue;
-            newPatientMedicine.PatientId = patientOnList.Id;
-            newPatientMedicine.Dose = int.Parse(numericUpDownDose.Text);
-            newPatientMedicine.Term = System.TimeSpan.Parse(comboBoxTerm.Text);
-
-            if (patientMedicineDataManager.Add(newPatientMedicine))
+           if (patientMedicineManager.Add((int)comboBoxName.SelectedValue, patientOnList.Id, int.Parse(numericUpDownDose.Text), System.TimeSpan.Parse(comboBoxTerm.Text)))
             {
                 MessageBox.Show("Added");
             }
@@ -192,15 +189,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonEditPatientMedicine_Click(object sender, EventArgs e)
         {
-            PatientMedicine updatedPatientMedicine = new PatientMedicine();
-
-            updatedPatientMedicine.Id = patientMedicine.Id; 
-            updatedPatientMedicine.MedicineId = (int)comboBoxName.SelectedValue;
-            updatedPatientMedicine.PatientId = patientOnList.Id;
-            updatedPatientMedicine.Dose = int.Parse(numericUpDownDose.Text);
-            updatedPatientMedicine.Term = System.TimeSpan.Parse(comboBoxTerm.Text);
-
-            if (patientMedicineDataManager.Update(updatedPatientMedicine))
+            if (patientMedicineManager.Update(patientMedicine.Id,(int)comboBoxName.SelectedValue, patientOnList.Id, int.Parse(numericUpDownDose.Text), System.TimeSpan.Parse(comboBoxTerm.Text)))
             {
                 MessageBox.Show("Updated");
             }
@@ -216,7 +205,7 @@ namespace NursingHomeApp.Forms
         {
             try
             {
-                if (patientMedicineDataManager.Delete(patientMedicine.Id))
+                if (patientMedicineManager.Delete(patientMedicine.Id))
                 {
                     MessageBox.Show("Deleted");
                 }
