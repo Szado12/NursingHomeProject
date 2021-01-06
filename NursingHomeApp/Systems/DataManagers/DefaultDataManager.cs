@@ -10,7 +10,7 @@ namespace NursingHomeApp.Systems.DataManagers
 {
     public class DefaultDataManager
     {
-        protected readonly NursingHomeEntities DbContext = new NursingHomeEntities();
+        protected NursingHomeEntities DbContext = new NursingHomeEntities();
         private static readonly MapperConfiguration mapperConfig = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         protected IMapper Mapper = mapperConfig.CreateMapper();
     }

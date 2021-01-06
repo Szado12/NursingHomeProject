@@ -56,16 +56,11 @@ namespace NursingHomeApp.Forms
             Schedule newSchedule = new Schedule
             {
                 PatientId = (int)comboBoxPatient.SelectedValue,
-            //newSchedule.Patient = (Patient)comboBoxPatient.SelectedItem;
-                 PlaceId = (int)comboBoxPlace.SelectedValue,
-                //newSchedule.Place = (Place)comboBoxPlace.SelectedItem;
-                //newSchedule.Employee = currentUser;
-
+                PlaceId = (int)comboBoxPlace.SelectedValue,
                 EmployeeId = currentUser.Id,
                 TreatmentId = (int)comboBoxTreatment.SelectedValue,
                 Term = System.DateTime.Parse(textBoxTerm.Text)
-        };
-            //newSchedule.Treatment = (Treatment)comboBoxTreatment.SelectedItem;
+            };
             
 
             if (ScheduleDataManager.Add(newSchedule))

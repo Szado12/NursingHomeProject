@@ -697,5 +697,6 @@ namespace NursingHomeApp.Forms
         private System.Windows.Forms.DataGridView dataGridViewRooms;
         private System.Windows.Forms.DataGridView dataGridViewResidents;
         private System.Windows.Forms.ComboBox comboBoxCaregiver;
+
     }
 }
