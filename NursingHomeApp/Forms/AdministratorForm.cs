@@ -16,7 +16,7 @@ namespace NursingHomeApp.Forms
 
         PatientDataManager patientDataManager = new PatientDataManager();
         RoomDataManager roomDataManager = new RoomDataManager();
-        MedicineDataManger medicineDataManager = new MedicineDataManger();
+        MedicineDataManager medicineDataManager = new MedicineDataManager();
         PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
         EmployeeDataManager employeeDataManager = new EmployeeDataManager();
 

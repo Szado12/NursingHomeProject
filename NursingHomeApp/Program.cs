@@ -20,7 +20,7 @@ namespace NursingHomeApp
             Employee employee = employeeDataManager.Select(13);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdministratorForm(employee));
+            Application.Run(new TestForm());
 
         }
     }

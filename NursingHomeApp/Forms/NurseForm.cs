@@ -1,4 +1,5 @@
 ﻿using NursingHomeApp.Systems.DataManagers;
+using NursingHomeApp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace NursingHomeApp.Forms
             textBoxLastName.Text = currentUser.LastName;
             textBoxPersonId.Text = currentUser.PersonId;
             textBoxPhoneNumber.Text = currentUser.PhoneNumber;
-            textBoxPhoneNumber.Text = currentUser.Profession.ToString();
+            textBoxProfession.Text = currentUser.Profession.Name.ToString();
         }
 
         private void buttonAddMedicine_Click(object sender, EventArgs e)
@@ -133,7 +134,7 @@ namespace NursingHomeApp.Forms
 
         private void dataGridViewPatients_SelectionChanged(object sender, EventArgs e)
         {
-            Patient patient = (Patient)dataGridViewPatients.CurrentRow.DataBoundItem;
+            NursePatientsView patient = (NursePatientsView)dataGridViewPatients.CurrentRow.DataBoundItem;
             patientMedicineDataManager.SelectPatientMedicine(patient.Id);
         }
     }

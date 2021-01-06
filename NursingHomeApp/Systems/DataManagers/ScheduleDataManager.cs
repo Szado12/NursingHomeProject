@@ -53,7 +53,11 @@ namespace NursingHomeApp.Systems.DataManagers
         public bool Update(Schedule t)
         {
             Schedule schedule = DbContext.Schedules.SingleOrDefault(p => p.Id == t.Id);
-            schedule = t;
+            schedule.EmployeeId = t.EmployeeId;
+            schedule.PatientId = t.PatientId;
+            schedule.PlaceId = t.PlaceId;
+            schedule.TreatmentId = t.TreatmentId;
+            schedule.Term = t.Term;
             return (DbContext.SaveChanges() > 0);
         }
     }

@@ -37,6 +37,8 @@ namespace NursingHomeApp.Mapper
 
             CreateMap<Patient, PatientOnListView>();
 
+            CreateMap<Patient, NursePatientsView>();
+
             CreateMap<Room, RoomView>()
                 .ForMember(r => r.Patients, opt => opt.MapFrom(src => src.Patients));
 

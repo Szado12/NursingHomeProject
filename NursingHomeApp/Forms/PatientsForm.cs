@@ -18,10 +18,10 @@ namespace NursingHomeApp
     {
         
         PatientDataManager patientDataManager = new PatientDataManager();
-        public PatientsForm()
+        public PatientsForm(PatientView patient)
         {
             InitializeComponent();
-            PatientView patientView = patientDataManager.Select(7);
+            PatientView patientView = patient;
             SetControlls(patientView);
             dataGridViewPatientSchedule.Columns["Id"].Visible = false;
         }
