@@ -11,6 +11,8 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
     public interface IScheduleDataManger : IDefaultDataManager<Schedule, ScheduleView>
     {
         List<ScheduleView> SelectIdPatient(int Id);
+        List<ScheduleView> SelectFilteredPatient(int Id, int treatmentId);
         List<ScheduleView> SelectIdEmployee(int Id);
+        List<ScheduleView> SelectFilteredEmployee(int Id, int treatmentId);
     }
 }

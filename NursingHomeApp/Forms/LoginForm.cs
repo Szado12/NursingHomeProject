@@ -16,7 +16,7 @@ namespace NursingHomeApp.Forms
     public partial class LoginForm : Form
     {
         PatientLoginManager patientLoginManager = new PatientLoginManager();
-        EmployeeLoginDataManager employeeLoginDataManager = new EmployeeLoginDataManager();
+        EmployeeLoginManager employeeLoginManager = new EmployeeLoginManager();
         public LoginForm()
         {
             InitializeComponent();
@@ -43,7 +43,7 @@ namespace NursingHomeApp.Forms
                     }
                     break;
                 case 1:
-                    Employee employee  = employeeLoginDataManager.Select(textBoxPersonId.Text, textBoxPassword.Text);
+                    Employee employee  = employeeLoginManager.Select(textBoxPersonId.Text, textBoxPassword.Text);
                     if (employee == null)
                         MessageBox.Show("Wrong login data");
                     else

@@ -67,6 +67,9 @@ namespace NursingHomeApp.Forms
             this.buttonEditTreatment = new System.Windows.Forms.Button();
             this.buttonAddTreatment = new System.Windows.Forms.Button();
             this.dataGridViewTreatments = new System.Windows.Forms.DataGridView();
+            this.buttonFilter = new System.Windows.Forms.Button();
+            this.comboBoxFilterOptions = new System.Windows.Forms.ComboBox();
+            this.buttonShowAll = new System.Windows.Forms.Button();
             this.tabControlRehabilitator.SuspendLayout();
             this.tabPageInformations.SuspendLayout();
             this.tabPageSchedule.SuspendLayout();
@@ -121,7 +124,7 @@ namespace NursingHomeApp.Forms
             // textBoxProfession
             // 
             this.textBoxProfession.Location = new System.Drawing.Point(381, 178);
-            this.textBoxProfession.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxProfession.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxProfession.Name = "textBoxProfession";
             this.textBoxProfession.ReadOnly = true;
             this.textBoxProfession.Size = new System.Drawing.Size(233, 22);
@@ -140,7 +143,7 @@ namespace NursingHomeApp.Forms
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Location = new System.Drawing.Point(381, 146);
-            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.ReadOnly = true;
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(233, 22);
@@ -159,7 +162,7 @@ namespace NursingHomeApp.Forms
             // textBoxPersonId
             // 
             this.textBoxPersonId.Location = new System.Drawing.Point(381, 112);
-            this.textBoxPersonId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPersonId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPersonId.Name = "textBoxPersonId";
             this.textBoxPersonId.ReadOnly = true;
             this.textBoxPersonId.Size = new System.Drawing.Size(233, 22);
@@ -178,7 +181,7 @@ namespace NursingHomeApp.Forms
             // textBoxLastName
             // 
             this.textBoxLastName.Location = new System.Drawing.Point(381, 80);
-            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.ReadOnly = true;
             this.textBoxLastName.Size = new System.Drawing.Size(233, 22);
@@ -197,7 +200,7 @@ namespace NursingHomeApp.Forms
             // textBoxFistName
             // 
             this.textBoxFistName.Location = new System.Drawing.Point(381, 48);
-            this.textBoxFistName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFistName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFistName.Name = "textBoxFistName";
             this.textBoxFistName.ReadOnly = true;
             this.textBoxFistName.Size = new System.Drawing.Size(233, 22);
@@ -205,6 +208,9 @@ namespace NursingHomeApp.Forms
             // 
             // tabPageSchedule
             // 
+            this.tabPageSchedule.Controls.Add(this.buttonShowAll);
+            this.tabPageSchedule.Controls.Add(this.buttonFilter);
+            this.tabPageSchedule.Controls.Add(this.comboBoxFilterOptions);
             this.tabPageSchedule.Controls.Add(this.textBoxTerm);
             this.tabPageSchedule.Controls.Add(this.labelTerm);
             this.tabPageSchedule.Controls.Add(this.labelPlace);
@@ -230,8 +236,8 @@ namespace NursingHomeApp.Forms
             // 
             // textBoxTerm
             // 
-            this.textBoxTerm.Location = new System.Drawing.Point(797, 380);
-            this.textBoxTerm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxTerm.Location = new System.Drawing.Point(680, 381);
+            this.textBoxTerm.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxTerm.Name = "textBoxTerm";
             this.textBoxTerm.Size = new System.Drawing.Size(160, 22);
             this.textBoxTerm.TabIndex = 19;
@@ -239,7 +245,7 @@ namespace NursingHomeApp.Forms
             // labelTerm
             // 
             this.labelTerm.AutoSize = true;
-            this.labelTerm.Location = new System.Drawing.Point(744, 384);
+            this.labelTerm.Location = new System.Drawing.Point(627, 385);
             this.labelTerm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTerm.Name = "labelTerm";
             this.labelTerm.Size = new System.Drawing.Size(45, 17);
@@ -249,7 +255,7 @@ namespace NursingHomeApp.Forms
             // labelPlace
             // 
             this.labelPlace.AutoSize = true;
-            this.labelPlace.Location = new System.Drawing.Point(439, 423);
+            this.labelPlace.Location = new System.Drawing.Point(352, 423);
             this.labelPlace.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPlace.Name = "labelPlace";
             this.labelPlace.Size = new System.Drawing.Size(47, 17);
@@ -259,7 +265,7 @@ namespace NursingHomeApp.Forms
             // labelTreatment
             // 
             this.labelTreatment.AutoSize = true;
-            this.labelTreatment.Location = new System.Drawing.Point(439, 384);
+            this.labelTreatment.Location = new System.Drawing.Point(352, 384);
             this.labelTreatment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTreatment.Name = "labelTreatment";
             this.labelTreatment.Size = new System.Drawing.Size(77, 17);
@@ -268,8 +274,8 @@ namespace NursingHomeApp.Forms
             // 
             // textBoxRehabilitator
             // 
-            this.textBoxRehabilitator.Location = new System.Drawing.Point(211, 420);
-            this.textBoxRehabilitator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxRehabilitator.Location = new System.Drawing.Point(160, 420);
+            this.textBoxRehabilitator.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxRehabilitator.Name = "textBoxRehabilitator";
             this.textBoxRehabilitator.ReadOnly = true;
             this.textBoxRehabilitator.Size = new System.Drawing.Size(160, 22);
@@ -278,7 +284,7 @@ namespace NursingHomeApp.Forms
             // labelRehabilitator
             // 
             this.labelRehabilitator.AutoSize = true;
-            this.labelRehabilitator.Location = new System.Drawing.Point(111, 423);
+            this.labelRehabilitator.Location = new System.Drawing.Point(60, 423);
             this.labelRehabilitator.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelRehabilitator.Name = "labelRehabilitator";
             this.labelRehabilitator.Size = new System.Drawing.Size(92, 17);
@@ -288,7 +294,7 @@ namespace NursingHomeApp.Forms
             // labelPatient
             // 
             this.labelPatient.AutoSize = true;
-            this.labelPatient.Location = new System.Drawing.Point(111, 384);
+            this.labelPatient.Location = new System.Drawing.Point(60, 384);
             this.labelPatient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPatient.Name = "labelPatient";
             this.labelPatient.Size = new System.Drawing.Size(56, 17);
@@ -298,8 +304,8 @@ namespace NursingHomeApp.Forms
             // comboBoxPatient
             // 
             this.comboBoxPatient.FormattingEnabled = true;
-            this.comboBoxPatient.Location = new System.Drawing.Point(212, 380);
-            this.comboBoxPatient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxPatient.Location = new System.Drawing.Point(161, 380);
+            this.comboBoxPatient.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxPatient.Name = "comboBoxPatient";
             this.comboBoxPatient.Size = new System.Drawing.Size(160, 24);
             this.comboBoxPatient.TabIndex = 12;
@@ -308,8 +314,8 @@ namespace NursingHomeApp.Forms
             // comboBoxTreatment
             // 
             this.comboBoxTreatment.FormattingEnabled = true;
-            this.comboBoxTreatment.Location = new System.Drawing.Point(539, 380);
-            this.comboBoxTreatment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxTreatment.Location = new System.Drawing.Point(452, 380);
+            this.comboBoxTreatment.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxTreatment.Name = "comboBoxTreatment";
             this.comboBoxTreatment.Size = new System.Drawing.Size(160, 24);
             this.comboBoxTreatment.TabIndex = 11;
@@ -317,15 +323,15 @@ namespace NursingHomeApp.Forms
             // comboBoxPlace
             // 
             this.comboBoxPlace.FormattingEnabled = true;
-            this.comboBoxPlace.Location = new System.Drawing.Point(539, 420);
-            this.comboBoxPlace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxPlace.Location = new System.Drawing.Point(452, 420);
+            this.comboBoxPlace.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxPlace.Name = "comboBoxPlace";
             this.comboBoxPlace.Size = new System.Drawing.Size(160, 24);
             this.comboBoxPlace.TabIndex = 10;
             // 
             // buttonDeleteSchedulePosition
             // 
-            this.buttonDeleteSchedulePosition.Location = new System.Drawing.Point(592, 466);
+            this.buttonDeleteSchedulePosition.Location = new System.Drawing.Point(327, 471);
             this.buttonDeleteSchedulePosition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDeleteSchedulePosition.Name = "buttonDeleteSchedulePosition";
             this.buttonDeleteSchedulePosition.Size = new System.Drawing.Size(129, 46);
@@ -336,7 +342,7 @@ namespace NursingHomeApp.Forms
             // 
             // buttonEditSchedulePosition
             // 
-            this.buttonEditSchedulePosition.Location = new System.Drawing.Point(457, 466);
+            this.buttonEditSchedulePosition.Location = new System.Drawing.Point(192, 471);
             this.buttonEditSchedulePosition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditSchedulePosition.Name = "buttonEditSchedulePosition";
             this.buttonEditSchedulePosition.Size = new System.Drawing.Size(129, 46);
@@ -347,7 +353,7 @@ namespace NursingHomeApp.Forms
             // 
             // buttonAddSchedulePosition
             // 
-            this.buttonAddSchedulePosition.Location = new System.Drawing.Point(323, 466);
+            this.buttonAddSchedulePosition.Location = new System.Drawing.Point(58, 471);
             this.buttonAddSchedulePosition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddSchedulePosition.Name = "buttonAddSchedulePosition";
             this.buttonAddSchedulePosition.Size = new System.Drawing.Size(129, 46);
@@ -391,7 +397,7 @@ namespace NursingHomeApp.Forms
             // textBoxDuration
             // 
             this.textBoxDuration.Location = new System.Drawing.Point(484, 422);
-            this.textBoxDuration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxDuration.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDuration.Name = "textBoxDuration";
             this.textBoxDuration.Size = new System.Drawing.Size(132, 22);
             this.textBoxDuration.TabIndex = 10;
@@ -409,7 +415,7 @@ namespace NursingHomeApp.Forms
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(484, 390);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(132, 22);
             this.textBoxName.TabIndex = 8;
@@ -469,6 +475,37 @@ namespace NursingHomeApp.Forms
             this.dataGridViewTreatments.Size = new System.Drawing.Size(1045, 379);
             this.dataGridViewTreatments.TabIndex = 2;
             this.dataGridViewTreatments.SelectionChanged += new System.EventHandler(this.dataGridViewTreatments_SelectionChanged);
+            // 
+            // buttonFilter
+            // 
+            this.buttonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFilter.Location = new System.Drawing.Point(917, 484);
+            this.buttonFilter.Name = "buttonFilter";
+            this.buttonFilter.Size = new System.Drawing.Size(140, 36);
+            this.buttonFilter.TabIndex = 21;
+            this.buttonFilter.Text = "Filter";
+            this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
+            // 
+            // comboBoxFilterOptions
+            // 
+            this.comboBoxFilterOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFilterOptions.FormattingEnabled = true;
+            this.comboBoxFilterOptions.Location = new System.Drawing.Point(706, 487);
+            this.comboBoxFilterOptions.Name = "comboBoxFilterOptions";
+            this.comboBoxFilterOptions.Size = new System.Drawing.Size(205, 33);
+            this.comboBoxFilterOptions.TabIndex = 20;
+            // 
+            // buttonShowAll
+            // 
+            this.buttonShowAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowAll.Location = new System.Drawing.Point(917, 442);
+            this.buttonShowAll.Name = "buttonShowAll";
+            this.buttonShowAll.Size = new System.Drawing.Size(140, 36);
+            this.buttonShowAll.TabIndex = 22;
+            this.buttonShowAll.Text = "Show All";
+            this.buttonShowAll.UseVisualStyleBackColor = true;
+            this.buttonShowAll.Click += new System.EventHandler(this.buttonShowAll_Click);
             // 
             // RehabilitatorForm
             // 
@@ -532,5 +569,8 @@ namespace NursingHomeApp.Forms
         private System.Windows.Forms.Label labelPatient;
         private System.Windows.Forms.TextBox textBoxTerm;
         private System.Windows.Forms.Label labelTerm;
+        private System.Windows.Forms.Button buttonFilter;
+        private System.Windows.Forms.ComboBox comboBoxFilterOptions;
+        private System.Windows.Forms.Button buttonShowAll;
     }
 }

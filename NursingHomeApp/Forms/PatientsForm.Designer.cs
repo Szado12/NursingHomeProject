@@ -47,6 +47,9 @@
             this.labelFirstName = new System.Windows.Forms.Label();
             this.textBoxFistName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonFilter = new System.Windows.Forms.Button();
+            this.comboBoxFilterOptions = new System.Windows.Forms.ComboBox();
+            this.buttonShowAll = new System.Windows.Forms.Button();
             this.dataGridViewPatientSchedule = new System.Windows.Forms.DataGridView();
             this.Tabs.SuspendLayout();
             this.InformationsTab.SuspendLayout();
@@ -59,10 +62,10 @@
             this.Tabs.Controls.Add(this.InformationsTab);
             this.Tabs.Controls.Add(this.tabPage2);
             this.Tabs.Location = new System.Drawing.Point(0, 0);
-            this.Tabs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tabs.Margin = new System.Windows.Forms.Padding(4);
             this.Tabs.Name = "Tabs";
             this.Tabs.SelectedIndex = 0;
-            this.Tabs.Size = new System.Drawing.Size(1071, 554);
+            this.Tabs.Size = new System.Drawing.Size(1071, 555);
             this.Tabs.TabIndex = 0;
             // 
             // InformationsTab
@@ -84,10 +87,10 @@
             this.InformationsTab.Controls.Add(this.labelFirstName);
             this.InformationsTab.Controls.Add(this.textBoxFistName);
             this.InformationsTab.Location = new System.Drawing.Point(4, 25);
-            this.InformationsTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InformationsTab.Margin = new System.Windows.Forms.Padding(4);
             this.InformationsTab.Name = "InformationsTab";
-            this.InformationsTab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.InformationsTab.Size = new System.Drawing.Size(1063, 525);
+            this.InformationsTab.Padding = new System.Windows.Forms.Padding(4);
+            this.InformationsTab.Size = new System.Drawing.Size(1063, 526);
             this.InformationsTab.TabIndex = 0;
             this.InformationsTab.Text = "Informations";
             this.InformationsTab.UseVisualStyleBackColor = true;
@@ -236,7 +239,7 @@
             // textBoxFistName
             // 
             this.textBoxFistName.Location = new System.Drawing.Point(285, 34);
-            this.textBoxFistName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxFistName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFistName.Name = "textBoxFistName";
             this.textBoxFistName.ReadOnly = true;
             this.textBoxFistName.Size = new System.Drawing.Size(233, 22);
@@ -244,26 +247,60 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.buttonFilter);
+            this.tabPage2.Controls.Add(this.comboBoxFilterOptions);
+            this.tabPage2.Controls.Add(this.buttonShowAll);
             this.tabPage2.Controls.Add(this.dataGridViewPatientSchedule);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1063, 525);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1063, 526);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Schedule";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // buttonFilter
+            // 
+            this.buttonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFilter.Location = new System.Drawing.Point(911, 483);
+            this.buttonFilter.Name = "buttonFilter";
+            this.buttonFilter.Size = new System.Drawing.Size(140, 36);
+            this.buttonFilter.TabIndex = 6;
+            this.buttonFilter.Text = "Filter";
+            this.buttonFilter.UseVisualStyleBackColor = true;
+            this.buttonFilter.Click += new System.EventHandler(this.buttonFilter_Click);
+            // 
+            // comboBoxFilterOptions
+            // 
+            this.comboBoxFilterOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFilterOptions.FormattingEnabled = true;
+            this.comboBoxFilterOptions.Location = new System.Drawing.Point(700, 486);
+            this.comboBoxFilterOptions.Name = "comboBoxFilterOptions";
+            this.comboBoxFilterOptions.Size = new System.Drawing.Size(205, 33);
+            this.comboBoxFilterOptions.TabIndex = 5;
+            // 
+            // buttonShowAll
+            // 
+            this.buttonShowAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonShowAll.Location = new System.Drawing.Point(8, 485);
+            this.buttonShowAll.Name = "buttonShowAll";
+            this.buttonShowAll.Size = new System.Drawing.Size(140, 36);
+            this.buttonShowAll.TabIndex = 4;
+            this.buttonShowAll.Text = "Show All";
+            this.buttonShowAll.UseVisualStyleBackColor = true;
+            this.buttonShowAll.Click += new System.EventHandler(this.buttonShowAll_Click);
             // 
             // dataGridViewPatientSchedule
             // 
             this.dataGridViewPatientSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPatientSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPatientSchedule.Location = new System.Drawing.Point(-5, 0);
-            this.dataGridViewPatientSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewPatientSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPatientSchedule.Name = "dataGridViewPatientSchedule";
             this.dataGridViewPatientSchedule.ReadOnly = true;
             this.dataGridViewPatientSchedule.RowHeadersWidth = 51;
-            this.dataGridViewPatientSchedule.Size = new System.Drawing.Size(1071, 527);
+            this.dataGridViewPatientSchedule.Size = new System.Drawing.Size(1071, 478);
             this.dataGridViewPatientSchedule.TabIndex = 0;
             // 
             // PatientsForm
@@ -272,7 +309,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.Tabs);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PatientsForm";
             this.Text = "Patient";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PatientsForm_FormClosed);
@@ -307,6 +344,9 @@
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label labelContactNumber;
         private System.Windows.Forms.TextBox textBoxContactNumber;
+        private System.Windows.Forms.Button buttonShowAll;
+        private System.Windows.Forms.Button buttonFilter;
+        private System.Windows.Forms.ComboBox comboBoxFilterOptions;
     }
 }
 
