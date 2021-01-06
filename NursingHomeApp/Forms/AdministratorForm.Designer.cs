@@ -100,11 +100,11 @@ namespace NursingHomeApp.Forms
             this.tabControlRehabilitator.Controls.Add(this.tabPageSchedule);
             this.tabControlRehabilitator.Controls.Add(this.tabPageTreatments);
             this.tabControlRehabilitator.Controls.Add(this.tabPage1);
-            this.tabControlRehabilitator.Location = new System.Drawing.Point(-2, 0);
-            this.tabControlRehabilitator.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlRehabilitator.Location = new System.Drawing.Point(-3, 0);
+            this.tabControlRehabilitator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControlRehabilitator.Name = "tabControlRehabilitator";
             this.tabControlRehabilitator.SelectedIndex = 0;
-            this.tabControlRehabilitator.Size = new System.Drawing.Size(803, 450);
+            this.tabControlRehabilitator.Size = new System.Drawing.Size(1071, 554);
             this.tabControlRehabilitator.TabIndex = 2;
             // 
             // tabPageInformations
@@ -119,11 +119,11 @@ namespace NursingHomeApp.Forms
             this.tabPageInformations.Controls.Add(this.textBoxLastName);
             this.tabPageInformations.Controls.Add(this.labelFirstName);
             this.tabPageInformations.Controls.Add(this.textBoxFistName);
-            this.tabPageInformations.Location = new System.Drawing.Point(4, 22);
-            this.tabPageInformations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInformations.Location = new System.Drawing.Point(4, 25);
+            this.tabPageInformations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageInformations.Name = "tabPageInformations";
-            this.tabPageInformations.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageInformations.Size = new System.Drawing.Size(795, 424);
+            this.tabPageInformations.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageInformations.Size = new System.Drawing.Size(1063, 525);
             this.tabPageInformations.TabIndex = 0;
             this.tabPageInformations.Text = "Informations";
             this.tabPageInformations.UseVisualStyleBackColor = true;
@@ -131,86 +131,96 @@ namespace NursingHomeApp.Forms
             // labelProfession
             // 
             this.labelProfession.AutoSize = true;
-            this.labelProfession.Location = new System.Drawing.Point(17, 149);
+            this.labelProfession.Location = new System.Drawing.Point(23, 183);
+            this.labelProfession.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelProfession.Name = "labelProfession";
-            this.labelProfession.Size = new System.Drawing.Size(59, 13);
+            this.labelProfession.Size = new System.Drawing.Size(79, 17);
             this.labelProfession.TabIndex = 28;
             this.labelProfession.Text = "Profession:";
             // 
             // textBoxProfession
             // 
-            this.textBoxProfession.Location = new System.Drawing.Point(286, 145);
+            this.textBoxProfession.Location = new System.Drawing.Point(381, 178);
+            this.textBoxProfession.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxProfession.Name = "textBoxProfession";
             this.textBoxProfession.ReadOnly = true;
-            this.textBoxProfession.Size = new System.Drawing.Size(176, 20);
+            this.textBoxProfession.Size = new System.Drawing.Size(233, 22);
             this.textBoxProfession.TabIndex = 27;
             // 
             // labelPhoneNumber
             // 
             this.labelPhoneNumber.AutoSize = true;
-            this.labelPhoneNumber.Location = new System.Drawing.Point(17, 123);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(23, 151);
+            this.labelPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
-            this.labelPhoneNumber.Size = new System.Drawing.Size(81, 13);
+            this.labelPhoneNumber.Size = new System.Drawing.Size(107, 17);
             this.labelPhoneNumber.TabIndex = 26;
             this.labelPhoneNumber.Text = "Phone Number:";
             // 
             // textBoxPhoneNumber
             // 
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(286, 119);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(381, 146);
+            this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.ReadOnly = true;
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(176, 20);
+            this.textBoxPhoneNumber.Size = new System.Drawing.Size(233, 22);
             this.textBoxPhoneNumber.TabIndex = 25;
             // 
             // labelPersonId
             // 
             this.labelPersonId.AutoSize = true;
-            this.labelPersonId.Location = new System.Drawing.Point(17, 94);
+            this.labelPersonId.Location = new System.Drawing.Point(23, 116);
+            this.labelPersonId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPersonId.Name = "labelPersonId";
-            this.labelPersonId.Size = new System.Drawing.Size(52, 13);
+            this.labelPersonId.Size = new System.Drawing.Size(68, 17);
             this.labelPersonId.TabIndex = 22;
             this.labelPersonId.Text = "Person Id";
             // 
             // textBoxPersonId
             // 
-            this.textBoxPersonId.Location = new System.Drawing.Point(286, 91);
+            this.textBoxPersonId.Location = new System.Drawing.Point(381, 112);
+            this.textBoxPersonId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPersonId.Name = "textBoxPersonId";
             this.textBoxPersonId.ReadOnly = true;
-            this.textBoxPersonId.Size = new System.Drawing.Size(176, 20);
+            this.textBoxPersonId.Size = new System.Drawing.Size(233, 22);
             this.textBoxPersonId.TabIndex = 21;
             // 
             // labelLastName
             // 
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(17, 68);
+            this.labelLastName.Location = new System.Drawing.Point(23, 84);
+            this.labelLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(61, 13);
+            this.labelLastName.Size = new System.Drawing.Size(80, 17);
             this.labelLastName.TabIndex = 20;
             this.labelLastName.Text = "Last Name:";
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(286, 65);
+            this.textBoxLastName.Location = new System.Drawing.Point(381, 80);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.ReadOnly = true;
-            this.textBoxLastName.Size = new System.Drawing.Size(176, 20);
+            this.textBoxLastName.Size = new System.Drawing.Size(233, 22);
             this.textBoxLastName.TabIndex = 19;
             // 
             // labelFirstName
             // 
             this.labelFirstName.AutoSize = true;
-            this.labelFirstName.Location = new System.Drawing.Point(17, 42);
+            this.labelFirstName.Location = new System.Drawing.Point(23, 52);
+            this.labelFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(60, 13);
+            this.labelFirstName.Size = new System.Drawing.Size(80, 17);
             this.labelFirstName.TabIndex = 18;
             this.labelFirstName.Text = "First Name:";
             // 
             // textBoxFistName
             // 
-            this.textBoxFistName.Location = new System.Drawing.Point(286, 39);
+            this.textBoxFistName.Location = new System.Drawing.Point(381, 48);
+            this.textBoxFistName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFistName.Name = "textBoxFistName";
             this.textBoxFistName.ReadOnly = true;
-            this.textBoxFistName.Size = new System.Drawing.Size(176, 20);
+            this.textBoxFistName.Size = new System.Drawing.Size(233, 22);
             this.textBoxFistName.TabIndex = 17;
             // 
             // tabPageSchedule
@@ -237,11 +247,11 @@ namespace NursingHomeApp.Forms
             this.tabPageSchedule.Controls.Add(this.buttonEditPatient);
             this.tabPageSchedule.Controls.Add(this.buttonAddPatient);
             this.tabPageSchedule.Controls.Add(this.dataGridViewPatients);
-            this.tabPageSchedule.Location = new System.Drawing.Point(4, 22);
-            this.tabPageSchedule.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageSchedule.Location = new System.Drawing.Point(4, 25);
+            this.tabPageSchedule.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageSchedule.Name = "tabPageSchedule";
-            this.tabPageSchedule.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageSchedule.Size = new System.Drawing.Size(795, 424);
+            this.tabPageSchedule.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageSchedule.Size = new System.Drawing.Size(1063, 525);
             this.tabPageSchedule.TabIndex = 1;
             this.tabPageSchedule.Text = "Patient Manager";
             this.tabPageSchedule.UseVisualStyleBackColor = true;
@@ -249,169 +259,170 @@ namespace NursingHomeApp.Forms
             // comboBoxCaregiver
             // 
             this.comboBoxCaregiver.FormattingEnabled = true;
-            this.comboBoxCaregiver.Location = new System.Drawing.Point(687, 308);
-            this.comboBoxCaregiver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxCaregiver.Location = new System.Drawing.Point(916, 379);
+            this.comboBoxCaregiver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCaregiver.Name = "comboBoxCaregiver";
-            this.comboBoxCaregiver.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxCaregiver.Size = new System.Drawing.Size(121, 24);
             this.comboBoxCaregiver.TabIndex = 28;
             this.comboBoxCaregiver.Format += new System.Windows.Forms.ListControlConvertEventHandler(this.comboBoxCaregiver_Format);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(598, 250);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(797, 308);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.Size = new System.Drawing.Size(49, 17);
             this.label5.TabIndex = 27;
             this.label5.Text = "Room:";
             // 
             // labelAlergies
             // 
             this.labelAlergies.AutoSize = true;
-            this.labelAlergies.Location = new System.Drawing.Point(598, 282);
-            this.labelAlergies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelAlergies.Location = new System.Drawing.Point(797, 347);
             this.labelAlergies.Name = "labelAlergies";
-            this.labelAlergies.Size = new System.Drawing.Size(47, 13);
+            this.labelAlergies.Size = new System.Drawing.Size(63, 17);
             this.labelAlergies.TabIndex = 26;
             this.labelAlergies.Text = "Alergies:";
             // 
             // labelCaregiver
             // 
             this.labelCaregiver.AutoSize = true;
-            this.labelCaregiver.Location = new System.Drawing.Point(598, 314);
-            this.labelCaregiver.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelCaregiver.Location = new System.Drawing.Point(797, 386);
             this.labelCaregiver.Name = "labelCaregiver";
-            this.labelCaregiver.Size = new System.Drawing.Size(55, 13);
+            this.labelCaregiver.Size = new System.Drawing.Size(73, 17);
             this.labelCaregiver.TabIndex = 25;
             this.labelCaregiver.Text = "Caregiver:";
             // 
             // labelContactNumber
             // 
             this.labelContactNumber.AutoSize = true;
-            this.labelContactNumber.Location = new System.Drawing.Point(597, 187);
-            this.labelContactNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelContactNumber.Location = new System.Drawing.Point(796, 230);
             this.labelContactNumber.Name = "labelContactNumber";
-            this.labelContactNumber.Size = new System.Drawing.Size(87, 13);
+            this.labelContactNumber.Size = new System.Drawing.Size(114, 17);
             this.labelContactNumber.TabIndex = 24;
             this.labelContactNumber.Text = "Contact Number:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(598, 219);
+            this.label1.Location = new System.Drawing.Point(797, 270);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.Size = new System.Drawing.Size(107, 17);
             this.label1.TabIndex = 23;
             this.label1.Text = "Phone Number:";
             // 
             // labelAge
             // 
             this.labelAge.AutoSize = true;
-            this.labelAge.Location = new System.Drawing.Point(598, 155);
+            this.labelAge.Location = new System.Drawing.Point(797, 191);
+            this.labelAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(29, 13);
+            this.labelAge.Size = new System.Drawing.Size(37, 17);
             this.labelAge.TabIndex = 22;
             this.labelAge.Text = "Age:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(598, 124);
+            this.label2.Location = new System.Drawing.Point(797, 153);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 21;
             this.label2.Text = "Person Id";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(597, 92);
+            this.label3.Location = new System.Drawing.Point(796, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 20;
             this.label3.Text = "Last Name:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(597, 60);
+            this.label4.Location = new System.Drawing.Point(796, 74);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(80, 17);
             this.label4.TabIndex = 19;
             this.label4.Text = "First Name:";
             // 
             // textBoxPatientAlergies
             // 
-            this.textBoxPatientAlergies.Location = new System.Drawing.Point(687, 280);
-            this.textBoxPatientAlergies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPatientAlergies.Location = new System.Drawing.Point(916, 345);
+            this.textBoxPatientAlergies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPatientAlergies.Name = "textBoxPatientAlergies";
-            this.textBoxPatientAlergies.Size = new System.Drawing.Size(92, 20);
+            this.textBoxPatientAlergies.Size = new System.Drawing.Size(121, 22);
             this.textBoxPatientAlergies.TabIndex = 18;
             // 
             // comboBoxPatientRoom
             // 
             this.comboBoxPatientRoom.FormattingEnabled = true;
-            this.comboBoxPatientRoom.Location = new System.Drawing.Point(687, 246);
-            this.comboBoxPatientRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxPatientRoom.Location = new System.Drawing.Point(916, 303);
+            this.comboBoxPatientRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxPatientRoom.Name = "comboBoxPatientRoom";
-            this.comboBoxPatientRoom.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxPatientRoom.Size = new System.Drawing.Size(121, 24);
             this.comboBoxPatientRoom.TabIndex = 16;
             // 
             // textBoxPatientPhoneNumber
             // 
-            this.textBoxPatientPhoneNumber.Location = new System.Drawing.Point(687, 214);
-            this.textBoxPatientPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPatientPhoneNumber.Location = new System.Drawing.Point(916, 263);
+            this.textBoxPatientPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPatientPhoneNumber.Name = "textBoxPatientPhoneNumber";
-            this.textBoxPatientPhoneNumber.Size = new System.Drawing.Size(92, 20);
+            this.textBoxPatientPhoneNumber.Size = new System.Drawing.Size(121, 22);
             this.textBoxPatientPhoneNumber.TabIndex = 15;
             // 
             // textBoxPatientContactNumber
             // 
-            this.textBoxPatientContactNumber.Location = new System.Drawing.Point(687, 183);
-            this.textBoxPatientContactNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPatientContactNumber.Location = new System.Drawing.Point(916, 225);
+            this.textBoxPatientContactNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPatientContactNumber.Name = "textBoxPatientContactNumber";
-            this.textBoxPatientContactNumber.Size = new System.Drawing.Size(92, 20);
+            this.textBoxPatientContactNumber.Size = new System.Drawing.Size(121, 22);
             this.textBoxPatientContactNumber.TabIndex = 14;
             // 
             // numericUpDownPatientAge
             // 
-            this.numericUpDownPatientAge.Location = new System.Drawing.Point(687, 151);
-            this.numericUpDownPatientAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownPatientAge.Location = new System.Drawing.Point(916, 186);
+            this.numericUpDownPatientAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownPatientAge.Name = "numericUpDownPatientAge";
-            this.numericUpDownPatientAge.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownPatientAge.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownPatientAge.TabIndex = 13;
             // 
             // textBoxPatientPersonId
             // 
-            this.textBoxPatientPersonId.Location = new System.Drawing.Point(687, 119);
-            this.textBoxPatientPersonId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPatientPersonId.Location = new System.Drawing.Point(916, 146);
+            this.textBoxPatientPersonId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPatientPersonId.Name = "textBoxPatientPersonId";
-            this.textBoxPatientPersonId.Size = new System.Drawing.Size(92, 20);
+            this.textBoxPatientPersonId.Size = new System.Drawing.Size(121, 22);
             this.textBoxPatientPersonId.TabIndex = 12;
             // 
             // textBoxPatientLastName
             // 
-            this.textBoxPatientLastName.Location = new System.Drawing.Point(687, 88);
-            this.textBoxPatientLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPatientLastName.Location = new System.Drawing.Point(916, 108);
+            this.textBoxPatientLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPatientLastName.Name = "textBoxPatientLastName";
-            this.textBoxPatientLastName.Size = new System.Drawing.Size(92, 20);
+            this.textBoxPatientLastName.Size = new System.Drawing.Size(121, 22);
             this.textBoxPatientLastName.TabIndex = 11;
             // 
             // textBoxPatientFirstName
             // 
-            this.textBoxPatientFirstName.Location = new System.Drawing.Point(687, 56);
-            this.textBoxPatientFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPatientFirstName.Location = new System.Drawing.Point(916, 69);
+            this.textBoxPatientFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPatientFirstName.Name = "textBoxPatientFirstName";
-            this.textBoxPatientFirstName.Size = new System.Drawing.Size(92, 20);
+            this.textBoxPatientFirstName.Size = new System.Drawing.Size(121, 22);
             this.textBoxPatientFirstName.TabIndex = 10;
             // 
             // buttonDeletePatient
             // 
-            this.buttonDeletePatient.Location = new System.Drawing.Point(463, 236);
-            this.buttonDeletePatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDeletePatient.Location = new System.Drawing.Point(617, 290);
+            this.buttonDeletePatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDeletePatient.Name = "buttonDeletePatient";
-            this.buttonDeletePatient.Size = new System.Drawing.Size(97, 45);
+            this.buttonDeletePatient.Size = new System.Drawing.Size(129, 55);
             this.buttonDeletePatient.TabIndex = 9;
             this.buttonDeletePatient.Text = "Delete patient";
             this.buttonDeletePatient.UseVisualStyleBackColor = true;
@@ -419,10 +430,10 @@ namespace NursingHomeApp.Forms
             // 
             // buttonEditPatient
             // 
-            this.buttonEditPatient.Location = new System.Drawing.Point(463, 174);
-            this.buttonEditPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEditPatient.Location = new System.Drawing.Point(617, 214);
+            this.buttonEditPatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditPatient.Name = "buttonEditPatient";
-            this.buttonEditPatient.Size = new System.Drawing.Size(97, 45);
+            this.buttonEditPatient.Size = new System.Drawing.Size(129, 55);
             this.buttonEditPatient.TabIndex = 8;
             this.buttonEditPatient.Text = "Edit patient";
             this.buttonEditPatient.UseVisualStyleBackColor = true;
@@ -430,10 +441,10 @@ namespace NursingHomeApp.Forms
             // 
             // buttonAddPatient
             // 
-            this.buttonAddPatient.Location = new System.Drawing.Point(463, 108);
-            this.buttonAddPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddPatient.Location = new System.Drawing.Point(617, 133);
+            this.buttonAddPatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddPatient.Name = "buttonAddPatient";
-            this.buttonAddPatient.Size = new System.Drawing.Size(97, 45);
+            this.buttonAddPatient.Size = new System.Drawing.Size(129, 55);
             this.buttonAddPatient.TabIndex = 7;
             this.buttonAddPatient.Text = "Add patient";
             this.buttonAddPatient.UseVisualStyleBackColor = true;
@@ -442,12 +453,12 @@ namespace NursingHomeApp.Forms
             // dataGridViewPatients
             // 
             this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatients.Location = new System.Drawing.Point(2, 2);
-            this.dataGridViewPatients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewPatients.Location = new System.Drawing.Point(3, 2);
+            this.dataGridViewPatients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewPatients.Name = "dataGridViewPatients";
             this.dataGridViewPatients.RowHeadersWidth = 51;
             this.dataGridViewPatients.RowTemplate.Height = 24;
-            this.dataGridViewPatients.Size = new System.Drawing.Size(429, 422);
+            this.dataGridViewPatients.Size = new System.Drawing.Size(572, 519);
             this.dataGridViewPatients.TabIndex = 0;
             this.dataGridViewPatients.SelectionChanged += new System.EventHandler(this.dataGridViewPatients_SelectionChanged);
             // 
@@ -464,11 +475,11 @@ namespace NursingHomeApp.Forms
             this.tabPageTreatments.Controls.Add(this.buttonEditPatientMedicine);
             this.tabPageTreatments.Controls.Add(this.buttonAddPatientMedicine);
             this.tabPageTreatments.Controls.Add(this.dataGridViewPatientsList);
-            this.tabPageTreatments.Location = new System.Drawing.Point(4, 22);
-            this.tabPageTreatments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageTreatments.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTreatments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageTreatments.Name = "tabPageTreatments";
-            this.tabPageTreatments.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPageTreatments.Size = new System.Drawing.Size(795, 424);
+            this.tabPageTreatments.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPageTreatments.Size = new System.Drawing.Size(1063, 525);
             this.tabPageTreatments.TabIndex = 2;
             this.tabPageTreatments.Text = "Patient Medicine Manager";
             this.tabPageTreatments.UseVisualStyleBackColor = true;
@@ -477,39 +488,42 @@ namespace NursingHomeApp.Forms
             // 
             this.dataGridViewPatientMedicines.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPatientMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatientMedicines.Location = new System.Drawing.Point(228, 2);
-            this.dataGridViewPatientMedicines.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewPatientMedicines.Location = new System.Drawing.Point(304, 2);
+            this.dataGridViewPatientMedicines.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewPatientMedicines.Name = "dataGridViewPatientMedicines";
             this.dataGridViewPatientMedicines.RowHeadersWidth = 51;
             this.dataGridViewPatientMedicines.RowTemplate.Height = 24;
-            this.dataGridViewPatientMedicines.Size = new System.Drawing.Size(380, 422);
+            this.dataGridViewPatientMedicines.Size = new System.Drawing.Size(507, 519);
             this.dataGridViewPatientMedicines.TabIndex = 44;
             this.dataGridViewPatientMedicines.SelectionChanged += new System.EventHandler(this.dataGridViewPatientMedicines_SelectionChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(611, 123);
+            this.label12.Location = new System.Drawing.Point(815, 151);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 13);
+            this.label12.Size = new System.Drawing.Size(45, 17);
             this.label12.TabIndex = 43;
             this.label12.Text = "Term:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(610, 91);
+            this.label13.Location = new System.Drawing.Point(813, 112);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 13);
+            this.label13.Size = new System.Drawing.Size(45, 17);
             this.label13.TabIndex = 42;
             this.label13.Text = "Dose:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(610, 59);
+            this.label14.Location = new System.Drawing.Point(813, 73);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 13);
+            this.label14.Size = new System.Drawing.Size(49, 17);
             this.label14.TabIndex = 41;
             this.label14.Text = "Name:";
             // 
@@ -521,35 +535,35 @@ namespace NursingHomeApp.Forms
             "12:00:00",
             "17:00:00",
             "21:00:00"});
-            this.comboBoxTerm.Location = new System.Drawing.Point(652, 122);
-            this.comboBoxTerm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTerm.Location = new System.Drawing.Point(869, 150);
+            this.comboBoxTerm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxTerm.Name = "comboBoxTerm";
-            this.comboBoxTerm.Size = new System.Drawing.Size(138, 21);
+            this.comboBoxTerm.Size = new System.Drawing.Size(183, 24);
             this.comboBoxTerm.TabIndex = 39;
             // 
             // comboBoxName
             // 
             this.comboBoxName.FormattingEnabled = true;
-            this.comboBoxName.Location = new System.Drawing.Point(652, 59);
-            this.comboBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxName.Location = new System.Drawing.Point(869, 73);
+            this.comboBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxName.Name = "comboBoxName";
-            this.comboBoxName.Size = new System.Drawing.Size(139, 21);
+            this.comboBoxName.Size = new System.Drawing.Size(184, 24);
             this.comboBoxName.TabIndex = 38;
             // 
             // numericUpDownDose
             // 
-            this.numericUpDownDose.Location = new System.Drawing.Point(652, 89);
-            this.numericUpDownDose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDownDose.Location = new System.Drawing.Point(869, 110);
+            this.numericUpDownDose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownDose.Name = "numericUpDownDose";
-            this.numericUpDownDose.Size = new System.Drawing.Size(137, 20);
+            this.numericUpDownDose.Size = new System.Drawing.Size(183, 22);
             this.numericUpDownDose.TabIndex = 35;
             // 
             // buttonDeletePatientMedicine
             // 
-            this.buttonDeletePatientMedicine.Location = new System.Drawing.Point(652, 329);
-            this.buttonDeletePatientMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDeletePatientMedicine.Location = new System.Drawing.Point(869, 405);
+            this.buttonDeletePatientMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDeletePatientMedicine.Name = "buttonDeletePatientMedicine";
-            this.buttonDeletePatientMedicine.Size = new System.Drawing.Size(97, 45);
+            this.buttonDeletePatientMedicine.Size = new System.Drawing.Size(129, 55);
             this.buttonDeletePatientMedicine.TabIndex = 31;
             this.buttonDeletePatientMedicine.Text = "Delete patient medicine";
             this.buttonDeletePatientMedicine.UseVisualStyleBackColor = true;
@@ -557,10 +571,10 @@ namespace NursingHomeApp.Forms
             // 
             // buttonEditPatientMedicine
             // 
-            this.buttonEditPatientMedicine.Location = new System.Drawing.Point(652, 266);
-            this.buttonEditPatientMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEditPatientMedicine.Location = new System.Drawing.Point(869, 327);
+            this.buttonEditPatientMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEditPatientMedicine.Name = "buttonEditPatientMedicine";
-            this.buttonEditPatientMedicine.Size = new System.Drawing.Size(97, 45);
+            this.buttonEditPatientMedicine.Size = new System.Drawing.Size(129, 55);
             this.buttonEditPatientMedicine.TabIndex = 30;
             this.buttonEditPatientMedicine.Text = "Edit patient medicine";
             this.buttonEditPatientMedicine.UseVisualStyleBackColor = true;
@@ -568,10 +582,10 @@ namespace NursingHomeApp.Forms
             // 
             // buttonAddPatientMedicine
             // 
-            this.buttonAddPatientMedicine.Location = new System.Drawing.Point(652, 201);
-            this.buttonAddPatientMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddPatientMedicine.Location = new System.Drawing.Point(869, 247);
+            this.buttonAddPatientMedicine.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAddPatientMedicine.Name = "buttonAddPatientMedicine";
-            this.buttonAddPatientMedicine.Size = new System.Drawing.Size(97, 45);
+            this.buttonAddPatientMedicine.Size = new System.Drawing.Size(129, 55);
             this.buttonAddPatientMedicine.TabIndex = 29;
             this.buttonAddPatientMedicine.Text = "Add patient medicine";
             this.buttonAddPatientMedicine.UseVisualStyleBackColor = true;
@@ -581,12 +595,12 @@ namespace NursingHomeApp.Forms
             // 
             this.dataGridViewPatientsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewPatientsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPatientsList.Location = new System.Drawing.Point(10, 2);
-            this.dataGridViewPatientsList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewPatientsList.Location = new System.Drawing.Point(13, 2);
+            this.dataGridViewPatientsList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewPatientsList.Name = "dataGridViewPatientsList";
             this.dataGridViewPatientsList.RowHeadersWidth = 51;
             this.dataGridViewPatientsList.RowTemplate.Height = 24;
-            this.dataGridViewPatientsList.Size = new System.Drawing.Size(213, 422);
+            this.dataGridViewPatientsList.Size = new System.Drawing.Size(284, 519);
             this.dataGridViewPatientsList.TabIndex = 28;
             this.dataGridViewPatientsList.SelectionChanged += new System.EventHandler(this.dataGridViewPatientsList_SelectionChanged);
             // 
@@ -594,11 +608,11 @@ namespace NursingHomeApp.Forms
             // 
             this.tabPage1.Controls.Add(this.dataGridViewResidents);
             this.tabPage1.Controls.Add(this.dataGridViewRooms);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Size = new System.Drawing.Size(795, 424);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(1063, 525);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Rooms";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -607,36 +621,37 @@ namespace NursingHomeApp.Forms
             // 
             this.dataGridViewResidents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewResidents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewResidents.Location = new System.Drawing.Point(405, 69);
-            this.dataGridViewResidents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewResidents.Location = new System.Drawing.Point(540, 85);
+            this.dataGridViewResidents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewResidents.Name = "dataGridViewResidents";
             this.dataGridViewResidents.RowHeadersWidth = 51;
             this.dataGridViewResidents.RowTemplate.Height = 24;
-            this.dataGridViewResidents.Size = new System.Drawing.Size(327, 284);
+            this.dataGridViewResidents.Size = new System.Drawing.Size(436, 350);
             this.dataGridViewResidents.TabIndex = 1;
             // 
             // dataGridViewRooms
             // 
             this.dataGridViewRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRooms.Location = new System.Drawing.Point(2, 2);
-            this.dataGridViewRooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewRooms.Location = new System.Drawing.Point(3, 2);
+            this.dataGridViewRooms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewRooms.Name = "dataGridViewRooms";
             this.dataGridViewRooms.RowHeadersWidth = 51;
             this.dataGridViewRooms.RowTemplate.Height = 24;
-            this.dataGridViewRooms.Size = new System.Drawing.Size(341, 427);
+            this.dataGridViewRooms.Size = new System.Drawing.Size(455, 526);
             this.dataGridViewRooms.TabIndex = 0;
             this.dataGridViewRooms.SelectionChanged += new System.EventHandler(this.dataGridViewRooms_SelectionChanged);
             // 
             // AdministratorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tabControlRehabilitator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdministratorForm";
             this.Text = "AdministratorForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdministratorForm_FormClosed);
             this.Load += new System.EventHandler(this.AdministratorForm_Load);
             this.tabControlRehabilitator.ResumeLayout(false);
             this.tabPageInformations.ResumeLayout(false);

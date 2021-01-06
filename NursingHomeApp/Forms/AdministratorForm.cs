@@ -235,5 +235,9 @@ namespace NursingHomeApp.Forms
             e.Value = lastname + " " + firstname;
         }
 
+        private void AdministratorForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

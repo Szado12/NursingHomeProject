@@ -27,5 +27,10 @@ namespace NursingHomeApp
 
 
         }
+
+        private void PatientsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 }
