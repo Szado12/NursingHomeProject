@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using NursingHomeApp.Mapper;
+using NursingHomeApp.Systems.LogicalManagers;
 using NursingHomeApp.Systems.DataManagers;
 using NursingHomeApp.Views;
 using System;
@@ -23,7 +24,7 @@ namespace NursingHomeApp.Forms
         TreatmentDataManager treatmentDataManager = new TreatmentDataManager();
         PatientDataManager patientDataManager = new PatientDataManager();
         PlaceDataManager placeDataManager = new PlaceDataManager();
-        ScheduleDataManager ScheduleDataManager  = new ScheduleDataManager();
+        ScheduleManager ScheduleManager  = new ScheduleManager();
         private static readonly MapperConfiguration mapperConfig = new MapperConfiguration(cfg => cfg.AddProfile(new MapperProfile()));
         protected IMapper Mapper = mapperConfig.CreateMapper();
         public RehabilitatorForm(Employee loggedInRehabilitator)
@@ -53,17 +54,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonAddSchedulePosition_Click(object sender, EventArgs e)
         {
-            Schedule newSchedule = new Schedule
-            {
-                PatientId = (int)comboBoxPatient.SelectedValue,
-                PlaceId = (int)comboBoxPlace.SelectedValue,
-                EmployeeId = currentUser.Id,
-                TreatmentId = (int)comboBoxTreatment.SelectedValue,
-                Term = System.DateTime.Parse(textBoxTerm.Text)
-            };
-            
-
-            if (ScheduleDataManager.Add(newSchedule))
+            if (ScheduleManager.Add((int)comboBoxPatient.SelectedValue, (int)comboBoxPlace.SelectedValue, currentUser.Id, (int)comboBoxTreatment.SelectedValue, DateTime.Parse(textBoxTerm.Text)))
                 MessageBox.Show("Created");
             else
                 MessageBox.Show("Error occured");
@@ -72,14 +63,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonEditSchedulePosition_Click(object sender, EventArgs e)
         {
-            Schedule newSchedule = new Schedule();
-            newSchedule.PatientId = (int)comboBoxPatient.SelectedValue;
-            newSchedule.PlaceId = (int)comboBoxPlace.SelectedValue;
-            newSchedule.EmployeeId = currentUser.Id;
-            newSchedule.TreatmentId = (int)comboBoxTreatment.SelectedValue;
-            newSchedule.Id = schedule.Id;
-            newSchedule.Term = System.DateTime.Parse(textBoxTerm.Text);
-            if (ScheduleDataManager.Update(newSchedule))
+            if (ScheduleManager.Update(schedule.Id,(int)comboBoxPatient.SelectedValue, (int)comboBoxPlace.SelectedValue, currentUser.Id, (int)comboBoxTreatment.SelectedValue, DateTime.Parse(textBoxTerm.Text)))
                 MessageBox.Show("Updated");
             else
                 MessageBox.Show("Error occured");
@@ -91,7 +75,7 @@ namespace NursingHomeApp.Forms
             try
             {
                 schedule = (ScheduleView)dataGridViewSchedule.CurrentRow.DataBoundItem;
-                if (ScheduleDataManager.Delete(schedule.Id))
+                if (ScheduleManager.Delete(schedule.Id))
                     MessageBox.Show("Deleted");
                 else
                     MessageBox.Show("Error occured");
@@ -108,7 +92,7 @@ namespace NursingHomeApp.Forms
             {
                 Treatment newTreatment = new Treatment();
                 newTreatment.Name = textBoxName.Text;
-                newTreatment.Duration = System.TimeSpan.Parse(textBoxDuration.Text);
+                newTreatment.Duration = TimeSpan.Parse(textBoxDuration.Text);
                 if (treatmentDataManager.Add(newTreatment))
                     MessageBox.Show(newTreatment.Name + " Added");
                 else
@@ -121,7 +105,7 @@ namespace NursingHomeApp.Forms
         {
             if(textBoxName.Text!="" && textBoxDuration.Text != "") {
             treatment.Name = textBoxName.Text;
-            treatment.Duration = System.TimeSpan.Parse(textBoxDuration.Text);
+            treatment.Duration = TimeSpan.Parse(textBoxDuration.Text);
             if (treatmentDataManager.Update(treatment))
                 MessageBox.Show(treatment.Name + " Updated");
             else
@@ -171,7 +155,7 @@ namespace NursingHomeApp.Forms
         }
         private void RefreshDataGridViewSchedule()
         {
-            dataGridViewSchedule.DataSource = ScheduleDataManager.SelectIdEmployee(CurrentUser.Id);
+            dataGridViewSchedule.DataSource = ScheduleManager.SelectIdEmployee(CurrentUser.Id);
         }
         
         private void dataGridViewSchedule_SelectionChanged(object sender, EventArgs e)
