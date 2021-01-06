@@ -77,5 +77,6 @@ namespace NursingHomeApp.Systems.LogicalManagers
         {
             return patientDataManager.SelectRoomId(Id);
         }
+
     }
 }

@@ -16,6 +16,7 @@ namespace NursingHomeApp.Forms
         PatientOnListView patientOnList;
         PatientMedicineView patientMedicine;
         PatientManager patientManager = new PatientManager();
+        PatientDataManager patientDataManager = new PatientDataManager();
         RoomDataManager roomDataManager = new RoomDataManager();
         MedicineDataManager medicineDataManager = new MedicineDataManager();
         PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
