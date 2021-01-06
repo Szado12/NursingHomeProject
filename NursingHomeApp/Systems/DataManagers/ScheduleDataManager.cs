@@ -14,7 +14,6 @@ namespace NursingHomeApp.Systems.DataManagers
         {
             DbContext.Schedules.Add(t);
             return (DbContext.SaveChanges() > 0);
-
         }
 
         public bool Delete(int Id)
@@ -35,6 +34,20 @@ namespace NursingHomeApp.Systems.DataManagers
             Schedule schedule = DbContext.Schedules.SingleOrDefault(p => p.Id == Id);
             ScheduleView scheduleView = Mapper.Map<Schedule, ScheduleView>(schedule);
             return scheduleView;
+        }
+
+        public List<ScheduleView> SelectFilteredEmployee(int Id, int treatmentId)
+        {
+            DbContext = new NursingHomeEntities();
+            List<Schedule> schedules = DbContext.Schedules.Where(s => (s.EmployeeId == Id && s.TreatmentId == treatmentId)).ToList();
+            return Mapper.Map<List<Schedule>, List<ScheduleView>>(schedules);
+        }
+
+        public List<ScheduleView> SelectFilteredPatient(int Id, int treatmentId)
+        {
+            DbContext = new NursingHomeEntities();
+            List<Schedule> schedules = DbContext.Schedules.Where(s => (s.PatientId == Id && s.TreatmentId == treatmentId)).ToList();
+            return Mapper.Map<List<Schedule>, List<ScheduleView>>(schedules);
         }
 
         public List<ScheduleView> SelectIdEmployee(int Id)

@@ -56,5 +56,13 @@ namespace NursingHomeApp.Systems.LogicalManagers
         {
             return scheduleDataManager.SelectIdPatient(Id);
         }
+        public List<ScheduleView> SelectFilteredEmployee(int Id, int treatmentId)
+        {
+            return scheduleDataManager.SelectFilteredEmployee(Id, treatmentId);
+        }
+        public List<ScheduleView> SelectFilteredPatient(int Id, int treatmentId)
+        {
+            return scheduleDataManager.SelectFilteredPatient(Id, treatmentId);
+        }
     }
 }
