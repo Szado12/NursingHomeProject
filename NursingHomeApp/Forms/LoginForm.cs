@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NursingHomeApp.Systems.DataManagers;
+using NursingHomeApp.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace NursingHomeApp.Forms
 {
     public partial class LoginForm : Form
     {
+        PatientLoginDataManager patientLoginDataManager = new PatientLoginDataManager();
+        EmployeeLoginDataManager employeeLoginDataManager = new EmployeeLoginDataManager();
         public LoginForm()
         {
             InitializeComponent();
@@ -24,7 +28,50 @@ namespace NursingHomeApp.Forms
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(textBoxPassword.Text);
+            switch (comboBoxLoginWay.SelectedIndex)
+            {
+                case 0:
+                    PatientView patient = patientLoginDataManager.Select(textBoxPersonId.Text, textBoxPassword.Text);
+                    if (patient == null)
+                        MessageBox.Show("Wrong login data");
+                    else
+                    {
+                        PatientsForm patientsForm =new PatientsForm(patient);
+                        this.Hide();
+                        patientsForm.ShowDialog();
+                    }
+                    break;
+                case 1:
+                    Employee employee  = employeeLoginDataManager.Select(textBoxPersonId.Text, textBoxPassword.Text);
+                    if (employee == null)
+                        MessageBox.Show("Wrong login data");
+                    else
+                    {
+                        switch (employee.ProfessionId)
+                        {
+                            case 1:
+                                AdministratorForm administratorForm = new AdministratorForm(employee);
+                                this.Hide();
+                                administratorForm.ShowDialog();
+                                break;
+                            case 2:
+                                RehabilitatorForm rehabilitatorForm  = new RehabilitatorForm(employee);
+                                this.Hide();
+                                rehabilitatorForm.ShowDialog();
+                                break;
+                            case 3:
+                                NurseForm nurseForm = new NurseForm(employee);
+                                this.Hide();
+                                nurseForm.ShowDialog();
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }
