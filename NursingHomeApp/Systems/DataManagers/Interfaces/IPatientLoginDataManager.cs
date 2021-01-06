@@ -9,6 +9,6 @@ namespace NursingHomeApp.Systems.DataManagers.Interfaces
 {
     interface IPatientLoginDataManager
     {
-        PatientView Select(string PersonId, string Password);
+        PatientView Select(string PersonId, Byte[] Password);
     }
 }

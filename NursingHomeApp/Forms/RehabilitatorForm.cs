@@ -194,5 +194,10 @@ namespace NursingHomeApp.Forms
             string firstname = ((Patient)e.ListItem).LastName;
             e.Value = lastname + " " + firstname;
         }
+
+        private void RehabilitatorForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -11,11 +11,9 @@ namespace NursingHomeApp.Systems.DataManagers
 {
     public class PatientLoginDataManager : DefaultDataManager, IPatientLoginDataManager
     {
-        public PatientView Select(string PersonId, string Password)
+        public PatientView Select(string PersonId, Byte[] hashedBytes)
         {
-            Byte[] inputBytes = Encoding.UTF8.GetBytes(Password);
-            SHA512 shaM = new SHA512Managed();
-            Byte[] hashedBytes = shaM.ComputeHash(inputBytes);
+            
             PatientLogin patient = DbContext.PatientLogins.Where(x => x.PersonId == PersonId && x.Password == hashedBytes).SingleOrDefault();
             if (patient == null)
                 return null;

@@ -175,6 +175,7 @@
     <Compile Include="Systems\DataManagers\TreatmentDataManager.cs" />
     <Compile Include="Systems\LogicalManagers\MedicineManager.cs" />
     <Compile Include="Systems\LogicalManagers\EmployeeManager.cs" />
+    <Compile Include="Systems\LogicalManagers\PatientLoginManager.cs" />
     <Compile Include="Systems\LogicalManagers\PatientManager.cs" />
     <Compile Include="Systems\LogicalManagers\PatientMedicineManager.cs" />
     <Compile Include="Systems\LogicalManagers\PlaceManager.cs" />

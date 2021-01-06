@@ -1,4 +1,5 @@
 ﻿using NursingHomeApp.Systems.DataManagers;
+using NursingHomeApp.Systems.LogicalManagers;
 using NursingHomeApp.Views;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace NursingHomeApp.Forms
 {
     public partial class LoginForm : Form
     {
-        PatientLoginDataManager patientLoginDataManager = new PatientLoginDataManager();
+        PatientLoginManager patientLoginManager = new PatientLoginManager();
         EmployeeLoginDataManager employeeLoginDataManager = new EmployeeLoginDataManager();
         public LoginForm()
         {
@@ -31,7 +32,7 @@ namespace NursingHomeApp.Forms
             switch (comboBoxLoginWay.SelectedIndex)
             {
                 case 0:
-                    PatientView patient = patientLoginDataManager.Select(textBoxPersonId.Text, textBoxPassword.Text);
+                    PatientView patient = patientLoginManager.Select(textBoxPersonId.Text, textBoxPassword.Text);
                     if (patient == null)
                         MessageBox.Show("Wrong login data");
                     else

@@ -17,12 +17,9 @@ namespace NursingHomeApp
         [STAThread]
         static void Main()
         {
-            EmployeeManager employeeManager = new EmployeeManager();
-            Employee employee = employeeManager.Select(13);
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TestForm());
+            Application.Run(new LoginForm());
 
         }
     }

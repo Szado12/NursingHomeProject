@@ -98,5 +98,10 @@ namespace NursingHomeApp.Forms
             dataGridViewPatientMedicines.DataSource = patientMedicineManager.SelectPatientMedicine(patient.Id);
             dataGridViewPatientMedicines.Columns["Id"].Visible = false;
         }
+
+        private void NurseForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 }
