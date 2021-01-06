@@ -42,26 +42,15 @@ namespace NursingHomeApp.Forms
 
         private void buttonAddMedicine_Click(object sender, EventArgs e)
         {
-            if (textBoxMedicineName.Text == "" || textBoxStockStatus.Text == "")
+            if (textBoxMedicineName.Text == "")
             {
-                if (MessageBox.Show(this, "All text boxes must be filled!") == DialogResult.OK)
-                    return;
-            }
-
-            int amount = -1;
-            try
-            {
-                amount = int.Parse(textBoxStockStatus.Text);
-            }
-            catch (Exception)
-            {
-                if (MessageBox.Show(this, "Amount must be a number!") == DialogResult.OK)
+                if (MessageBox.Show(this, "Choose a name!") == DialogResult.OK)
                     return;
             }
 
             Medicine newMedicine = new Medicine();
             newMedicine.Name = textBoxMedicineName.Text;
-            newMedicine.Amount = amount;
+            newMedicine.Amount = int.Parse(numericUpDownStockStatus.Text);
 
             if (medicineDataManager.Add(newMedicine))
                 MessageBox.Show("Added!");
@@ -73,26 +62,16 @@ namespace NursingHomeApp.Forms
 
         private void buttonEditMedicine_Click(object sender, EventArgs e)
         {
-            if (textBoxMedicineName.Text == "" || textBoxStockStatus.Text == "")
+            if (textBoxMedicineName.Text == "")
             {
-                if (MessageBox.Show(this, "All text boxes must be filled!") == DialogResult.OK)
+                if (MessageBox.Show(this, "Choose a name!") == DialogResult.OK)
                     return;
             }
 
-            int amount = -1;
-            try
-            {
-                amount = int.Parse(textBoxStockStatus.Text);
-            }
-            catch (Exception)
-            {
-                if (MessageBox.Show(this, "Amount must be a number!") == DialogResult.OK)
-                    return;
-            }
             Medicine updatedMedicine = new Medicine();
             updatedMedicine.Id = medicine.Id;
             updatedMedicine.Name = textBoxMedicineName.Text;
-            updatedMedicine.Amount = amount;
+            updatedMedicine.Amount = int.Parse(numericUpDownStockStatus.Text);
 
             if (medicineDataManager.Update(updatedMedicine))
                 MessageBox.Show("Updated!");
@@ -122,7 +101,7 @@ namespace NursingHomeApp.Forms
         {
             medicine = (MedicineView)dataGridViewMedicines.CurrentRow.DataBoundItem;
             textBoxMedicineName.Text = medicine.Name;
-            textBoxStockStatus.Text = medicine.Amount.ToString();
+            numericUpDownStockStatus.Text = medicine.Amount.ToString();
         }
 
         private void RefreshDataGridView()
@@ -136,7 +115,7 @@ namespace NursingHomeApp.Forms
         private void dataGridViewPatients_SelectionChanged(object sender, EventArgs e)
         {
             NursePatientsView patient = (NursePatientsView)dataGridViewPatients.CurrentRow.DataBoundItem;
-            patientMedicineDataManager.SelectPatientMedicine(patient.Id);
+            dataGridViewPatientMedicines.DataSource = patientMedicineDataManager.SelectPatientMedicine(patient.Id);
         }
     }
 }
