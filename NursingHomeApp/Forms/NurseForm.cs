@@ -18,7 +18,6 @@ namespace NursingHomeApp.Forms
         MedicineDataManager medicineDataManager = new MedicineDataManager();
         PatientDataManager patientDataManager = new PatientDataManager();
         PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
-
         MedicineView medicine;
 
         public NurseForm(Employee loggedInNurse)
