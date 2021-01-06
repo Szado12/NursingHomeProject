@@ -18,9 +18,7 @@ namespace NursingHomeApp.Forms
         private Employee currentUser;
 
         MedicineManager medicineManager = new MedicineManager();
-
-        MedicineDataManager medicineDataManager = new MedicineDataManager();
-        PatientDataManager patientDataManager = new PatientDataManager();
+        PatientManager patientManager = new PatientManager();
         PatientMedicineManager patientMedicineManager = new PatientMedicineManager();
         MedicineView medicine;
 
@@ -90,7 +88,7 @@ namespace NursingHomeApp.Forms
         {
             dataGridViewMedicines.DataSource = medicineManager.Select();
             dataGridViewMedicines.Columns["Id"].Visible = false;
-            dataGridViewPatients.DataSource = patientDataManager.SelectNursePatients(currentUser.Id);
+            dataGridViewPatients.DataSource = patientManager.SelectNursePatients(currentUser.Id);
             dataGridViewPatients.Columns["Id"].Visible = false;
         }
 
