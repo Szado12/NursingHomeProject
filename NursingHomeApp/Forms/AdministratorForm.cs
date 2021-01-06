@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using NursingHomeApp.Systems.DataManagers;
+using NursingHomeApp.Systems.LogicalManagers;
 using NursingHomeApp.Views;
 
 namespace NursingHomeApp.Forms
@@ -14,7 +15,7 @@ namespace NursingHomeApp.Forms
         RoomView room;
         PatientOnListView patientOnList;
         PatientMedicineView patientMedicine;
-
+        PatientManager patientManager = new PatientManager();
         PatientDataManager patientDataManager = new PatientDataManager();
         RoomDataManager roomDataManager = new RoomDataManager();
         MedicineDataManager medicineDataManager = new MedicineDataManager();
@@ -125,21 +126,9 @@ namespace NursingHomeApp.Forms
         private void buttonAddPatient_Click(object sender, EventArgs e)
         {
 
-            Patient newPatient = new Patient();
-
-            newPatient.FirstName = textBoxPatientFirstName.Text;
-            newPatient.LastName = textBoxPatientLastName.Text;
-            newPatient.PersonId = textBoxPatientPersonId.Text;
-            newPatient.Age = int.Parse(numericUpDownPatientAge.Text);
-            newPatient.ContactNumber = textBoxPatientContactNumber.Text;
-            newPatient.PhoneNumber = textBoxPatientPhoneNumber.Text;
-            newPatient.RoomID = int.Parse(comboBoxPatientRoom.Text);
-            newPatient.Alergies = textBoxPatientAlergies.Text;
-            newPatient.EmployeeId = (int)comboBoxCaregiver.SelectedValue;
-
-            if (patientDataManager.Add(newPatient))
+            if (patientManager.Add(textBoxPatientFirstName.Text, textBoxPatientLastName.Text, textBoxPatientPersonId.Text, int.Parse(numericUpDownPatientAge.Text), textBoxPatientContactNumber.Text, textBoxPatientPhoneNumber.Text, int.Parse(comboBoxPatientRoom.Text), textBoxPatientAlergies.Text, (int)comboBoxCaregiver.SelectedValue))
             {
-                MessageBox.Show(newPatient.FirstName + " " + newPatient.LastName + " Added");
+                MessageBox.Show(textBoxPatientFirstName.Text + " " + textBoxPatientLastName.Text+ " Added");
             }
             else
             {

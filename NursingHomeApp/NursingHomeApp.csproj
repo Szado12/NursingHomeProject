@@ -173,6 +173,7 @@
     <Compile Include="Systems\DataManagers\RoomDataManager.cs" />
     <Compile Include="Systems\DataManagers\ScheduleDataManager.cs" />
     <Compile Include="Systems\DataManagers\TreatmentDataManager.cs" />
+    <Compile Include="Systems\LogicalManagers\PatientManager.cs" />
     <Compile Include="Treatment.cs">
       <DependentUpon>NursingHomeModel.tt</DependentUpon>
     </Compile>
