@@ -11,19 +11,17 @@ namespace NursingHomeApp.Forms
     public partial class AdministratorForm : Form
     {
         private Employee currentUser;
-        PatientView patient;
+        
         RoomView room;
-
         PatientOnListView patientOnList;
         PatientMedicineView patientMedicine;
+        PatientView patient;
 
         EmployeeManager employeeManager = new EmployeeManager();
         PatientMedicineManager patientMedicineManager = new PatientMedicineManager();
-
         PatientManager patientManager = new PatientManager();
-        PatientDataManager patientDataManager = new PatientDataManager();
-        RoomDataManager roomDataManager = new RoomDataManager();
-        MedicineDataManager medicineDataManager = new MedicineDataManager();
+        RoomManager roomManager = new RoomManager();
+        MedicineManager medicineManager = new MedicineManager();
 
 
         public AdministratorForm(Employee loggedInAdministrator)
@@ -32,11 +30,11 @@ namespace NursingHomeApp.Forms
             InitializeComponent();
             RefreshDataGridView();
 
-            comboBoxPatientRoom.DataSource = roomDataManager.Select();
+            comboBoxPatientRoom.DataSource = roomManager.Select();
             comboBoxPatientRoom.DisplayMember = "Id";
             comboBoxPatientRoom.ValueMember = "Id";
 
-            comboBoxName.DataSource = medicineDataManager.Select();
+            comboBoxName.DataSource = medicineManager.Select();
             comboBoxName.DisplayMember = "Name";
             comboBoxName.ValueMember = "Id";
 
@@ -54,7 +52,7 @@ namespace NursingHomeApp.Forms
             dataGridViewPatientsList.DataSource = patientManager.SelectToList();
             dataGridViewPatientsList.Columns[0].Visible = false;
 
-            dataGridViewRooms.DataSource = roomDataManager.Select();
+            dataGridViewRooms.DataSource = roomManager.Select();
         }
         public AdministratorForm()
         {
