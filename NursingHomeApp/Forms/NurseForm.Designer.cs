@@ -68,7 +68,7 @@ namespace NursingHomeApp.Forms
             this.tabControlNurse.Controls.Add(this.tabPagePatients);
             this.tabControlNurse.Controls.Add(this.tabPageMedicines);
             this.tabControlNurse.Location = new System.Drawing.Point(-2, 0);
-            this.tabControlNurse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControlNurse.Margin = new System.Windows.Forms.Padding(2);
             this.tabControlNurse.Name = "tabControlNurse";
             this.tabControlNurse.SelectedIndex = 0;
             this.tabControlNurse.Size = new System.Drawing.Size(803, 450);
@@ -87,9 +87,9 @@ namespace NursingHomeApp.Forms
             this.tabPageInformations.Controls.Add(this.labelFirstName);
             this.tabPageInformations.Controls.Add(this.textBoxFistName);
             this.tabPageInformations.Location = new System.Drawing.Point(4, 22);
-            this.tabPageInformations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInformations.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageInformations.Name = "tabPageInformations";
-            this.tabPageInformations.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInformations.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageInformations.Size = new System.Drawing.Size(795, 424);
             this.tabPageInformations.TabIndex = 0;
             this.tabPageInformations.Text = "Informations";
@@ -185,9 +185,9 @@ namespace NursingHomeApp.Forms
             this.tabPagePatients.Controls.Add(this.dataGridViewPatientMedicines);
             this.tabPagePatients.Controls.Add(this.dataGridViewPatients);
             this.tabPagePatients.Location = new System.Drawing.Point(4, 22);
-            this.tabPagePatients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPagePatients.Margin = new System.Windows.Forms.Padding(2);
             this.tabPagePatients.Name = "tabPagePatients";
-            this.tabPagePatients.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPagePatients.Padding = new System.Windows.Forms.Padding(2);
             this.tabPagePatients.Size = new System.Drawing.Size(795, 424);
             this.tabPagePatients.TabIndex = 1;
             this.tabPagePatients.Text = "Patients";
@@ -197,7 +197,7 @@ namespace NursingHomeApp.Forms
             // 
             this.dataGridViewPatientMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPatientMedicines.Location = new System.Drawing.Point(416, 40);
-            this.dataGridViewPatientMedicines.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewPatientMedicines.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewPatientMedicines.Name = "dataGridViewPatientMedicines";
             this.dataGridViewPatientMedicines.RowHeadersWidth = 51;
             this.dataGridViewPatientMedicines.RowTemplate.Height = 24;
@@ -208,7 +208,7 @@ namespace NursingHomeApp.Forms
             // 
             this.dataGridViewPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPatients.Location = new System.Drawing.Point(34, 40);
-            this.dataGridViewPatients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewPatients.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewPatients.Name = "dataGridViewPatients";
             this.dataGridViewPatients.RowHeadersWidth = 51;
             this.dataGridViewPatients.RowTemplate.Height = 24;
@@ -227,9 +227,9 @@ namespace NursingHomeApp.Forms
             this.tabPageMedicines.Controls.Add(this.textBoxStockStatus);
             this.tabPageMedicines.Controls.Add(this.dataGridViewMedicines);
             this.tabPageMedicines.Location = new System.Drawing.Point(4, 22);
-            this.tabPageMedicines.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageMedicines.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageMedicines.Name = "tabPageMedicines";
-            this.tabPageMedicines.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageMedicines.Padding = new System.Windows.Forms.Padding(2);
             this.tabPageMedicines.Size = new System.Drawing.Size(795, 424);
             this.tabPageMedicines.TabIndex = 2;
             this.tabPageMedicines.Text = "Medicines";
@@ -239,7 +239,7 @@ namespace NursingHomeApp.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(616, 167);
+            this.label1.Location = new System.Drawing.Point(600, 168);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
@@ -250,9 +250,8 @@ namespace NursingHomeApp.Forms
             // 
             this.textBoxMedicineName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMedicineName.Location = new System.Drawing.Point(664, 165);
-            this.textBoxMedicineName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMedicineName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMedicineName.Name = "textBoxMedicineName";
-            this.textBoxMedicineName.ReadOnly = true;
             this.textBoxMedicineName.Size = new System.Drawing.Size(114, 23);
             this.textBoxMedicineName.TabIndex = 8;
             // 
@@ -260,7 +259,7 @@ namespace NursingHomeApp.Forms
             // 
             this.labelAmount.AutoSize = true;
             this.labelAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(606, 203);
+            this.labelAmount.Location = new System.Drawing.Point(600, 204);
             this.labelAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmount.Name = "labelAmount";
             this.labelAmount.Size = new System.Drawing.Size(60, 17);
@@ -270,7 +269,7 @@ namespace NursingHomeApp.Forms
             // buttonDeleteMedicine
             // 
             this.buttonDeleteMedicine.Location = new System.Drawing.Point(434, 240);
-            this.buttonDeleteMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDeleteMedicine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDeleteMedicine.Name = "buttonDeleteMedicine";
             this.buttonDeleteMedicine.Size = new System.Drawing.Size(97, 45);
             this.buttonDeleteMedicine.TabIndex = 6;
@@ -281,7 +280,7 @@ namespace NursingHomeApp.Forms
             // buttonEditMedicine
             // 
             this.buttonEditMedicine.Location = new System.Drawing.Point(434, 178);
-            this.buttonEditMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonEditMedicine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEditMedicine.Name = "buttonEditMedicine";
             this.buttonEditMedicine.Size = new System.Drawing.Size(97, 45);
             this.buttonEditMedicine.TabIndex = 5;
@@ -292,7 +291,7 @@ namespace NursingHomeApp.Forms
             // buttonAddMedicine
             // 
             this.buttonAddMedicine.Location = new System.Drawing.Point(434, 112);
-            this.buttonAddMedicine.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonAddMedicine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAddMedicine.Name = "buttonAddMedicine";
             this.buttonAddMedicine.Size = new System.Drawing.Size(97, 45);
             this.buttonAddMedicine.TabIndex = 4;
@@ -304,17 +303,17 @@ namespace NursingHomeApp.Forms
             // 
             this.textBoxStockStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxStockStatus.Location = new System.Drawing.Point(664, 201);
-            this.textBoxStockStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxStockStatus.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxStockStatus.Name = "textBoxStockStatus";
-            this.textBoxStockStatus.ReadOnly = true;
             this.textBoxStockStatus.Size = new System.Drawing.Size(114, 23);
             this.textBoxStockStatus.TabIndex = 3;
             // 
             // dataGridViewMedicines
             // 
+            this.dataGridViewMedicines.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMedicines.Location = new System.Drawing.Point(42, 52);
-            this.dataGridViewMedicines.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewMedicines.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewMedicines.Name = "dataGridViewMedicines";
             this.dataGridViewMedicines.RowHeadersWidth = 51;
             this.dataGridViewMedicines.RowTemplate.Height = 24;
@@ -328,7 +327,7 @@ namespace NursingHomeApp.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControlNurse);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NurseForm";
             this.Text = "NurseForm";
             this.Load += new System.EventHandler(this.NurseForm_Load);

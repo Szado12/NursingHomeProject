@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using NursingHomeApp.Systems.DataManagers;
 using NursingHomeApp.Views;
@@ -73,6 +74,8 @@ namespace NursingHomeApp.Forms
                 textBoxPatientPhoneNumber.Text = patient.PhoneNumber;
                 comboBoxPatientRoom.Text = patient.RoomID.ToString();
                 textBoxPatientAlergies.Text = patient.Alergies;
+                comboBoxCaregiver.SelectedItem = comboBoxCaregiver.Items.Cast<Employee>()
+                    .Where(x => comboBoxCaregiver.GetItemText(x).Equals(patient.EmployeeFirstName + " " + patient.EmployeeLastName)).FirstOrDefault();
             }
             catch (Exception)
             {
@@ -268,5 +271,6 @@ namespace NursingHomeApp.Forms
             string firstname = ((Employee)e.ListItem).LastName;
             e.Value = lastname + " " + firstname;
         }
+
     }
 }

@@ -19,7 +19,7 @@ namespace NursingHomeApp.Forms
         PatientDataManager patientDataManager = new PatientDataManager();
         PatientMedicineDataManager patientMedicineDataManager = new PatientMedicineDataManager();
 
-        Medicine medicine;
+        MedicineView medicine;
 
         public NurseForm(Employee loggedInNurse)
         {
@@ -89,11 +89,12 @@ namespace NursingHomeApp.Forms
                 if (MessageBox.Show(this, "Amount must be a number!") == DialogResult.OK)
                     return;
             }
+            Medicine updatedMedicine = new Medicine();
+            updatedMedicine.Id = medicine.Id;
+            updatedMedicine.Name = textBoxMedicineName.Text;
+            updatedMedicine.Amount = amount;
 
-            medicine.Name = textBoxMedicineName.Text;
-            medicine.Amount = amount;
-
-            if (medicineDataManager.Update(medicine))
+            if (medicineDataManager.Update(updatedMedicine))
                 MessageBox.Show("Updated!");
             else
                 MessageBox.Show("Error occured!");
@@ -105,7 +106,7 @@ namespace NursingHomeApp.Forms
         {
             try
             {
-                medicine = (Medicine)dataGridViewMedicines.CurrentRow.DataBoundItem;
+                medicine = (MedicineView)dataGridViewMedicines.CurrentRow.DataBoundItem;
                 if (medicineDataManager.Delete(medicine.Id))
                     MessageBox.Show("Deleted!");
                 else
@@ -119,9 +120,9 @@ namespace NursingHomeApp.Forms
 
         private void dataGridViewMedicines_SelectionChanged(object sender, EventArgs e)
         {
-            Medicine medicine = (Medicine)dataGridViewMedicines.CurrentRow.DataBoundItem;
+            medicine = (MedicineView)dataGridViewMedicines.CurrentRow.DataBoundItem;
             textBoxMedicineName.Text = medicine.Name;
-            textBoxMedicineName.Text = medicine.Amount.ToString();
+            textBoxStockStatus.Text = medicine.Amount.ToString();
         }
 
         private void RefreshDataGridView()
