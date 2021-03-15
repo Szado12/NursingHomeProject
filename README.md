@@ -53,3 +53,8 @@ Allows to manage treatments in schedule for logged in rehabilitator.
 ### Treatments
 Allows to manage treatments.
 ![alt text](img/rehabilitantForm3.png)
+
+# Collaborator
+* [ :upside_down_face: Szado12](https://github.com/Szado12)
+* [ :slightly_smiling_face: TGrochowski87](https://github.com/TGrochowski87)
+* [ :superhero_woman: Halszka99](https://github.com/halszka99)
