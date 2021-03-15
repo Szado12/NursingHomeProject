@@ -59,7 +59,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonAddSchedulePosition_Click(object sender, EventArgs e)
         {
-            if (scheduleManager.Add((int)comboBoxPatient.SelectedValue, (int)comboBoxPlace.SelectedValue, currentUser.Id, (int)comboBoxTreatment.SelectedValue, DateTime.Parse(textBoxTerm.Text)))
+            if (scheduleManager.Add((int)comboBoxPatient.SelectedValue, (int)comboBoxPlace.SelectedValue, currentUser.Id, (int)comboBoxTreatment.SelectedValue, dateTimeTerm.Value))
                 MessageBox.Show("Created");
             else
                 MessageBox.Show("Error occured");
@@ -68,7 +68,7 @@ namespace NursingHomeApp.Forms
 
         private void buttonEditSchedulePosition_Click(object sender, EventArgs e)
         {
-            if (scheduleManager.Update(schedule.Id,(int)comboBoxPatient.SelectedValue, (int)comboBoxPlace.SelectedValue, currentUser.Id, (int)comboBoxTreatment.SelectedValue, DateTime.Parse(textBoxTerm.Text)))
+            if (scheduleManager.Update(schedule.Id,(int)comboBoxPatient.SelectedValue, (int)comboBoxPlace.SelectedValue, currentUser.Id, (int)comboBoxTreatment.SelectedValue, dateTimeTerm.Value))
                 MessageBox.Show("Updated");
             else
                 MessageBox.Show("Error occured");
@@ -144,8 +144,8 @@ namespace NursingHomeApp.Forms
 
                 comboBoxTreatment.SelectedItem = comboBoxTreatment.Items.Cast<Treatment>()
                 .Where(x => comboBoxTreatment.GetItemText(x).Equals(schedule.TreatmentName)).FirstOrDefault();
+                dateTimeTerm.Value = schedule.Term;
 
-                textBoxTerm.Text = schedule.Term.ToString();
             }
             catch (Exception)
             {
